@@ -4,7 +4,7 @@
             "type": "hysteria",
             "tag": "hysteria-in",
             "listen": "::",
-            "listen_port": 50000,
+            "listen_port": 16384,
             "sniff": true,
             "sniff_override_destination": true,
             "up_mbps": 1000,
