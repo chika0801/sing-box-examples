@@ -4,12 +4,12 @@
             "type": "trojan",
             "tag": "trojan-in",
             "listen": "::",
-            "listen_port": 16386,
+            "listen_port": 50000,
             "sniff": true,
             "sniff_override_destination": true,
             "users": [
                 {
-                    "password": "chika"
+                    "password": "password"
                 }
             ],
             "tls": {
