@@ -23,11 +23,5 @@
                 "key_path": "/root/private.key"
             }
         }
-    ],
-    "outbounds": [
-        {
-            "type": "direct",
-            "tag": "direct"
-        }
     ]
 }
