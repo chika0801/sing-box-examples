@@ -2,7 +2,6 @@
     "inbounds": [
         {
             "type": "hysteria",
-            "tag": "hysteria-in",
             "listen": "::",
             "listen_port": 16384,
             "sniff": true,
