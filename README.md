@@ -21,3 +21,5 @@ systemctl start sing-box
 ```
 systemctl status sing-box
 ```
+
+官方文档 [https://sing-box.sagernet.org](https://sing-box.sagernet.org/zh/configuration/)
