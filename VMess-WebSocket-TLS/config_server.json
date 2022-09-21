@@ -20,11 +20,5 @@
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         }
-    ],
-    "outbounds": [
-        {
-            "type": "direct",
-            "tag": "direct"
-        }
     ]
 }
