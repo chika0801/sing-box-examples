@@ -1,28 +1,4 @@
 {
-    "log": {
-        "level": "info"
-    },
-    "dns": {
-        "servers": [
-            {
-                "address": "1.1.1.1"
-            }
-        ]
-    },
-    "route": {
-        "geoip": {
-            "path": "geoip.db",
-            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db"
-        },
-        "rules": [
-            {
-                "geoip": [
-                    "cn"
-                ],
-                "outbound": "block"
-            }
-        ]
-    },
     "inbounds": [
         {
             "type": "trojan",
@@ -31,7 +7,6 @@
             "listen_port": 16386,
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
             "users": [
                 {
                     "password": "chika"
