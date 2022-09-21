@@ -1,28 +1,4 @@
 {
-    "log": {
-        "level": "info"
-    },
-    "dns": {
-        "servers": [
-            {
-                "address": "1.1.1.1"
-            }
-        ]
-    },
-    "route": {
-        "geoip": {
-            "path": "geoip.db",
-            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db"
-        },
-        "rules": [
-            {
-                "geoip": [
-                    "cn"
-                ],
-                "outbound": "block"
-            }
-        ]
-    },
     "inbounds": [
         {
             "type": "vmess",
@@ -31,16 +7,15 @@
             "listen_port": 8001,
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "0d74dc01-d920-528a-9a05-cd203e12f587",
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
                     "alterId": 0
                 }
             ],
             "transport": {
                 "type": "ws",
-                "path": "/lovelive_liella",
+                "path": "/lovelive",
                 "max_early_data": 0,
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
