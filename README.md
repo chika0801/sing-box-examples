@@ -1,4 +1,4 @@
-## sing-box手动安装教程
+## sing-box安装指南
 
 - 下载 [sing-box](https://github.com/SagerNet/sing-box/releases)
 - 程序 `/root/sing-box`
