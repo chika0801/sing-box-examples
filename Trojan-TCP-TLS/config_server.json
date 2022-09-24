@@ -2,6 +2,7 @@
     "inbounds": [
         {
             "type": "trojan",
+            "tag": "trojan-in",
             "listen": "::",
             "listen_port": 16386,
             "sniff": true,
