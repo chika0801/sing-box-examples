@@ -3,7 +3,7 @@
         {
             "type": "trojan",
             "listen": "::",
-            "listen_port": 16386,
+            "listen_port": 16384,
             "users": [
                 {
                     "password": "chika"
