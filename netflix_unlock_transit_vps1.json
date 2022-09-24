@@ -34,7 +34,7 @@
         {
             "type": "shadowsocks",
             "tag": "shadowsocks-out",
-            "server": "vps2_IP",
+            "server": "",
             "server_port": 50000,
             "method": "aes-128-gcm",
             "password": "chika"
