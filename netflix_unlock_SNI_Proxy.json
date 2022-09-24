@@ -6,7 +6,7 @@
             },
             {
                 "tag": "netflix",
-                "address": "SNI_Proxy_IP"
+                "address": "DNS_Proxy_IP"
             }
         ],
         "rules": [
