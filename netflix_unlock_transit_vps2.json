@@ -1,0 +1,13 @@
+{
+    "inbounds": [
+        {
+            "type": "shadowsocks",
+            "listen": "::",
+            "listen_port": 50000,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "method": "aes-128-gcm",
+            "password": "chika"
+        }
+    ]
+}
