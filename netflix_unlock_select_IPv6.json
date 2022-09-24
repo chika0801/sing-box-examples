@@ -19,7 +19,7 @@
     "inbounds": [
         {
             "type": "",
-            "tag": ""
+            "tag": "",
             ...
             "sniff": true,
             "sniff_override_destination": true,
