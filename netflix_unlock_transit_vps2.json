@@ -2,6 +2,7 @@
     "inbounds": [
         {
             "type": "shadowsocks",
+            "tag": "shadowsocks-in",
             "listen": "::",
             "listen_port": 50000,
             "method": "aes-128-gcm",
