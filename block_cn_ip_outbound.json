@@ -15,6 +15,11 @@
         {
             "type": "",
             "tag": ""
+            ...
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
+            ...
         }
     ],
     "outbounds": [
