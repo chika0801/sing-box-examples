@@ -20,6 +20,10 @@
         {
             "type": "",
             "tag": ""
+            ...
+            "sniff": true,
+            "sniff_override_destination": true,
+            ...
         }
     ],
     "outbounds": [
