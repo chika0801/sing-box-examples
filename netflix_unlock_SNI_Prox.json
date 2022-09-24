@@ -1,0 +1,44 @@
+{
+    "dns": {
+        "servers": [
+            {
+                "address": "local"
+            },
+            {
+                "tag": "netflix",
+                "address": "SNI_Proxy_IP"
+            }
+        ],
+        "rules": [
+            {
+                "geosite": [
+                    "netflix"
+                ],
+                "server": "netflix"
+            }
+        ]
+    },
+    "route": {
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db"
+        }
+    },
+    "inbounds": [
+        {
+            "type": "",
+            "tag": "",
+            ...
+            "sniff": true,
+            "sniff_override_destination": true,
+            ...
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct",
+            "domain_strategy": "ipv4_only"
+        }
+    ]
+}
