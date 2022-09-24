@@ -1,0 +1,37 @@
+{
+    "route": {
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db"
+        },
+        "rules": [
+            {
+                "domain_keyword": [
+                    "ip.sb"
+                ],
+                "geosite": [
+                    "netflix"
+                ],
+                "outbound": "direct_ipv6"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "",
+            "tag": ""
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct_ipv4",
+            "domain_strategy": "ipv4_only"
+        },
+        {
+            "type": "direct",
+            "tag": "direct_ipv6",
+            "domain_strategy": "ipv6_only"
+        }
+    ]
+}
