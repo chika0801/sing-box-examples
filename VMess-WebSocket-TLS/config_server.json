@@ -2,6 +2,7 @@
     "inbounds": [
         {
             "type": "vmess",
+            "tag": "vmess-in",
             "listen": "127.0.0.1",
             "listen_port": 8001,
             "sniff": true,
