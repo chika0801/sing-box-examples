@@ -6,13 +6,13 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
+                    "uuid": "",
                     "alterId": 0
                 }
             ],
             "transport": {
                 "type": "ws",
-                "path": "/lovelive",
+                "path": "/lovelive_staff",
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         }
