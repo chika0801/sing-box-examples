@@ -3,10 +3,10 @@
         {
             "type": "hysteria",
             "listen": "::",
-            "listen_port": ,
+            "listen_port": 16384,
             "up_mbps": 1000,
             "down_mbps": 1000,
-            "auth_str": "",
+            "auth_str": "chika",
             "recv_window_conn": 67108864,
             "recv_window_client": 268435456,
             "max_conn_client": 4096,
@@ -16,8 +16,8 @@
                 "alpn": [
                     "h3"
                 ],
-                "certificate_path": "",
-                "key_path": ""
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
             }
         }
     ]
