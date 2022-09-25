@@ -6,7 +6,7 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "password": ""
+                    "password": "chika"
                 }
             ],
             "transport": {
