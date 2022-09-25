@@ -18,12 +18,6 @@
             }
         ]
     },
-    "route": {
-        "geosite": {
-            "path": "geosite.db",
-            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db"
-        }
-    },
     "inbounds": [
         {
             "type": "",
@@ -40,5 +34,11 @@
             "tag": "direct",
             "domain_strategy": "ipv4_only"
         }
-    ]
+    ],
+    "route": {
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db"
+        }
+    }
 }
