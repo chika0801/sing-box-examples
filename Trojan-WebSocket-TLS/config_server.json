@@ -11,7 +11,7 @@
             ],
             "transport": {
                 "type": "ws",
-                "path": "/lovelive_staff",
+                "path": "/lovelive",
                 "early_data_header_name": "Sec-WebSocket-Protocol"
             }
         }
