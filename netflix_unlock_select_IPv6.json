@@ -24,7 +24,7 @@
     "route": {
         "geosite": {
             "path": "geosite.db",
-            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+            "download_url": "https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db"
         },
         "rules": [
             {
