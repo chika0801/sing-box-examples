@@ -7,8 +7,8 @@
             "up_mbps": 1000,
             "down_mbps": 1000,
             "auth_str": "chika",
-            "recv_window_conn": 67108864,
-            "recv_window_client": 268435456,
+            "recv_window_conn": 33554432,
+            "recv_window_client": 134217728,
             "max_conn_client": 4096,
             "disable_mtu_discovery": false,
             "tls": {
