@@ -5,8 +5,7 @@
 - 配置 `/root/sing-box_config.json`
 - 证书 `/root/fullchain.cer`
 - 私钥 `/root/private.key`
-- systemctl文件 `/etc/systemd/system/sing-box.service`
-
+- systemctl配置文件 `/etc/systemd/system/sing-box.service`
 
 ```
 chmod +x /root/sing-box
