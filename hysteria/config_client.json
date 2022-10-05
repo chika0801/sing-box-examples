@@ -1,0 +1,11 @@
+{
+    "protocol": "udp",
+    "server": "chika.example.com:16384",
+    "alpn": "h3",
+    "up_mbps": 50,
+    "down_mbps": 200,
+    "auth_str": "chika",
+    "socks5": {
+        "listen": "127.0.0.1:50000"
+    }
+}
