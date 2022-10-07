@@ -5,10 +5,16 @@
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.0.5-linux-amd64.tar.gz && tar -xf /root/sb && mv /root/sing-box-*-linux-amd64/sing-box . && rm /root/sb -r /root/sing-box-*-linux-amd64 && chown root:root sing-box && chmod +x sing-box
 ```
 
-2.下载配置(Trojan-TCP-TLS)
+2.下载配置
 
+Trojan-TCP-TLS
 ```
 curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/Trojan-TCP-TLS/config_server.json
+```
+
+hysteria
+```
+curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/hysteria/config_server.json
 ```
 
 3.下载systemctl配置文件
