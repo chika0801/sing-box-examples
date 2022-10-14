@@ -1,3 +1,4 @@
+
 ## v2rayN配置指南
 
 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/download/v1.2.1/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
@@ -6,4 +7,4 @@
 
 小技巧：只要证书在有效期内，证书包含的域名可不用解析到你的VPS IP。`即一份有效的证书，同时在N个VPS上使用`。
 
-![hy](https://user-images.githubusercontent.com/88967758/195763003-97e79ce9-9f59-444f-85ec-17d0851ee32e.jpg)
+![1](https://user-images.githubusercontent.com/88967758/195763557-f9706952-f2fc-466f-9787-bf00d138562d.jpg)
