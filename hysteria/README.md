@@ -4,4 +4,4 @@
 
 使用小技巧：只要证书在有效期内，证书包含的域名可不用解析到你的VPS IP。即一份有效的证书，同时在N个VPS上使用。
 
-![1](https://user-images.githubusercontent.com/88967758/195762002-d868aab1-3190-41e6-953e-5fccb27e95d7.jpg)
+![hy](https://user-images.githubusercontent.com/88967758/195762002-d868aab1-3190-41e6-953e-5fccb27e95d7.jpg)
