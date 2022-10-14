@@ -6,4 +6,4 @@ v2rayN配置指南
 
 小技巧：只要证书在有效期内，证书包含的域名可不用解析到你的VPS IP。即一份有效的证书，同时在N个VPS上使用。
 
-![hy](https://user-images.githubusercontent.com/88967758/195762002-d868aab1-3190-41e6-953e-5fccb27e95d7.jpg)
+![hy](https://user-images.githubusercontent.com/88967758/195763003-97e79ce9-9f59-444f-85ec-17d0851ee32e.jpg)
