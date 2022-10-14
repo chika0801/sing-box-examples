@@ -1,4 +1,4 @@
-v2rayN配置指南
+## v2rayN配置指南
 
 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/download/v1.2.1/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
 
