@@ -1,6 +1,7 @@
 {
     "protocol": "udp",
-    "server": "chika.example.com:16384",
+    "server": "127.0.0.1:16384",
+    "server_name": "chika.example.com",
     "alpn": "h3",
     "up_mbps": 50,
     "down_mbps": 200,
