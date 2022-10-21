@@ -1,6 +1,7 @@
 ## [sing-box](https://github.com/SagerNet/sing-box)安装指南
 
 1.下载程序
+
 ```
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.0.6-linux-amd64.tar.gz && tar -xf /root/sb && mv /root/sing-box-*-linux-amd64/sing-box . && rm /root/sb -r /root/sing-box-*-linux-amd64 && chown root:root sing-box && chmod +x sing-box
 ```
@@ -13,6 +14,7 @@ curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/
 ```
 
 3.下载systemctl配置文件
+
 ```
 curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service
 ```
