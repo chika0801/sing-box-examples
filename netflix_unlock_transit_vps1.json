@@ -18,7 +18,7 @@
             "type": "shadowsocks",
             "tag": "shadowsocks-out",
             "server": "vps2_IP",
-            "server_port": 50000,
+            "server_port": 60000,
             "method": "aes-128-gcm",
             "password": "chika"
         }
@@ -30,9 +30,6 @@
         },
         "rules": [
             {
-                "domain_keyword": [
-                    "ip.sb"
-                ],
                 "geosite": [
                     "netflix"
                 ],
