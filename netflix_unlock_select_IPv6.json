@@ -28,9 +28,6 @@
         },
         "rules": [
             {
-                "domain_keyword": [
-                    "ip.sb"
-                ],
                 "geosite": [
                     "netflix"
                 ],
