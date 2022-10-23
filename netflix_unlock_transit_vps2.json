@@ -4,7 +4,7 @@
             "type": "shadowsocks",
             "tag": "shadowsocks-in",
             "listen": "::",
-            "listen_port": 50000,
+            "listen_port": 60000,
             "sniff": true,
             "sniff_override_destination": true,
             "method": "aes-128-gcm",
