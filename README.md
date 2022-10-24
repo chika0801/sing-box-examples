@@ -13,7 +13,7 @@ curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/latest/download/
 curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/hysteria/config_server.json
 ```
 
-3.下载systemctl配置文件
+3.下载systemctl配置
 
 ```
 curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service
@@ -45,6 +45,6 @@ systemctl status sing-box
 - 配置 `/root/sing-box_config.json`
 - 证书 `/root/fullchain.cer`
 - 私钥 `/root/private.key`
-- systemctl配置文件 `/etc/systemd/system/sing-box.service`
+- systemctl配置 `/etc/systemd/system/sing-box.service`
 - 查看日志 `journalctl -u sing-box --output cat -e`
 - 实时日志 `journalctl -u sing-box --output cat -f`
