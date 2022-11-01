@@ -1,25 +1,25 @@
 ## [sing-box](https://github.com/SagerNet/sing-box)安装指南
 
-1.下载程序
+1. 下载程序
 
 ```
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.0.6-linux-amd64.tar.gz && tar -xf /root/sb && mv /root/sing-box-*/sing-box . && rm /root/sb -r /root/sing-box-* && chown root:root sing-box && chmod +x sing-box
 ```
 
-2.下载配置
+2. 下载配置
 
 [hysteria](https://github.com/chika0801/sing-box-install/tree/main/hysteria)
 ```
 curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/hysteria/config_server.json
 ```
 
-3.下载systemctl配置
+3. 下载systemctl配置
 
 ```
 curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service
 ```
 
-4.上传证书和私钥
+4. 上传证书和私钥
 
 将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/root/`目录。
 
@@ -27,7 +27,7 @@ curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/
 <br/>
 [什么是 SSL 证书](https://www.kaspersky.com.cn/resource-center/definitions/what-is-a-ssl-certificate)
 
-5.启动程序
+5. 启动程序
 
 ```
 systemctl daemon-reload && systemctl enable sing-box
