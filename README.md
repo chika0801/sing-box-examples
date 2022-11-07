@@ -38,13 +38,15 @@ systemctl start sing-box
 systemctl status sing-box
 ```
 
-- 程序 `/root/sing-box`
-- 配置 `/root/sing-box_config.json`
-- 证书 `/root/fullchain.cer`
-- 私钥 `/root/private.key`
-- systemctl配置 `/etc/systemd/system/sing-box.service`
-- 查看日志 `journalctl -u sing-box --output cat -e`
-- 实时日志 `journalctl -u sing-box --output cat -f`
+| 项目 | |
+| :--- | :--- |
+| 程序 | /root/sing-box |
+| 配置 | /root/sing-box_config.json |
+| 证书 | /root/fullchain.cer |
+| 私钥 | /root/private.key |
+| systemctl配置 | /etc/systemd/system/sing-box.service |
+| 查看日志 | journalctl -u sing-box --output cat -e |
+| 实时日志 | journalctl -u sing-box --output cat -f |
 
 ## v2rayN配置指南
 
