@@ -1,4 +1,4 @@
-## [sing-box](https://github.com/SagerNet/sing-box)安装指南
+## [sing-box](https://github.com/SagerNet/sing-box)安装指南(Quick Installation Guide)
 
 1. 下载程序(Download sing-box)
 
