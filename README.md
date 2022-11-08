@@ -36,7 +36,7 @@ systemctl status sing-box
 
 | 项目 | |
 | :--- | :--- |
-| 程序 | /root/sing-box |
+| 程序(sing-box file) | /root/sing-box |
 | 配置(config) | /root/sing-box_config.json |
 | 证书(certificate) | /root/fullchain.cer |
 | 私钥(private key) | /root/private.key |
