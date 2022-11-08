@@ -27,11 +27,7 @@ curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/
 5. 启动程序
 
 ```
-systemctl daemon-reload && systemctl enable sing-box
-```
-
-```
-systemctl start sing-box
+systemctl daemon-reload && systemctl enable --now sing-box
 ```
 
 ```
