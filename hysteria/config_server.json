@@ -6,7 +6,11 @@
             "listen_port": 16384,
             "up_mbps": 1000,
             "down_mbps": 1000,
-            "auth_str": "chika",
+            "users": [
+                {
+                    "auth_str": "chika"
+                }
+            ],
             "tls": {
                 "enabled": true,
                 "alpn": [
