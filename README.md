@@ -1,8 +1,7 @@
 ## [sing-box](https://github.com/SagerNet/sing-box)安装指南
 
-1. 下载程序
+1. 下载程序(linux-amd64）
 
-linux-amd64
 ```
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.1-rc1/sing-box-1.1-rc1-linux-arm64.tar.gz && tar -xf /root/sb && mv /root/sing-box-*/sing-box . && rm /root/sb -r /root/sing-box-* && chown root:root sing-box && chmod +x sing-box
 ```
