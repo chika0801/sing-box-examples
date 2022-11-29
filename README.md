@@ -78,6 +78,6 @@ systemctl status sing-box
 | QUIC TLS ALPN | h3 |
 | 允许不安全连接 | 不勾 |
 | 自签证书 | 不勾 |
-| TCP 快速打开 | 勾上 |
+| TCP 快速打开 | 不勾 |
 | 启用自动切换 | 不勾 |
 | 本地端口 | 1234 |
