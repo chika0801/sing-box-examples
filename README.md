@@ -9,7 +9,6 @@ curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.1-rc
 
 2. 下载配置
 
-hysteria
 ```
 curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/hysteria/config_server.json
 ```
