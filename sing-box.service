@@ -1,6 +1,4 @@
 [Unit]
-Description=sing-box, The universal proxy platform.
-Documentation=https://github.com/SagerNet/sing-box
 After=network.target
 
 [Service]
