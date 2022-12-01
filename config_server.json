@@ -4,6 +4,8 @@
             "type": "hysteria",
             "listen": "::",
             "listen_port": 16384,
+            "sniff": true,
+            "sniff_override_destination": true,
             "up_mbps": 1000,
             "down_mbps": 1000,
             "users": [
