@@ -9,7 +9,7 @@ curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.1-rc
 2. 下载配置
 
 ```
-curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/hysteria/config_server.json
+curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_server.json
 ```
 
 3. 下载systemctl配置
@@ -46,7 +46,7 @@ systemctl status sing-box
 
 1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
 
-2. 下载客户端配置[config_client.json](https://github.com/chika0801/sing-box-install/blob/main/hysteria/config_client.json)，修改`chika.example.com`为证书中包含的域名，修改`10.0.0.1`为VPS的IP。
+2. 下载客户端配置[config_client.json](https://github.com/chika0801/sing-box-install/blob/main/config_client.json)，修改`chika.example.com`为证书中包含的域名，修改`10.0.0.1`为VPS的IP。
 
 3. `服务器` ——> `添加自定义配置服务器` ——> `浏览(B)` ——> `选择客户端配置` ——> `Core类型 hysteria` ——> `Socks端口 50000`
 
