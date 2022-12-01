@@ -4,7 +4,7 @@
     "server_name": "chika.example.com",
     "alpn": "h3",
     "up_mbps": 50,
-    "down_mbps": 200,
+    "down_mbps": 150,
     "auth_str": "chika",
     "socks5": {
         "listen": "127.0.0.1:50000"
