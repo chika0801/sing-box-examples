@@ -87,7 +87,7 @@ systemctl status sing-box
 | 端口 | 16384 | "server" |
 | 端口跳跃额外端口 | 留空 | "server" |
 | 协议名称 | UDP | "protocol" |
-| 混淆密码 | 留空 |  |
+| 混淆密码 | 留空 | "obfs" |
 | 认证类型 | STRING |  |
 | 认证密码 | chika | "auth_str" |
 | QUIC TLS ALPN | h3 | "alpn" |
