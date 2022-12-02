@@ -97,9 +97,9 @@ systemctl status sing-box
 | 最大下行(Mbps) | 150 | "down_mbps" |
 | QUIC 流接收窗口 | 1677721 | "recv_window_conn" |
 | QUIC 连接接收窗口 | 4194304 | "recv_window" |
-| 握手超时 | 30 | "handshake_timeout" |
-| 空闲超时 | 20 | "idle_timeout" |
-| 端口跳跃时间 | 10 | "hop_interval" |
+| 握手超时 | 留空 | "handshake_timeout" |
+| 空闲超时 | 留空 | "idle_timeout" |
+| 端口跳跃时间 | 留空 | "hop_interval" |
 | 禁用 MTU 检测 | 不勾 | "disable_mtu_discovery" |
 
   "retry_interval": 5,
