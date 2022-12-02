@@ -101,3 +101,6 @@ systemctl status sing-box
 | 空闲超时 | 20 |   "idle_timeout": 20
 | 端口跳跃时间 | 10 | "hop_interval"
 | 禁用 MTU 检测 | 不勾 | "disable_mtu_discovery"
+
+  "retry_interval": 5,
+  "retry": -1,
