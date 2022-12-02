@@ -68,7 +68,7 @@ systemctl status sing-box
 | 禁用 MTU 探测 | 不勾 | "disable_mtu_discovery" |
 | 上行链路容量 | 50 | "up_mbps" |
 | 下行链路容量 | 150 | "down_mbps" |
-| 混淆密码（可选） | 留空 |  |
+| 混淆密码（可选） | 留空 | "obfs" |
 | TLS 主机名 | 证书中包含的域名 | "server_name" |
 | QUIC TLS ALPN | h3 | "alpn" |
 | 允许不安全连接 | 不勾 | "insecure" |
