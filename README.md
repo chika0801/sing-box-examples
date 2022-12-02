@@ -63,8 +63,8 @@ systemctl status sing-box
 | 传输协议 | udp | "protocol"
 | 验证类型 | string |
 | 验证载荷 | chika | "auth_str"
-| QUIC 连接接收窗口 | 4194304 | "recv_window_conn"
-| QUIC 流接收窗口 | 1677721 |  "recv_window"
+| QUIC 连接接收窗口 | 4194304 | "recv_window"
+| QUIC 流接收窗口 | 1677721 | "recv_window_conn"
 | 禁用 MTU 探测 | 不勾 | "disable_mtu_discovery"
 | 上行链路容量 | 50 | "up_mbps"
 | 下行链路容量 | 150 | "down_mbps"
