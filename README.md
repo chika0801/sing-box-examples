@@ -54,26 +54,26 @@ systemctl status sing-box
 
 ## ShadowSocksR Plus+配置指南
 
-| 选项 | 值 |
-| :--- | :--- |
+| 选项 | 值 | 对应参数 |
+| :--- | :--- | :--- |
 | 服务器节点类型 | Hysteria |
 | 别名（可选） |  |
-| 服务器地址 | VPS的IP |
-| 端口 | 16384 |
-| 传输协议 | udp |
+| 服务器地址 | VPS的IP | "server"
+| 端口 | 16384 | "server"
+| 传输协议 | udp | "protocol"
 | 验证类型 | string |
-| 验证载荷 | chika |
-| QUIC 连接接收窗口 | 4194304 |
-| QUIC 流接收窗口 | 1677721 |
-| 禁用 MTU 探测 | 不勾 |
-| 上行链路容量 | 50 |
-| 下行链路容量 | 150 |
+| 验证载荷 | chika | "auth_str"
+| QUIC 连接接收窗口 | 4194304 | "recv_window_conn"
+| QUIC 流接收窗口 | 1677721 |  "recv_window"
+| 禁用 MTU 探测 | 不勾 | "disable_mtu_discovery"
+| 上行链路容量 | 50 | "up_mbps"
+| 下行链路容量 | 150 | "down_mbps"
 | 混淆密码（可选） | 留空 |
-| TLS 主机名 | 证书中包含的域名 |
-| QUIC TLS ALPN | h3 |
-| 允许不安全连接 | 不勾 |
+| TLS 主机名 | 证书中包含的域名 | "server_name"
+| QUIC TLS ALPN | h3 | "alpn"
+| 允许不安全连接 | 不勾 | "insecure"
 | 自签证书 | 不勾 |
-| TCP 快速打开 | 不勾 |
+| TCP 快速打开 | 不勾 | "fast_open"
 | 启用自动切换 | 不勾 |
 | 本地端口 | 1234 |
 
