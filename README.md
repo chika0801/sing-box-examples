@@ -61,7 +61,7 @@ systemctl status sing-box
 | 服务器地址 | VPS的IP | "server" |
 | 端口 | 16384 | "server" |
 | 传输协议 | udp | "protocol" |
-| 验证类型 | string |
+| 验证类型 | string |  |
 | 验证载荷 | chika | "auth_str" |
 | QUIC 连接接收窗口 | 4194304 | "recv_window" |
 | QUIC 流接收窗口 | 1677721 | "recv_window_conn" |
