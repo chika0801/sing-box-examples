@@ -54,6 +54,8 @@ systemctl status sing-box
 
 ## SagerNet配置指南
 
+<details><summary>点击查看</summary>
+
 | 选项 | 值 |
 | :--- | :--- |
 | 配置名称 |  |
@@ -73,7 +75,11 @@ systemctl status sing-box
 | QUIC 连接接收窗口 | 4194304 |
 | 禁用路径最大传输单元发现 | 不勾 |
 
+</details>
+
 ## ShadowSocksR Plus+配置指南
+
+<details><summary>点击查看</summary>
 
 | 选项 | 值 | 对应参数 |
 | :--- | :--- | :--- |
@@ -98,7 +104,11 @@ systemctl status sing-box
 | 启用自动切换 | 不勾 |  |
 | 本地端口 | 1234 |  |
 
+</details>
+
 ## PassWall配置指南
+
+<details><summary>点击查看</summary>
 
 | 选项 | 值 | 对应参数 |
 | :--- | :--- | :--- |
@@ -122,3 +132,5 @@ systemctl status sing-box
 | 空闲超时 | 留空 | "idle_timeout" |
 | 端口跳跃时间 | 留空 | "hop_interval" |
 | 禁用 MTU 检测 | 不勾 | "disable_mtu_discovery" |
+
+</details>
