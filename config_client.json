@@ -6,6 +6,7 @@
     "up_mbps": 50,
     "down_mbps": 150,
     "auth_str": "chika",
+    "fast_open": true,
     "socks5": {
         "listen": "127.0.0.1:50000"
     }
