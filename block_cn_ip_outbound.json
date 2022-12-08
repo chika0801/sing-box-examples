@@ -19,8 +19,8 @@
                 "alpn": [
                     "h3"
                 ],
-                "certificate_path": "/root/fullchain.cer",
-                "key_path": "/root/private.key"
+                "certificate_path": "fullchain.cer",
+                "key_path": "private.key"
             }
         }
     ],
