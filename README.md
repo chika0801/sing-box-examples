@@ -1,4 +1,4 @@
-## [sing-box](https://github.com/SagerNet/sing-box)安装指南
+## [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
 1. 下载程序（linux-amd64）
 
@@ -40,7 +40,7 @@ systemctl status sing-box
 | 查看日志 | journalctl -u sing-box --output cat -e |
 | 实时日志 | journalctl -u sing-box --output cat -f |
 
-## v2rayN配置指南
+## v2rayN 5.x 配置指南
 
 1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
 
