@@ -52,7 +52,7 @@ systemctl status sing-box
 
 小技巧：只要证书在有效期内，证书中包含的域名不用解析到VPS的IP。一份证书，在多个VPS上使用。
 
-## SagerNet配置指南
+## SagerNet 配置指南
 
 <details><summary>点击查看</summary>
 
@@ -77,7 +77,7 @@ systemctl status sing-box
 
 </details>
 
-## ShadowSocksR Plus+配置指南
+## ShadowSocksR Plus+ 配置指南
 
 <details><summary>点击查看</summary>
 
@@ -106,7 +106,7 @@ systemctl status sing-box
 
 </details>
 
-## PassWall配置指南
+## PassWall 配置指南
 
 <details><summary>点击查看</summary>
 
