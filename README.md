@@ -77,6 +77,33 @@ systemctl status sing-box
 
 </details>
 
+
+
+## Shadowrocket 配置指南
+
+<details><summary>点击查看</summary>
+
+| 选项 | 值 |
+| :--- | :--- |
+| 配置名称 |  |
+| 类型 | Hysteria |
+| 地址 | VPS的IP |
+| 端口 | 16384 |
+| 密码 | chika |
+| 协议 | UDP |
+| 允许不安全 | 不选 |
+| UDP转发 | 选上 |
+| 快速打开 | 选上 |
+| SNI | 证书中包含的域名 |
+| ALPN | h3 |
+| 上行速度 | 20 |
+| 下行速度 | 100 |
+| 备注 | 留空 |
+
+</details>
+
+
+
 ## ShadowSocksR Plus+ 配置指南
 
 <details><summary>点击查看</summary>
