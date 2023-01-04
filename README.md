@@ -77,8 +77,6 @@ systemctl status sing-box
 
 </details>
 
-
-
 ## Shadowrocket 配置指南
 
 <details><summary>点击查看</summary>
@@ -101,8 +99,6 @@ systemctl status sing-box
 | 备注 | 留空 |
 
 </details>
-
-
 
 ## ShadowSocksR Plus+ 配置指南
 
