@@ -88,6 +88,7 @@ systemctl status sing-box
 | 地址 | VPS的IP |
 | 端口 | 16384 |
 | 密码 | chika |
+| 混淆 | 留空 |
 | 协议 | UDP |
 | 允许不安全 | 不选 |
 | UDP转发 | 选上 |
