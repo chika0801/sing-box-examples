@@ -41,7 +41,16 @@
         },
         "rules": [
             {
-                "geoip": "cn",
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
+                "geoip": [
+                    "cn"
+                ],
                 "outbound": "block"
             }
         ]
