@@ -2,6 +2,7 @@
     "inbounds": [
         {
             "type": "hysteria",
+            "tag": "hysteria-in",
             "listen": "::",
             "listen_port": 16384,
             "sniff": true,
@@ -22,5 +23,26 @@
                 "key_path": "private.key"
             }
         }
-    ]
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            }
+        ]
+    }
 }
