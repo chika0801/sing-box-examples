@@ -42,6 +42,8 @@ systemctl status sing-box
 
 ## v2rayN 5.x 配置指南
 
+<details><summary>点击查看</summary>
+
 1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
 
 2. 下载客户端配置[config_client.json](https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_client.json)，修改`chika.example.com`为证书中包含的域名，修改`10.0.0.1`为VPS的IP。
@@ -51,6 +53,8 @@ systemctl status sing-box
 ![1](https://user-images.githubusercontent.com/88967758/195763557-f9706952-f2fc-466f-9787-bf00d138562d.jpg)
 
 小技巧：只要证书在有效期内，证书中包含的域名不用解析到VPS的IP。一份证书，在多个VPS上使用。
+
+</details>
 
 ## SagerNet 配置指南
 
