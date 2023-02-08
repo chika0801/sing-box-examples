@@ -145,11 +145,12 @@ systemctl status sing-box
 | 地址 | VPS的IP | "server" |
 | 端口 | 16384 | "server" |
 | 端口跳跃额外端口 | 留空 | "server" |
-| 协议名称 | UDP | "protocol" |
+| 传输协议 | UDP | "protocol" |
 | 混淆密码 | 留空 | "obfs" |
 | 认证类型 | STRING |  |
 | 认证密码 | chika | "auth_str" |
 | QUIC TLS ALPN | h3 | "alpn" |
+| 快速打开 | 勾上 | "fast_open" |
 | 域名 | 证书中包含的域名 | "server_name" |
 | 允许不安全连接 | 不勾 | "insecure" |
 | 最大上行(Mbps) | 50 | "up_mbps" |
