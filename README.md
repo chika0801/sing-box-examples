@@ -112,7 +112,6 @@ systemctl status sing-box
 | 选项 | 值 | 对应参数 |
 | :--- | :--- | :--- |
 | 服务器节点类型 | Hysteria |
-| 别名（可选） |  |
 | 服务器地址 | VPS的IP | "server" |
 | 端口 | 16384 | "server" |
 | 传输协议 | udp | "protocol" |
