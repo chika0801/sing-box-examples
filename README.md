@@ -44,7 +44,7 @@ systemctl status sing-box
 
 <details><summary>点击查看</summary>
 
-1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/HyNetwork/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
+1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/apernet/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为`hysteria.exe`，复制到v2rayN文件夹。
 
 2. 下载客户端配置[config_client.json](https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_client.json)，修改`chika.example.com`为证书中包含的域名，修改`10.0.0.1`为VPS的IP。
 
