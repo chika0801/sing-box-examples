@@ -75,8 +75,8 @@ systemctl status sing-box
 | 允许不安全的连接 | 不勾 |
 | 最大上行（Mbps） | 20 |
 | 最大下行（Mbps） | 100 |
-| QUIC 流接收窗口 | 1677721 |
-| QUIC 连接接收窗口 | 4194304 |
+| QUIC 流接收窗口 | 16777216 |
+| QUIC 连接接收窗口 | 6710886 |
 | 禁用路径最大传输单元发现 | 不勾 |
 
 </details>
@@ -117,8 +117,8 @@ systemctl status sing-box
 | 传输协议 | udp | "protocol" |
 | 验证类型 | string |  |
 | 验证载荷 | chika | "auth_str" |
-| QUIC 连接接收窗口 | 4194304 | "recv_window" |
-| QUIC 流接收窗口 | 1677721 | "recv_window_conn" |
+| QUIC 连接接收窗口 | 16777216 | "recv_window" |
+| QUIC 流接收窗口 | 6710886 | "recv_window_conn" |
 | 禁用 MTU 探测 | 不勾 | "disable_mtu_discovery" |
 | 上行链路容量 | 50 | "up_mbps" |
 | 下行链路容量 | 150 | "down_mbps" |
@@ -153,8 +153,8 @@ systemctl status sing-box
 | 允许不安全连接 | 不勾 | "insecure" |
 | 最大上行(Mbps) | 50 | "up_mbps" |
 | 最大下行(Mbps) | 150 | "down_mbps" |
-| QUIC 流接收窗口 | 1677721 | "recv_window_conn" |
-| QUIC 连接接收窗口 | 4194304 | "recv_window" |
+| QUIC 流接收窗口 | 6710886 | "recv_window_conn" |
+| QUIC 连接接收窗口 | 16777216 | "recv_window" |
 | 握手超时 | 留空 | "handshake_timeout" |
 | 空闲超时 | 留空 | "idle_timeout" |
 | 端口跳跃时间 | 留空 | "hop_interval" |
