@@ -62,7 +62,6 @@ systemctl status sing-box
 
 | 选项 | 值 |
 | :--- | :--- |
-| 配置名称 |  |
 | 服务器 | VPS的IP |
 | 服务器端口 | 16384 |
 | 混淆密码 | 留空 |
@@ -87,7 +86,6 @@ systemctl status sing-box
 
 | 选项 | 值 |
 | :--- | :--- |
-| 配置名称 |  |
 | 类型 | Hysteria |
 | 地址 | VPS的IP |
 | 端口 | 16384 |
