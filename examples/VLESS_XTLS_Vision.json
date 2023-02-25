@@ -1,0 +1,47 @@
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "tag": "vless-in",
+            "listen": "::",
+            "listen_port": 20000,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
+            "users": [
+                {
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "certificate_path": "fullchain.cer",
+                "key_path": "private.key"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "path": "geoip.db",
+            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "rules": [
+            {
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "block"
+            }
+        ]
+    }
+}
