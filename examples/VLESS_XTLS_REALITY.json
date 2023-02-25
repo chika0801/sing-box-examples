@@ -15,7 +15,7 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName，在 https://decoder.link/sslchecker/ 输入网站地址，查看 SANs 项
+                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName，在 https://decoder.link/sslchecker/ 输入目标网站网址，查看 SANs 项
                 "reality": {
                     "enabled": true,
                     "handshake": {
