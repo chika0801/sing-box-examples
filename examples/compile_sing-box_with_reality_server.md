@@ -11,3 +11,10 @@ go version
 ```
 go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
+
+```
+systemctl stop sing-box
+cp ./go/bin/sing-box ./
+systemctl start sing-box
+rm -rf go
+```
