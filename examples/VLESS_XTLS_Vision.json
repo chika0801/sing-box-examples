@@ -10,7 +10,7 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc"
+                    "uuid": "" // 执行 xray uuid 生成
                 }
             ],
             "tls": {
