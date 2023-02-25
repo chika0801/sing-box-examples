@@ -15,8 +15,8 @@
             ],
             "tls": {
                 "enabled": true,
-                "certificate_path": "fullchain.cer",
-                "key_path": "private.key"
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
             }
         }
     ],
