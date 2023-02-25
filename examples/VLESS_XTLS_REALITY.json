@@ -22,7 +22,7 @@
                         "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
                         "server_port": 443
                     },
-                    "private_key": "",
+                    "private_key": "", // 执行 xray x25519 生成
                     "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
                         "d5390167eac8f4b2", // 0 到 f，长度为 16 位
                         "8b1e465ca3f079d2",
