@@ -1,0 +1,65 @@
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "tag": "vless-in",
+            "listen": "::",
+            "listen_port": 443,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
+            "users": [
+                {
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName，在 https://decoder.link/sslchecker/ 输入网站地址，查看 SANs 项
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
+                        "server_port": 443
+                    },
+                    "private_key": "",
+                    "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
+                        "d5390167eac8f4b2", // 0 到 f，长度为 16 位
+                        "8b1e465ca3f079d2",
+                        "31d02feb94578ac6",
+                        "95e1c70824f63dba",
+                        "5603dc79b84f12ea",
+                        "05942a1e367fbcd8",
+                        "0a8eb1f632c47d95",
+                        "edf7305c6498a21b",
+                        "a94bef827dc15063"
+                    ]
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "path": "geoip.db",
+            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "rules": [
+            {
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "block"
+            }
+        ]
+    }
+}
