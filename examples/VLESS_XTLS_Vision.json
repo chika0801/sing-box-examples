@@ -4,7 +4,7 @@
             "type": "vless",
             "tag": "vless-in",
             "listen": "::",
-            "listen_port": 20000,
+            "listen_port": 16384,
             "sniff": true,
             "sniff_override_destination": true,
             "domain_strategy": "ipv4_only",
