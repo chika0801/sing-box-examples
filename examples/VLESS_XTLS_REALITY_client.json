@@ -1,0 +1,34 @@
+{
+    "inbounds": [
+        {
+            "type": "http",
+            "tag": "http-in",
+            "listen": "127.0.0.1",
+            "listen_port": 10809
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "tag": "vless-out",
+            "server": "",  // VPS的IP
+            "server_port": 443,
+            "uuid": "", // 与服务端 uuid 一致
+            "flow": "xtls-rprx-vision",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "server_name": "", // 与服务端 server_name 一致
+                    "utls": {
+                        "enabled": true,
+                        "fingerprint": "chrome"
+                    },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "", // 执行 xray x25519 生成
+                    "short_id": "" // 服务端 short_id 之一
+                }
+            }
+        }
+    ]
+}
