@@ -1,4 +1,8 @@
 {
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
     "inbounds": [
         {
             "type": "vless",
@@ -51,9 +55,19 @@
     "route": {
         "geoip": {
             "path": "geoip.db",
-            "download_url": "https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db"
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
         },
         "rules": [
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
             {
                 "geoip": [
                     "cn"
