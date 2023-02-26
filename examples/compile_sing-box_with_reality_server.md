@@ -8,6 +8,8 @@ export PATH=$PATH:/usr/local/go/bin
 go version
 ```
 
+**linux-amd64**
+
 ```
 go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
@@ -17,4 +19,11 @@ systemctl stop sing-box
 cp ./go/bin/sing-box ./
 systemctl start sing-box
 rm -rf go
+```
+
+
+**windows-amd64**
+
+```
+GOOS=windows GOARCH=amd64 go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
