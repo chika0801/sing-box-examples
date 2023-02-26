@@ -1,4 +1,8 @@
 {
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
     "inbounds": [
         {
             "type": "socks",
@@ -16,7 +20,7 @@
     "outbounds": [
         {
             "type": "vless",
-            "tag": "vless-out",
+            "tag": "proxy",
             "server": "",  // VPS的IP
             "server_port": 443,
             "uuid": "", // 与服务端 uuid 一致
@@ -35,6 +39,60 @@
                     "short_id": "" // 服务端 short_id 之一
                 }
             }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
         }
-    ]
+    ],
+    "route": {
+        "geoip": {
+            "path": "X:\\Program Files\\v2rayN\\bin\\sing_box\\geoip.db",
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+            "download_detour": "proxy"
+        },
+        "geosite": {
+            "path": "X:\\Program Files\\v2rayN\\bin\\sing_box\\geosite.db",
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+            "download_detour": "proxy"
+        },
+        "rules": [
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-games@cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    }
 }
