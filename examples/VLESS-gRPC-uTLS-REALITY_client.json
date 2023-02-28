@@ -48,12 +48,12 @@
     ],
     "route": {
         "geoip": {
-            "path": "G:\\Program Files\\v2rayN\\bin\\sing_box\\geoip.db",
+            "path": "C:\\Program Files\\v2rayN\\bin\\sing_box\\geoip.db",
             "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
             "download_detour": "proxy"
         },
         "geosite": {
-            "path": "G:\\Program Files\\v2rayN\\bin\\sing_box\\geosite.db",
+            "path": "C:\\Program Files\\v2rayN\\bin\\sing_box\\geosite.db",
             "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
             "download_detour": "proxy"
         },
