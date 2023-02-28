@@ -1,8 +1,8 @@
 {
     "inbounds": [
         {
-            "type": "hysteria",
-            "tag": "hysteria-in",
+            "type": "",
+            "tag": "",
             ...
             "sniff": true,
             "sniff_override_destination": true,
