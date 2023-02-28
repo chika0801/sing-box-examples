@@ -1,0 +1,101 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "inbounds": [
+        {
+            "type": "socks",
+            "tag": "socks-in",
+            "listen": "127.0.0.1",
+            "listen_port": 10808
+        },
+        {
+            "type": "http",
+            "tag": "http-in",
+            "listen": "127.0.0.1",
+            "listen_port": 10809
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "tag": "proxy",
+            "server": "",
+            "server_port": 443,
+            "uuid": "",
+            "flow": "",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                    "utls": {
+                        "enabled": true,
+                        "fingerprint": "chrome"
+                    },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "",
+                    "short_id": ""
+                }
+            },
+            "transport": {
+                "type": "grpc"
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "path": "G:\\Program Files\\v2rayN\\bin\\sing_box\\geoip.db",
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
+            "download_detour": "proxy"
+        },
+        "geosite": {
+            "path": "G:\\Program Files\\v2rayN\\bin\\sing_box\\geosite.db",
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
+            "download_detour": "proxy"
+        },
+        "rules": [
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-games@cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    }
+}
