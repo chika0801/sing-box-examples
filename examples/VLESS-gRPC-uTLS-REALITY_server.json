@@ -9,7 +9,7 @@
             "sniff_override_destination": true,
             "users": [
                 {
-                    "uuid": "" // 执行 xray uuid 生成
+                    "uuid": "" // 执行 xray uuid 生成 
                 }
             ],
             "tls": {
