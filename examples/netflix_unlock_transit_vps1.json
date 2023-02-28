@@ -20,7 +20,7 @@
             "server": "vps2_IP",
             "server_port": 60000,
             "method": "aes-128-gcm",
-            "password": "chika"
+            "password": ""
         }
     ],
     "route": {
