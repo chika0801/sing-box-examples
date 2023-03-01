@@ -37,8 +37,8 @@ systemctl status sing-box
 | 程序 | /root/sing-box |
 | 配置 | /root/sing-box_config.json |
 | 检查 | /root/sing-box check -c sing-box_config.json
-| 查看日志 | journalctl -u sing-box --output cat -e |
-| 实时日志 | journalctl -u sing-box --output cat -f |
+| 查看日志 | `journalctl -u sing-box --output cat -e` |
+| 实时日志 | `journalctl -u sing-box --output cat -f` |
 
 ## v2rayN 5.x 配置指南
 
