@@ -38,7 +38,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## v2rayN 5.x 配置指南
 
-<details><summary>点击查看</summary><br>
+<details><summary>点击查看</summary>
 
 1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/apernet/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为hysteria.exe，复制到v2rayN文件夹。
 
