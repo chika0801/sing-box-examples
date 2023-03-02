@@ -15,7 +15,7 @@ curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service
+curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
@@ -25,11 +25,7 @@ curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/
 5. 启动程序
 
 ```
-systemctl daemon-reload && systemctl enable --now sing-box
-```
-
-```
-systemctl status sing-box
+systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 ```
 
 | 项目 | |
