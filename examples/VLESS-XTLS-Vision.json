@@ -9,7 +9,8 @@
             "sniff_override_destination": true,
             "users": [
                 {
-                    "uuid": ""
+                    "uuid": "",
+                    "flow": "xtls-rprx-vision"
                 }
             ],
             "tls": {
