@@ -14,7 +14,8 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "" // 执行 xray uuid 生成
+                    "uuid": "", // 执行 xray uuid 生成
+                    "flow": "xtls-rprx-vision"
                 }
             ],
             "tls": {
