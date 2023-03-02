@@ -7,7 +7,6 @@
             "listen_port": 443,
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
             "users": [
                 {
                     "uuid": "",
