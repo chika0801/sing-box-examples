@@ -1,4 +1,8 @@
 {
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
     "inbounds": [
         {
             "type": "vless",
@@ -7,6 +11,7 @@
             "listen_port": ,
             "sniff": true,
             "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
             "users": [
                 {
                     "uuid": "" // 执行 xray uuid 生成
@@ -18,5 +23,29 @@
                 "key_path": "/root/private.key"
             }
         }
-    ]
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "route": {
+        "geoip": {
+            "path": "geoip.db",
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "rules": [
+            {
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "block"
+            }
+        ]
+    }
 }
