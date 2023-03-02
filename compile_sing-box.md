@@ -12,7 +12,7 @@ go version
 **linux-amd64**
 
 ```
-go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+CGO_ENABLED=0 go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 
 ```
