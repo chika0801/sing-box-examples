@@ -1,6 +1,6 @@
 {
     "log": {
-        "level": "debug",
+        "level": "info",
         "timestamp": true
     },
     "inbounds": [
