@@ -26,5 +26,5 @@ rm -rf go
 **windows-amd64**
 
 ```
-GOOS=windows GOARCH=amd64 go install -v -tags with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go install -v -tags with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
