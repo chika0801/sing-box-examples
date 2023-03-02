@@ -38,7 +38,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## v2rayN 5.x 配置指南
 
-<details><summary>点击查看</summary>
+<details><summary>点击查看</summary><br>
 
 1. 下载Windows客户端程序[hysteria-windows-amd64.exe](https://github.com/apernet/hysteria/releases/latest/download/hysteria-windows-amd64.exe)，重命令为hysteria.exe，复制到v2rayN文件夹。
 
@@ -54,7 +54,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## SagerNet 配置指南
 
-<details><summary>点击查看</summary>
+<details><summary>点击查看</summary><br>
 
 | 选项 | 值 |
 | :--- | :--- |
@@ -78,7 +78,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## Shadowrocket 配置指南
 
-<details><summary>点击查看</summary>
+<details><summary>点击查看</summary><br>
 
 | 选项 | 值 |
 | :--- | :--- |
@@ -101,7 +101,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## ShadowSocksR Plus+ 配置指南
 
-<details><summary>点击查看</summary>
+<details><summary>点击查看</summary><br>
 
 | 选项 | 值 | 对应参数 |
 | :--- | :--- | :--- |
@@ -129,7 +129,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ## PassWall 配置指南
 
-<details><summary>点击查看</summary>
+<details><summary>点击查看</summary><br>
 
 | 选项 | 值 | 对应参数 |
 | :--- | :--- | :--- |
