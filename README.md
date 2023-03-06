@@ -9,13 +9,13 @@ curl -sLo sb https://github.com/SagerNet/sing-box/releases/download/v1.1.6/sing-
 2. 下载配置
 
 ```
-curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_server.json
+curl -sLo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_server.json
 ```
 
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
+curl -sLo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
