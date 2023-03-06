@@ -3,19 +3,19 @@
 1. 下载程序（**linux-amd64**）
 
 ```
-curl -sLo sb https://github.com/SagerNet/sing-box/releases/download/v1.1.6/sing-box-1.1.6-linux-amd64.tar.gz && tar -xzf sb && mv sing-box-*/sing-box . && rm -r sb sing-box-* && chown root:root sing-box && chmod +x sing-box && ./sing-box version
+curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.1.6/sing-box-1.1.6-linux-amd64.tar.gz && tar -xzf /root/sb && mv /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box
 ```
 
 2. 下载配置
 
 ```
-curl -sLo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_server.json
+curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-install/main/config_server.json
 ```
 
 3. 下载systemctl配置
 
 ```
-curl -sLo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
+curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
