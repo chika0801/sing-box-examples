@@ -24,7 +24,7 @@
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "www.lovelive-anime.jp:443", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
+                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
                         "server_port": 443
                     },
                     "private_key": "", // 执行 ./sing-box generate reality-keypair 生成
