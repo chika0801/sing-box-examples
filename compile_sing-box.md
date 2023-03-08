@@ -14,6 +14,12 @@ source /etc/profile.d/go.sh
 go install -v -tags with_quic,with_wireguard,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 
+```
+cp -f ./go/bin/sing-box .
+./sing-box version
+systemctl restart sing-box && sleep 0.2 && systemctl status sing-box
+```
+
 **windows-amd64**
 
 ```
