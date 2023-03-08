@@ -62,7 +62,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "",
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
                     "flow": "xtls-rprx-vision"
                 }
             ],
