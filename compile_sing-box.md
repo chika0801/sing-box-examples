@@ -17,8 +17,8 @@ go install -v -tags with_quic,with_wireguard,with_reality_server github.com/sage
 
 ```
 cp -f ./go/bin/sing-box .
-./sing-box version
 systemctl restart sing-box && sleep 0.2 && systemctl status sing-box
+./sing-box version
 ```
 
 **windows-amd64**
