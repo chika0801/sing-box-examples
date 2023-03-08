@@ -11,7 +11,7 @@ source /etc/profile.d/go.sh
 **linux-amd64**
 
 ```
-go install -v -tags with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+go install -v -tags with_quic,with_wireguard,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 
 **windows-amd64**
