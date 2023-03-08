@@ -6,6 +6,7 @@ tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
 echo -e 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile.d/go.sh
 source /etc/profile.d/go.sh
+go version
 ```
 
 **linux-amd64**
