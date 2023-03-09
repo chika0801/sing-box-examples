@@ -1,5 +1,3 @@
-**以 Debian 11 为例，使用 root 用户登录**
-
 ```
 curl -sLo go.tar.gz https://go.dev/dl/go1.20.1.linux-amd64.tar.gz
 tar -C /usr/local -xzf go.tar.gz
