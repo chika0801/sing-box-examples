@@ -29,7 +29,7 @@
                     },
                     "private_key": "", // 执行 ./sing-box generate reality-keypair 生成
                     "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "" // 0 到 f，长度为 16 位，不能留空
+                        "" // 0 到 f，长度为 16，不能留空，或执行 openssl rand -hex 8 生成
                     ]
                 }
             },
