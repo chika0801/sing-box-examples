@@ -36,7 +36,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | 查看日志 | `journalctl -u sing-box --output cat -e` |
 | 实时日志 | `journalctl -u sing-box --output cat -f` |
 
-## v2rayN 5.x 配置指南
+## v2rayN 5.x 配置示例
 
 <details><summary>点击查看</summary>
 
@@ -52,7 +52,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 </details>
 
-## SagerNet 配置指南
+## SagerNet 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -76,7 +76,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 </details>
 
-## Shadowrocket 配置指南
+## Shadowrocket 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -99,7 +99,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 </details>
 
-## ShadowSocksR Plus+ 配置指南
+## ShadowSocksR Plus+ 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -127,7 +127,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 </details>
 
-## PassWall 配置指南
+## PassWall 配置示例
 
 <details><summary>点击查看</summary><br>
 
