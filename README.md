@@ -95,7 +95,6 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | ALPN | h3 |
 | 上行速度 | 20 |
 | 下行速度 | 100 |
-| 备注 | 留空 |
 
 </details>
 
