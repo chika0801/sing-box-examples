@@ -89,7 +89,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | 混淆 | 留空 |
 | 协议 | UDP |
 | 允许不安全 | 不选 |
-| UDP转发 | 选上 |
+| UDP 转发 | 选上 |
 | 快速打开 | 选上 |
 | SNI | 证书中包含的域名 |
 | ALPN | h3 |
