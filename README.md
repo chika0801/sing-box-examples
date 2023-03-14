@@ -108,7 +108,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | 服务器节点类型 | Hysteria |
 | 服务器地址 | VPS的IP | "server" |
 | 端口 | 16384 | "server" |
-| 传输协议 | udp | "protocol" |
+| 协议 | udp | "protocol" |
 | 验证类型 | string |  |
 | 验证载荷 | chika | "auth_str" |
 | QUIC 连接接收窗口 | 16777216 | "recv_window" |
