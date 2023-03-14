@@ -137,7 +137,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | 地址（支持域名） | VPS的IP | "server" |
 | 端口 | 16384 | "server" |
 | 端口跳跃额外端口 | 留空 | "server" |
-| 传输协议 | UDP | "protocol" |
+| 协议 | UDP | "protocol" |
 | 混淆密码 | 留空 | "obfs" |
 | 认证类型 | STRING |  |
 | 认证密码 | chika | "auth_str" |
