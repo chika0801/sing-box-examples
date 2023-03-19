@@ -1,14 +1,15 @@
 //iOS singbox（sfi）用，修改完毕后推荐删除中文注释和“//”符号
+//默认ipv4环境下使用
+//ipv6环境需要特殊配置，你没操作过那就是ipv4
 {
   "log": {
-    "level": "warn",
-    "timestamp": true
+    "level": "warn"
   },
   "dns": {
     "servers": [
       {
         "tag": "oversea",
-        "address": "https://1.1.1.1/dns-query"
+        "address": "tls://1.1.1.1"
       },
       {
         "tag": "homeland",
@@ -31,7 +32,8 @@
         "disable_cache": true
       }
     ],
-    "strategy": "prefer_ipv4",
+    "strategy": "ipv4_only",
+    //ipv6环境下请改成 "strategy": "ipv6_only",
     "final": "oversea"
   },
   "inbounds": [
@@ -39,7 +41,8 @@
         "type": "tun",
         "tag": "tun-in",
         "inet4_address": "172.19.0.1/30",
-        "inet6_address": "fdfe:dcba:9876::1/126",
+        //"inet6_address": "fdfe:dcba:9876::1/126", 
+        //ipv6环境下去掉上一行“//”标记，删去inet4那一行
         "auto_route": true,
         "strict_route": true,
         "stack": "gvisor",
@@ -54,7 +57,6 @@
       "server_port": 443,
       "uuid": "chika",// 与服务端一致
       "flow": "xtls-rprx-vision",
-      "network": "tcp",
       "tls": {
         "enabled": true,
         "server_name": "www.lovelive-anime.jp",// 服务端 serverNames 之一
@@ -93,9 +95,6 @@
         "geoip": [
           "cn",
           "private"
-        ],
-        "domain_suffix": [
-          ".cn"
         ],
         "outbound": "direct"
       },
