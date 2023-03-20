@@ -43,7 +43,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         ]
 ```
 
-**VLESS-XTLS-Vision** 的配置示例
+**VLESS-XTLS-Vision** 配置示例
 
 ```
 {
@@ -68,8 +68,8 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             ],
             "tls": {
                 "enabled": true,
-                "certificate_path": "fullchain.cer",
-                "key_path": "private.key"
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
             }
         }
     ],
