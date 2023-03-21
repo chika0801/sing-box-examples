@@ -89,6 +89,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | QUIC 连接接收窗口 | 16777216 | "recv_window" |
 | QUIC 流接收窗口 | 6710886 | "recv_window_conn" |
 | 禁用 MTU 探测 | 不勾 | "disable_mtu_discovery" |
+| 延迟启动 | 不勾 | "lazy_start" |
 | 上行链路容量 | 50 | "up_mbps" |
 | 下行链路容量 | 150 | "down_mbps" |
 | 混淆密码（可选） | 留空 | "obfs" |
