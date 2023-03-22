@@ -27,6 +27,15 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 编辑 **/root/sing-box_config.json**，按需增加"rules"和"outbounds"的内容（注意检查json语法），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
 
 ```
+    "route": {
+        "geoip": {
+            "path": "geoip.db",
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+        },
         "rules": [
             {
                 "domain_keyword": [
@@ -41,6 +50,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                 "outbound": "wireguard-out"
             }
         ]
+    }
 ```
 
 **VLESS-XTLS-Vision** 配置示例
