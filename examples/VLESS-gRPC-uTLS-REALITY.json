@@ -34,7 +34,7 @@
                 }
             },
             "transport": {
-                "type": "grpc", // 若客户端为 Xray-core，grpc 模式只能用gun，即 "multiMode": false
+                "type": "grpc", // 若客户端为 Xray-core，grpc 模式只支持 gun，即 "multiMode": false
                 "service_name": "grpc" // 指定服务名称，若客户端为 Clash Meta Kernel，不能留空
             }
         }
