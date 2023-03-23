@@ -1,0 +1,119 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+    "dns": {
+        "servers": [
+            {
+                "tag": "default",
+                "address": "tcp://1.1.1.1",
+                "address_resolver": "local",
+                "address_strategy": "ipv4_only",
+                "strategy": "ipv4_only",
+                "detour": "proxy"
+            },
+            {
+                "tag": "local",
+                "address": "https://223.5.5.5/dns-query",
+                "address_strategy": "ipv4_only",
+                "strategy": "ipv4_only",
+                "detour": "direct"
+            },
+            {
+                "tag": "block",
+                "address": "rcode://success"
+            }
+        ],
+        "rules": [
+            {
+                "geosite": "category-ads-all",
+                "server": "block",
+                "disable_cache": true
+            },
+            {
+                "geosite": [
+                    "category-games@cn",
+                    "cn"
+                ],
+                "server": "local"
+            }
+        ],
+        "disable_cache": false,
+        "disable_expire": false
+    },
+    "route": {
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-games@cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "geosite": [
+                    "cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "auto_detect_interface": true
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1/30",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "endpoint_independent_nat": false,
+            "stack": "gvisor",
+            "sniff": true,
+            "sniff_override_destination": true
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "tag": "proxy",
+            // 你的配置
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        }
+    ]
+}
