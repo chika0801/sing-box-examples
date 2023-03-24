@@ -93,7 +93,8 @@
                     "xray.exe",
                     "hysteria.exe",
                     "tuic.exe",
-                    "clash-meta.exe"
+                    "clash-meta.exe",
+                    "IDMan.exe"
                 ],
                 "outbound": "dns-out"
             },
@@ -102,7 +103,8 @@
                     "xray.exe",
                     "hysteria.exe",
                     "tuic.exe",
-                    "clash-meta.exe"
+                    "clash-meta.exe",
+                    "IDMan.exe"
                 ],
                 "outbound": "direct"
             }
