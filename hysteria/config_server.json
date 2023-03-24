@@ -47,7 +47,7 @@
             "down_mbps": 1000,
             "users": [
                 {
-                    "auth_str": "chika"
+                    "auth_str": "chika" // 认证密码
                 }
             ],
             "recv_window_conn": 26843545,
