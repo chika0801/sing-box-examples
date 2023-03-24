@@ -1,8 +1,6 @@
-## **配置：** 
+### 使用方法：
 
-| | 无需注册域名 | 解决 TLS in TLS | 自带多路复用 | 通过 CDN 访问 |
-| :--- | :---: | :---: | :---: | :---: |
-| :rocket:**VLESS-XTLS-Vision** | :x: | :heavy_check_mark: | :x: | :x: |
-| :rocket:**VLESS-XTLS-uTLS-REALITY** | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| :rocket:**VLESS-gRPC-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| :rocket:**VLESS-H2-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`
+2. 将客户端配置文件改名为 **config.json**，与 **sing-box.exe** 放在同一文件夹
+3. 右键点击 **sing-box.exe**，选择 **兼容性**，选择 **以管理员身份运行此程序**，确定
+4. 运行新建的批处理文件，同意 **用户账户控制**，启动 **sing-box**
