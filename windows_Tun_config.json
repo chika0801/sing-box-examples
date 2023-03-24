@@ -94,7 +94,9 @@
                     "hysteria.exe",
                     "tuic.exe",
                     "clash-meta.exe",
-                    "IDMan.exe"
+                    "IDMan.exe",
+                    "Xshell.exe",
+                    "XshellCore.exe"
                 ],
                 "outbound": "dns-out"
             },
@@ -104,7 +106,9 @@
                     "hysteria.exe",
                     "tuic.exe",
                     "clash-meta.exe",
-                    "IDMan.exe"
+                    "IDMan.exe",
+                    "Xshell.exe",
+                    "XshellCore.exe"
                 ],
                 "outbound": "direct"
             }
