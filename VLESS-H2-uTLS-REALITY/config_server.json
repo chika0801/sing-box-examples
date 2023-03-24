@@ -65,8 +65,7 @@
                 }
             },
             "transport": {
-                "type": "http",
-                "host": ["h2"]
+                "type": "http"
             }
         }
     ],
