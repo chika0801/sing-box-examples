@@ -126,7 +126,6 @@
     ],
     "outbounds": [
         {
-            "type": "vless",
             "tag": "proxy",
             // 你的配置
         },
