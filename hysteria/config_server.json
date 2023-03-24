@@ -1,4 +1,39 @@
 {
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "geoip": {
+            "path": "geoip.db",
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "geosite": {
+            "path": "geosite.db",
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+        },
+        "rules": [
+            {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "block"
+            }
+        ]
+    },
     "inbounds": [
         {
             "type": "hysteria",
@@ -7,6 +42,7 @@
             "listen_port": 16384,
             "sniff": true,
             "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
             "up_mbps": 1000,
             "down_mbps": 1000,
             "users": [
@@ -14,14 +50,28 @@
                     "auth_str": "chika"
                 }
             ],
+            "recv_window_conn": 26843545,
+            "recv_window_client": 67108864,
+            "max_conn_client": 4096,
+            "disable_mtu_discovery": false,
             "tls": {
                 "enabled": true,
                 "alpn": [
                     "h3"
                 ],
-                "certificate_path": "/root/fullchain.cer",
-                "key_path": "/root/private.key"
+                "certificate_path": "fullchain.cer",
+                "key_path": "private.key"
             }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
         }
     ]
 }
