@@ -115,8 +115,8 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             ],
             "tls": {
                 "enabled": true,
-                "certificate_path": "/root/fullchain.cer",
-                "key_path": "/root/private.key"
+                "certificate_path": "fullchain.cer",
+                "key_path": "private.key"
             }
         }
     ],
