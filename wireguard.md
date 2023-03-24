@@ -137,9 +137,9 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "local_address": [
                 "172.16.0.2/32"
             ],
-            "private_key": "",
+            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[0, 0, 0],
+            "reserved":[19, 152, 142],
             "mtu": 1280
         }
     ]
