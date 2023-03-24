@@ -14,6 +14,19 @@
         },
         "rules": [
             {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
                 "geoip": [
                     "cn"
                 ],
@@ -32,28 +45,28 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "", // 执行 ./sing-box generate uuid 生成
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成
                     "flow": "" // 留空
                 }
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "", // 客户端可用的 serverName 列表，暂不支持 * 通配符
+                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName 列表，暂不支持 * 通配符
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
+                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
                         "server_port": 443
                     },
-                    "private_key": "", // 执行 ./sing-box generate reality-keypair 生成
+                    "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，，填 "Privatekey" 的值
                     "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成
+                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成
                     ]
                 }
             },
             "transport": {
-                "type": "grpc", // 若客户端为 Xray-core，grpc 模式只支持 gun，即 "multiMode": false
-                "service_name": "grpc" // 指定服务名称，若客户端为 Clash Meta Kernel，不能留空
+                "type": "grpc",
+                "service_name": "grpc"
             }
         }
     ],
