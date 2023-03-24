@@ -49,14 +49,14 @@
     "inbounds": [
         {
             "type": "mixed",
-            "listen": "127.0.0.1",
-            "listen_port": 10808, // 本地http和socks5监听端口
+            "listen": "::",
+            "listen_port": 10808, // http和socks5监听端口
             "domain_strategy": "ipv4_only"
         },
         {
             "type": "mixed",
-            "listen": "127.0.0.1",
-            "listen_port": 10809, // 本地http和socks5监听端口
+            "listen": "::",
+            "listen_port": 10809, // http和socks5监听端口
             "domain_strategy": "ipv4_only"
         }
     ],
