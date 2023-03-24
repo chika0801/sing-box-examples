@@ -63,7 +63,7 @@
     "outbounds": [
         {
             "type": "shadowsocks",
-            "tag": "shadowsocks-out",
+            "tag": "proxy",
             "server": "",  // 服务端的域名或IP
             "server_port": 10000,
             "method": "2022-blake3-aes-128-gcm",
