@@ -14,6 +14,19 @@
         },
         "rules": [
             {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
                 "geoip": [
                     "cn"
                 ],
@@ -32,14 +45,14 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "", // 执行 ./sing-box generate uuid 生成
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
                     "flow": "xtls-rprx-vision"
                 }
             ],
             "tls": {
                 "enabled": true,
-                "certificate_path": "/root/fullchain.cer",
-                "key_path": "/root/private.key"
+                "certificate_path": "fullchain.cer",
+                "key_path": "private.key"
             }
         }
     ],
