@@ -1,5 +1,3 @@
-### [安装指南](https://github.com/chika0801/sing-box-install)
-
 ### 使用方法：
 
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`
