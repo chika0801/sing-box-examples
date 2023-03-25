@@ -14,19 +14,6 @@
         },
         "rules": [
             {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geoip": [
                     "cn"
                 ],
