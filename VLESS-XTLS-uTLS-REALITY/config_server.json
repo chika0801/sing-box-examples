@@ -14,19 +14,6 @@
         },
         "rules": [
             {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geoip": [
                     "cn"
                 ],
@@ -40,8 +27,6 @@
             "tag": "vless-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
             "domain_strategy": "ipv4_only",
             "users": [
                 {
