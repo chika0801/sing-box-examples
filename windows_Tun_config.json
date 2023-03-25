@@ -7,7 +7,7 @@
         "servers": [
             {
                 "tag": "global",
-                "address": "tcp://1.1.1.1",
+                "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "local",
                 "address_strategy": "ipv4_only",
                 "strategy": "ipv4_only",
@@ -96,7 +96,8 @@
                     "clash-meta.exe",
                     "IDMan.exe",
                     "Xshell.exe",
-                    "XshellCore.exe"
+                    "XshellCore.exe",
+                    "WinSCP.exe"
                 ],
                 "outbound": "dns-out"
             },
@@ -108,7 +109,8 @@
                     "clash-meta.exe",
                     "IDMan.exe",
                     "Xshell.exe",
-                    "XshellCore.exe"
+                    "XshellCore.exe",
+                    "WinSCP.exe"
                 ],
                 "outbound": "direct"
             }
@@ -127,7 +129,7 @@
             "endpoint_independent_nat": false,
             "stack": "gvisor",
             "sniff": true,
-            "sniff_override_destination": true
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
@@ -149,3 +151,4 @@
         }
     ]
 }
+
