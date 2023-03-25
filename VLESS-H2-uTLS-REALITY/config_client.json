@@ -15,24 +15,6 @@
         "rules": [
             {
                 "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "category-games@cn"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geosite": [
-                    "geolocation-!cn"
-                ],
-                "outbound": "proxy"
-            },
-            {
-                "geosite": [
                     "cn"
                 ],
                 "outbound": "direct"
