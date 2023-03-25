@@ -21,12 +21,6 @@
                 "outbound": "block"
             },
             {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geoip": [
                     "cn"
                 ],
@@ -40,8 +34,6 @@
             "tag": "hysteria-in",
             "listen": "::",
             "listen_port": 16384,
-            "sniff": true,
-            "sniff_override_destination": true,
             "domain_strategy": "ipv4_only",
             "up_mbps": 1000,
             "down_mbps": 1000,
