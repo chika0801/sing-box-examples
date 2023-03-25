@@ -21,12 +21,6 @@
                 "outbound": "block"
             },
             {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geoip": [
                     "cn"
                 ],
@@ -40,8 +34,7 @@
             "tag": "shadowsocks-in",
             "listen": "::",
             "listen_port": 10000,
-            "sniff": true,
-            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
             "method": "2022-blake3-aes-128-gcm",
             "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
         }
