@@ -15,7 +15,8 @@
         "rules": [
             {
                 "geosite": [
-                    "cn"
+                    "cn",
+                    "private"
                 ],
                 "outbound": "direct"
             },
