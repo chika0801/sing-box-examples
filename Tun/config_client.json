@@ -76,7 +76,8 @@
             },
             {
                 "geosite": [
-                    "cn"
+                    "cn",
+                    "private"
                 ],
                 "outbound": "direct"
             },
