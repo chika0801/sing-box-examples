@@ -62,7 +62,7 @@
             "packet_encoding": "xudp",
             "transport": {
                 "type": "grpc",
-                "service_name": "grpc"// 与服务端一致
+                "service_name": "grpc" // 与服务端一致
             }
         },
         {
