@@ -41,7 +41,7 @@
         {
             "type": "hysteria",
             "tag": "proxy",
-            "server": "", // 服务端的域名或IP
+            "server": "", // 服务端的域名或 IP
             "server_port": 16384,
             "up_mbps": 50,
             "down_mbps": 150,
