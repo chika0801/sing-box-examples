@@ -53,7 +53,7 @@
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "grpc" // 指定服务名称，若客户端为 Clash Meta Kernel，不能留空
+                "service_name": "grpc"
             }
         }
     ],
