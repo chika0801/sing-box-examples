@@ -72,19 +72,6 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         },
         "rules": [
             {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
                 "domain_keyword": [
                     "ip.sb"
                 ],
