@@ -33,13 +33,7 @@
         {
             "type": "mixed",
             "listen": "::",
-            "listen_port": 10808, // http和socks5监听端口
-            "domain_strategy": "ipv4_only"
-        },
-        {
-            "type": "mixed",
-            "listen": "::",
-            "listen_port": 10809, // http和socks5监听端口
+            "listen_port": 10000, // http和socks5监听端口
             "domain_strategy": "ipv4_only"
         }
     ],
