@@ -78,18 +78,10 @@
     {
       "type": "block",
       "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns"
     }
   ],
   "route": {
     "rules": [
-      {
-        "protocol": "dns",
-        "outbound": "dns"
-      },
       {
         "geosite": "cn",
         "geoip": [
@@ -103,12 +95,6 @@
         "outbound": "block"
       }
     ],
-    "geoip": {
-      "download_detour": "vless"
-    },
-    "geosite": {
-      "download_detour": "vless"
-    },
     "auto_detect_interface": true
   }
 }
