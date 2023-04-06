@@ -40,7 +40,8 @@
             {
                 "geosite": [
                     "category-games@cn",
-                    "cn"
+                    "cn",
+                    "private"
                 ],
                 "server": "local"
             }
