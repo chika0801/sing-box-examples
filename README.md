@@ -1,4 +1,4 @@
-### 使用方法：
+### Windows 使用方法：
 
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`
 2. 将客户端配置文件改名为 **config.json**，与 **sing-box.exe** 放在同一文件夹
