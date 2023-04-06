@@ -25,14 +25,6 @@
         ],
         "rules": [
             {
-                "ip_version": 4,
-                "domain_keyword": [
-                    "msftconnecttest.com",
-                    "msftncsi.com"
-                ],
-                "server": "local"
-            },
-            {
                 "geosite": [
                     "category-ads-all"
                 ],
