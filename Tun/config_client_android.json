@@ -1,0 +1,154 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+    "dns": {
+        "servers": [
+            {
+                "tag": "global",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "local",
+                "strategy": "prefer_ipv6", // 若服务端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "proxy"
+            },
+            {
+                "tag": "local",
+                "address": "https://223.5.5.5/dns-query",
+                "strategy": "prefer_ipv6", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "direct"
+            },
+            {
+                "tag": "block",
+                "address": "rcode://success"
+            }
+        ],
+        "rules": [
+            {
+                "ip_version": 4,
+                "domain_keyword": [
+                    "msftconnecttest.com",
+                    "msftncsi.com"
+                ],
+                "server": "local"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "server": "block",
+                "disable_cache": true
+            },
+            {
+                "geosite": [
+                    "category-games@cn",
+                    "cn",
+                    "private"
+                ],
+                "server": "local"
+            }
+        ]
+    },
+    "route": {
+        "geoip": {
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "geosite": {
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+        },
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-games@cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "outbound": "proxy"
+            },
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "auto_detect_interface": true
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "endpoint_independent_nat": true,
+            "stack": "gvisor",
+            "sniff": true,
+            "sniff_override_destination": false
+            "include_package": [
+                "com.google.android.gms", // Google 服务框架
+                "com.google.android.gsf", // Google 服务框架
+                "com.android.vending", // Google Play 商店
+                "com.android.chrome", // Chrome
+                "org.telegram.messenger" // Telegram
+            ]
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "tag": "proxy",
+            "server": "", // 服务端的域名或IP
+            "server_port": 443,
+            "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 与服务端一致
+            "flow": "xtls-rprx-vision",
+            "network": "tcp",
+            "tls": {
+                "enabled": true,
+                "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+             },
+            "packet_encoding": "xudp"
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        }
+    ]
+}
