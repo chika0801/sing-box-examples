@@ -129,7 +129,7 @@
             "auto_route": true,
             "strict_route": true,
             "endpoint_independent_nat": true,
-            "stack": "gvisor",
+            "stack": "system",
             "sniff": true,
             "sniff_override_destination": false
         }
