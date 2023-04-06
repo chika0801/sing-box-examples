@@ -54,15 +54,15 @@
                 "outbound": "dns-out"
             },
             {
-                "geosite": [
-                    "category-ads-all"
+                "network": "udp",
+                "port": [
+                    443
                 ],
                 "outbound": "block"
             },
             {
-                "network": "udp",
-                "port": [
-                    443
+                "geosite": [
+                    "category-ads-all"
                 ],
                 "outbound": "block"
             },
