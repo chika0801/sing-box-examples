@@ -1,3 +1,9 @@
+### Android 使用方法：
+
+1. 参考 [Tun服务端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_server.json) 示例，搭建一个简单服务端
+2. 加入 通知频道 [@yapnc](https://t.me/yapnc) ，下载 [测试版客户端](https://install.appcenter.ms/users/nekohasekai/apps/sfa/distribution_groups/publictest)
+3. 参考 [Tun客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_android.json) 示例，按需修改后导入 sing-box
+
 ### Windows 使用方法：
 
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`
