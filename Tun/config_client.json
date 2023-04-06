@@ -9,7 +9,7 @@
                 "tag": "global",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "local",
-                "strategy": "ipv4_only", // 若服务端准备好了 IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
