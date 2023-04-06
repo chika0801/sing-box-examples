@@ -99,8 +99,6 @@
                 "process_name": [
                     "xray.exe",
                     "hysteria.exe",
-                    "tuic.exe",
-                    "clash-meta.exe",
                     "IDMan.exe",
                     "Xshell.exe",
                     "XshellCore.exe",
@@ -112,8 +110,6 @@
                 "process_name": [
                     "xray.exe",
                     "hysteria.exe",
-                    "tuic.exe",
-                    "clash-meta.exe",
                     "IDMan.exe",
                     "Xshell.exe",
                     "XshellCore.exe",
