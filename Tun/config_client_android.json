@@ -110,7 +110,7 @@
             "stack": "gvisor",
             "sniff": true,
             "sniff_override_destination": false
-            "include_package": [ // 限制被路由的 Android 应用包名，应用包名可使用 LibCheck 查看，若不写 "include_package" 表示代理全部应用
+            "include_package": [ // 代理的 Android 应用包名，应用包名可使用 LibCheck 查看，若不写 "include_package" 表示代理全部应用
                 "com.google.android.gms", // Google 服务框架
                 "com.google.android.gsf", // Google 服务框架
                 "com.android.vending", // Google Play 商店
