@@ -44,9 +44,7 @@
                 ],
                 "server": "local"
             }
-        ],
-        "disable_cache": false,
-        "disable_expire": false
+        ]
     },
     "route": {
         "geoip": {
