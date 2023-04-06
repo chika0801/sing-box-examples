@@ -7,14 +7,14 @@
         "servers": [
             {
                 "tag": "global",
-                "address": "https://1.1.1.1/dns-query",
+                "address": "1.1.1.1",
                 "address_resolver": "local",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
                 "tag": "local",
-                "address": "https://223.5.5.5/dns-query",
+                "address": "223.5.5.5",
                 "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
