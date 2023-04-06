@@ -128,7 +128,7 @@
             "inet6_address": "fdfe:dcba:9876::1/126",
             "mtu": 9000,
             "auto_route": true,
-            "strict_route": true,
+            "strict_route": false,
             "endpoint_independent_nat": true,
             "stack": "system",
             "sniff": true,
