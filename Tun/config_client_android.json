@@ -84,6 +84,17 @@
                     "private"
                 ],
                 "outbound": "direct"
+            },
+            {
+                "network": "udp",
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "network": "udp",
+                "outbound": "proxy"
             }
         ],
         "auto_detect_interface": true
