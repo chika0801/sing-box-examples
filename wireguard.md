@@ -60,14 +60,6 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         "timestamp": true
     },
     "route": {
-        "geoip": {
-            "path": "geoip.db",
-            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
-        },
-        "geosite": {
-            "path": "geosite.db",
-            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
-        },
         "rules": [
             {
                 "domain_keyword": [
