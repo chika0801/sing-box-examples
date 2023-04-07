@@ -6,8 +6,8 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 
 打开 **wireguard.json**，复制"private_key"的值，粘贴到"private_key": "",处，复制"reserved"的值，粘贴到"reserved":[0, 0, 0],处
 
+**"outbounds"**
 ```
-    "outbounds": [
         {
             "type": "wireguard",
             "tag": "wireguard-out",
@@ -21,13 +21,12 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "reserved":[0, 0, 0],
             "mtu": 1280
         }
-    ]
 ```
 
-编辑 **/root/sing-box_config.json**，按需增加"route"和"outbounds"的内容（注意检查json语法），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
+编辑 **/root/sing-box_config.json**，按需增加 **"route"** 和 **"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
 
+**"route"**
 ```
-    "route": {
         "geoip": {
             "path": "geoip.db",
             "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
@@ -50,7 +49,6 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                 "outbound": "wireguard-out"
             }
         ]
-    }
 ```
 
 **VLESS-XTLS-Vision** 配置示例
