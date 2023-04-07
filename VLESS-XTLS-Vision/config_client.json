@@ -37,7 +37,6 @@
             "server_port": 443,
             "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 与服务端一致
             "flow": "xtls-rprx-vision",
-            "network": "tcp",
             "tls": {
                 "enabled": true,
                 "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
