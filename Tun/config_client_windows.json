@@ -9,13 +9,13 @@
                 "tag": "global",
                 "address": "tcp://1.1.1.1",
                 "address_resolver": "local",
-                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6，个人不推荐用，可能遇到莫名现象
+                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
                 "tag": "local",
                 "address": "223.5.5.5",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6，个人不推荐用，可能遇到莫名现象
+                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
             {
@@ -24,14 +24,6 @@
             }
         ],
         "rules": [
-            {
-                "ip_version": 4,
-                "domain_keyword": [
-                    "msftconnecttest.com",
-                    "msftncsi.com"
-                ],
-                "server": "local"
-            },
             {
                 "geosite": [
                     "category-ads-all"
