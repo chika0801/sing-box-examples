@@ -62,13 +62,6 @@
                 "outbound": "dns-out"
             },
             {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            },
-            {
                 "geosite": [
                     "category-ads-all"
                 ],
@@ -97,6 +90,13 @@
                 "geoip": [
                     "cn",
                     "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "network": "udp",
+                "geoip": [
+                    "cn"
                 ],
                 "outbound": "direct"
             },
