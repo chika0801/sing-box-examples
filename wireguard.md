@@ -50,7 +50,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "domain_strategy": "ipv4_only",
 ```
 
-**VLESS-XTLS-uTLS-REALITY** 配置示例
+:exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
 ```
 {
