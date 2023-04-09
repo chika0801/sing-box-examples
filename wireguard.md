@@ -23,7 +23,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         }
 ```
 
-编辑 **/root/sing-box_config.json**，按需增加 **"route"** 和 **"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
+编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"outbounds"**，**"inbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
 
 **"route"**
 ```
@@ -41,6 +41,13 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                 "outbound": "wireguard-out"
             }
         ]
+```
+
+**"inbounds"**
+```
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
 ```
 
 **VLESS-XTLS-Vision** 配置示例
