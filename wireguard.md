@@ -73,9 +73,9 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "tag": "vless-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
+            "sniff": true,  // 建议使用此参数
+            "sniff_override_destination": true,  // 建议使用此参数
+            "domain_strategy": "ipv4_only",  // 建议使用此参数
             "users": [
                 {
                     "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
