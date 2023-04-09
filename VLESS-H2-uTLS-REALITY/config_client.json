@@ -33,7 +33,7 @@
         {
             "type": "vless",
             "tag": "proxy",
-            "server": "", // 服务端的域名或 IP
+            "server": "", // 服务端的 IP
             "server_port": 443,
             "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 与服务端一致
             "flow": "", // 留空
