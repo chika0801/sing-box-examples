@@ -86,13 +86,6 @@
                 "outbound": "direct"
             },
             {
-                "network": "udp",
-                "geoip": [
-                    "cn"
-                ],
-                "outbound": "direct"
-            },
-            {
                 "port": 53,
                 "process_name": [
                     "xray.exe",
