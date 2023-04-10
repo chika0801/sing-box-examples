@@ -23,14 +23,14 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         }
 ```
 
-编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"outbounds"**，**"inbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问ip.sb查看是否为Cloudflare的IP
+编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"outbounds"**，**"inbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问bgp.he.net查看是否为Cloudflare的IP
 
 **"route"**
 ```
         "rules": [
             {
                 "domain_keyword": [
-                    "ip.sb"
+                    "bgp.he.net"
                 ],
                 "geosite": [
                     "openai"
