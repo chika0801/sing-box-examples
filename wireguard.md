@@ -62,7 +62,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         "rules": [
             {
                 "domain_keyword": [
-                    "ip.sb"
+                    "bgp.he.net"
                 ],
                 "geosite": [
                     "openai"
