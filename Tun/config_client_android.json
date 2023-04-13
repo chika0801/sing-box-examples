@@ -6,20 +6,20 @@
     "dns": {
         "servers": [
             {
-                "tag": "global",
+                "tag": "dns_proxy",
                 "address": "tcp://1.1.1.1",
-                "address_resolver": "local",
+                "address_resolver": "dns_direct",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
-                "tag": "local",
+                "tag": "dns_direct",
                 "address": "https://223.5.5.5/dns-query",
                 "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
             {
-                "tag": "block",
+                "tag": "dns_block",
                 "address": "rcode://success"
             }
         ],
@@ -28,16 +28,27 @@
                 "geosite": [
                     "category-ads-all"
                 ],
-                "server": "block",
+                "server": "dns_block",
                 "disable_cache": true
             },
             {
                 "geosite": [
-                    "category-games@cn",
+                    "category-games@cn"
+                ],
+                "server": "dns_direct"
+            },
+            {
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "server": "dns_proxy"
+            },
+            {
+                "geosite": [
                     "cn",
                     "private"
                 ],
-                "server": "local"
+                "server": "dns_direct"
             }
         ]
     },
@@ -60,8 +71,19 @@
                 "outbound": "block"
             },
             {
-                "geosite": [
-                    "category-games@cn"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "category-games@cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "cn"
+                        ]
+                    }
                 ],
                 "outbound": "direct"
             },
@@ -72,8 +94,24 @@
                 "outbound": "proxy"
             },
             {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "cn"
+                        ]
+                    }
+                ],
+                "outbound": "direct"
+            },
+            {
                 "geosite": [
-                    "cn",
                     "private"
                 ],
                 "outbound": "direct"
@@ -128,7 +166,7 @@
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw", // 服务端执行 ./sing-box generate reality-keypair 生成，私钥对应的公钥，填 "PublicKey" 的值
+                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw", // 服务端执行 ./sing-box generate reality-keypair 生成，私钥对应的公钥，建议替换为你的值
                     "short_id": "6ba85179e30d4fc2" // 与服务端一致
                 }
             },
