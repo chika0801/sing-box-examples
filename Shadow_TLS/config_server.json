@@ -23,7 +23,7 @@
             "version": 3,
             "users": [
                 {
-                    "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
+                    "password": "3P+xaSaFiXsrQ1KCr2Xvxg=="
                 }
             ],
             "handshake": {
@@ -40,7 +40,7 @@
             "sniff_override_destination": true,
             "domain_strategy": "ipv4_only",
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg=="
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
         }
     ],
     "outbounds": [
