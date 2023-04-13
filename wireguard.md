@@ -1,4 +1,4 @@
-使用 **waro-go**，注册warp，导出wireguard配置
+使用 **warp-go**，注册warp，导出wireguard配置
 
 ```
 mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/warp-go_1.0.8_linux_amd64.tar.gz && tar -xzf ./warp/warp -C ./warp && cp ./warp/warp-go . && chmod 0755 warp-go && rm -r warp && ./warp-go --register && ./warp-go -export-singbox wireguard.json
