@@ -35,7 +35,7 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成，替换为你的 "uuid"
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成，替换为你的值
                     "flow": "xtls-rprx-vision"
                 }
             ],
@@ -50,7 +50,7 @@
                     },
                     "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，替换为你的 "PrivateKey"
                     "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成，替换为你的 "short_id"
+                        "6ba85179e30d4fc2" // 执行 openssl rand -hex 8 生成，替换为你的值
                     ]
                 }
             }
@@ -73,9 +73,9 @@
             "local_address": [
                 "172.16.0.2/32"
             ],
-            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=", // 替换为你的 "private_key"
+            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=", // 替换为你的值
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[19, 152, 142], // 替换为你的 "reserved"
+            "reserved":[19, 152, 142], // 替换为你的值
             "mtu": 1280
         }
     ]
