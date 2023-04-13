@@ -35,22 +35,22 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成，建议替换为你的值
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
                     "flow": "xtls-rprx-vision"
                 }
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName 列表，暂不支持 * 通配符，建议替换为你的值
+                "server_name": "www.lovelive-anime.jp",
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3、X25519 与 H2，域名非跳转用（主域名可能被用于跳转到 www），建议替换为你的值
+                        "server": "www.lovelive-anime.jp",
                         "server_port": 443
                     },
-                    "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，建议替换为你的值
-                    "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "6ba85179e30d4fc2" // 执行 openssl rand -hex 8 生成，建议替换为你的值
+                    "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU",
+                    "short_id": [
+                        "6ba85179e30d4fc2"
                     ]
                 }
             }
@@ -66,16 +66,16 @@
             "tag": "block"
         },
         {
-            "type": "wireguard", // 详见 https://github.com/chika0801/sing-box-examples/blob/main/wireguard.md
+            "type": "wireguard",
             "tag": "wireguard-out",
             "server": "engage.cloudflareclient.com",
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32"
             ],
-            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=", // 建议替换为你的值
+            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[19, 152, 142], // 建议替换为你的值
+            "reserved":[19, 152, 142],
             "mtu": 1280
         }
     ]
