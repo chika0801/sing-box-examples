@@ -1,0 +1,75 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000, // 本地http和socks5监听端口
+            "domain_strategy": "ipv4_only"
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "shadowsocks",
+            "tag": "proxy",
+            "detour": "shadowtls-out",
+            "method": "2022-blake3-aes-128-gcm",
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==",
+            "udp_over_tcp": {
+                "enabled": true,
+                "version": 2
+            },
+            "multiplex": {
+                "enabled": true,
+                "protocol": "smux",
+                "max_connections": 4,
+                "min_streams": 4
+            }
+        },
+        {
+            "type": "shadowtls",
+            "tag": "shadowtls-out",
+            "server": "", // 服务端的 IP
+            "server_port": 443,
+            "version": 3,
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==", // 与服务端一致
+            "tls": {
+                "enabled": true,
+                "server_name": "www.lovelive-anime.jp", // 与服务端一致
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ]
+}
