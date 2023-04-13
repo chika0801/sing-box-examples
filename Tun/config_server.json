@@ -73,9 +73,9 @@
             "local_address": [
                 "172.16.0.2/32"
             ],
-            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=",
+            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=", // 建议替换为你的 "private_key"
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[19, 152, 142],
+            "reserved":[19, 152, 142], // 建议替换为你的 "reserved"
             "mtu": 1280
         }
     ]
