@@ -171,19 +171,19 @@
             "tag": "proxy",
             "server": "", // 服务端的 IP
             "server_port": 443,
-            "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 与服务端一致
+            "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 与服务端一致
+                "server_name": "www.lovelive-anime.jp",
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw", // 服务端执行 ./sing-box generate reality-keypair 生成，私钥对应的公钥，建议替换为你的值
-                    "short_id": "6ba85179e30d4fc2" // 与服务端一致
+                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
+                    "short_id": "6ba85179e30d4fc2"
                 }
             },
             "packet_encoding": "xudp"
