@@ -23,7 +23,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         }
 ```
 
-编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"outbounds"**，**"inbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问bgp.he.net查看是否为Cloudflare的IP
+编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"inbounds"**，**"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问bgp.he.net查看是否为Cloudflare的IP
 
 **"route"**
 ```
@@ -45,9 +45,9 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 
 **"inbounds"**
 ```
-            "sniff": true,
-            "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
+            "sniff": true, // 建议使用此参数
+            "sniff_override_destination": true, // 建议使用此参数
+            "domain_strategy": "ipv4_only", // 建议使用此参数
 ```
 
 :exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
@@ -80,9 +80,9 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "tag": "vless-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true, // 建议使用此参数
-            "sniff_override_destination": true, // 建议使用此参数
-            "domain_strategy": "ipv4_only", // 建议使用此参数
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
             "users": [
                 {
                     "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
