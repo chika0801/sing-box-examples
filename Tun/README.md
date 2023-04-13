@@ -2,13 +2,13 @@
 
 :exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
-**Android 使用方法：**
+**Android 客户端使用方法：**
 
 1. 参考 [Tun服务端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_server.json) 示例，搭建一个简单服务端
 2. 关注 [@yapnc](https://t.me/yapnc) 通知频道，下载 [测试版客户端](https://install.appcenter.ms/users/nekohasekai/apps/sfa/distribution_groups/publictest)
 3. 参考 [Tun客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_android.json) 示例，按需修改后导入 **sing-box**
 
-**Windows 使用方法：**
+**Windows 客户端使用方法：**
 
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`
 2. 将客户端配置文件改名为 **config.json**，与 **sing-box.exe** 放在同一文件夹
