@@ -66,7 +66,7 @@
             "tag": "block"
         },
         {
-            "type": "wireguard", // 参考 https://github.com/chika0801/sing-box-examples/blob/main/wireguard.md
+            "type": "wireguard", // 详见 https://github.com/chika0801/sing-box-examples/blob/main/wireguard.md
             "tag": "wireguard-out",
             "server": "engage.cloudflareclient.com",
             "server_port": 2408,
