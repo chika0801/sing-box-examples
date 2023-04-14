@@ -36,10 +36,6 @@
             "detour": "shadowtls-out",
             "method": "2022-blake3-aes-128-gcm",
             "password": "3P+xaSaFiXsrQ1KCr2Xvxg==", // 与服务端一致
-            "udp_over_tcp": {
-                "enabled": false,
-                "version": 2
-            },
             "multiplex": {
                 "enabled": true,
                 "protocol": "smux",
