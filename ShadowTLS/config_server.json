@@ -30,7 +30,7 @@
                 }
             ],
             "handshake": {
-                "server": "www.lovelive-anime.jp",
+                "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3
                 "server_port": 443
             },
             "strict_mode": true
