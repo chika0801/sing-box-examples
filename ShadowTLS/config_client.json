@@ -58,7 +58,7 @@
             "password": "3P+xaSaFiXsrQ1KCr2Xvxg==",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
+                "server_name": "www.lovelive-anime.jp", // 与服务端一致
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
