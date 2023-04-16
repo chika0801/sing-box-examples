@@ -28,7 +28,7 @@
             "listen": "::",
             "listen_port": 10000, // 本地http和socks5监听端口
             "domain_strategy": "ipv4_only",
-            "set_system_proxy": true // 启动时自动设置系统代理，停止时自动清理
+            "set_system_proxy": false // 启动时自动设置系统代理，停止时自动清理
         }
     ],
     "outbounds": [
