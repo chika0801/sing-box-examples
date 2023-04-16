@@ -54,9 +54,7 @@
             },
             "packet_encoding": "xudp",
             "transport": {
-                "type": "http",
-                "idle_timeout": "15s",
-                "ping_timeout": "15s"
+                "type": "http"
             }
         },
         {
