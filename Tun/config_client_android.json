@@ -98,8 +98,9 @@
                     },
                     {
                         "geoip": [
-                            "!cn"
-                        ]
+                            "cn"
+                        ],
+                        "invert": true
                     }
                 ],
                 "outbound": "proxy"
