@@ -88,8 +88,19 @@
                 "outbound": "direct"
             },
             {
-                "geosite": [
-                    "geolocation-!cn"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "geolocation-!cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "!cn"
+                        ]
+                    }
                 ],
                 "outbound": "proxy"
             },
