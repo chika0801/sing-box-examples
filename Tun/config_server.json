@@ -7,6 +7,9 @@
         "geoip": {
             "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
         },
+        "geosite": {
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+        },
         "rules": [
             {
                 "network": "udp",
