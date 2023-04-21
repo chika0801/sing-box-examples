@@ -12,8 +12,8 @@ apt install -y build-essential
 ```
 
 ```
-go env
 go env -w CGO_ENABLED=1
+go env
 ```
 
 **linux-amd64**
