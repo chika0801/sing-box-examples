@@ -3,7 +3,7 @@
 1. 下载程序（**linux-amd64**）
 
 ```
-curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.2.4/sing-box-1.2.4-linux-amd64.tar.gz && tar -xzf /root/sb && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box
+curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.2.5/sing-box-1.2.5-linux-amd64.tar.gz && tar -xzf /root/sb && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box
 ```
 
 2. 下载配置
