@@ -45,10 +45,9 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 
 **"inbounds"**
 ```jsonc
-            // 建议使用此参数
-            "sniff": true,
-            "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
+            "sniff": true, // 建议使用此参数
+            "sniff_override_destination": true, // 建议使用此参数
+            "domain_strategy": "ipv4_only", // 建议使用此参数
 ```
 
 :exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
