@@ -19,16 +19,10 @@
                 "outbound": "block"
             },
             {
-                "domain_keyword": [
-                    "ip.sb"
-                ],
-                "geosite": [
-                    "openai"
-                ],
                 "geoip": [
                     "cn"
                 ],
-                "outbound": "wireguard-out"
+                "outbound": "block"
             }
         ]
     },
@@ -72,19 +66,6 @@
         {
             "type": "block",
             "tag": "block"
-        },
-        {
-            "type": "wireguard",
-            "tag": "wireguard-out",
-            "server": "engage.cloudflareclient.com",
-            "server_port": 2408,
-            "local_address": [
-                "172.16.0.2/32"
-            ],
-            "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=",
-            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[19, 152, 142],
-            "mtu": 1280
         }
     ]
 }
