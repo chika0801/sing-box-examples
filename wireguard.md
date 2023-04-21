@@ -44,15 +44,16 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 ```
 
 **"inbounds"**
-```
-            "sniff": true, // 建议使用此参数
-            "sniff_override_destination": true, // 建议使用此参数
-            "domain_strategy": "ipv4_only", // 建议使用此参数
+```jsonc
+            // 建议使用此参数
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
 ```
 
 :exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
-```
+```jsonc
 {
     "log": {
         "level": "info",
@@ -123,8 +124,10 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
             "local_address": [
                 "172.16.0.2/32"
             ],
+            // 替换成你的 "private_key"
             "private_key": "sOL9HjJEqi7Xd0gtm6C2CWoDtsxXXYpJyj10Pi10KWM=",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            // 替换成你的 "reserved"
             "reserved":[19, 152, 142],
             "mtu": 1280
         }
