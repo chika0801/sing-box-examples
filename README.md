@@ -15,7 +15,7 @@ curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-install/main/sing-box.service && systemctl daemon-reload
+curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-examples/main/sing-box.service && systemctl daemon-reload
 ```
 
 4. 启动程序
