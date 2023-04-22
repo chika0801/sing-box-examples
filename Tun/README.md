@@ -6,7 +6,7 @@
 **注意事项：**
 
 1. 默认 sing-box 使用最新版本。
-2. 协议组合用 VLESS-XTLS-uTLS-REALITY 举例，如需改用其它协议组合，请自行参照修改。
+2. 协议组合用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
 **Android 客户端使用方法：**
 
