@@ -20,7 +20,7 @@
 3. 右键点击 **sing-box.exe**，选择兼容性，选择以管理员身份运行此程序，确定
 4. 运行批处理文件，同意用户账户控制，启动 **sing-box**
 
-参考链接
+**参考链接**
 
 1. https://sing-box.sagernet.org/zh/faq/fakeip/
 
