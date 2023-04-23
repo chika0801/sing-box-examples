@@ -1,0 +1,47 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geoip": [
+                    "cn"
+                ],
+                "outbound": "block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "trojan",
+            "tag": "trojan-in",
+            "listen": "::",
+            "listen_port": 443,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
+            "users": [
+                {
+                    "password": "chika"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ]
+}
