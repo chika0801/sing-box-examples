@@ -138,23 +138,13 @@
             {
                 "port": 53,
                 "process_name": [
-                    "xray.exe",
-                    "hysteria.exe",
-                    "IDMan.exe",
-                    "Xshell.exe",
-                    "XshellCore.exe",
-                    "WinSCP.exe"
+                    "xray.exe"
                 ],
                 "outbound": "dns-out"
             },
             {
                 "process_name": [
-                    "xray.exe",
-                    "hysteria.exe",
-                    "IDMan.exe",
-                    "Xshell.exe",
-                    "XshellCore.exe",
-                    "WinSCP.exe"
+                    "xray.exe"
                 ],
                 "outbound": "direct"
             }
