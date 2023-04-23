@@ -39,6 +39,13 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                     "cn"
                 ],
                 "outbound": "wireguard-out"
+            },
+            {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
             }
         ]
 ```
@@ -71,6 +78,13 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                     "cn"
                 ],
                 "outbound": "wireguard-out"
+            },
+            {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
             }
         ]
     },
