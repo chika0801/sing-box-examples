@@ -1,0 +1,66 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 10000,
+            "domain_strategy": "ipv4_only",
+            "set_system_proxy": false
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "trojan",
+            "tag": "proxy",
+            "server": "", // 服务端的域名或 IP
+            "server_port": 443,
+            "password": "chika", // 与服务端一致
+            "tls": {
+                "enabled": true,
+                "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+             },
+            "multiplex": {
+                "enabled": true,
+                "protocol": "h2mux",
+                "max_connections": 4,
+                "min_streams": 4,
+                "padding": true
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ]
+}
