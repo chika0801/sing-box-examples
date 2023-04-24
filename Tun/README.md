@@ -1,3 +1,7 @@
+**快速安装**
+
+1. 参考[VLESS-XTLS-uTLS-REALITY 使用 sing-box 安装指南](https://github.com/chika0801/sing-box-examples)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_server.json)。
+
 **工作流程**
 
 1. 由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得DNS解析前的域名（直接请求的IP无域名）。IP和域名作为条件，按预设的规则进行分流。客户端发送到服务端的是 **IP**，并且不使用 **"sniff_override_destination"** 参数，不会把IP还原成域名。
