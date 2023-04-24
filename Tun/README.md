@@ -1,6 +1,6 @@
 **快速安装**
 
-1. 参考[VLESS-XTLS-uTLS-REALITY 使用 sing-box 安装指南](https://github.com/chika0801/sing-box-examples/blob/main/README.md)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_server.json)。
+1. 参考[VLESS-XTLS-uTLS-REALITY 使用 sing-box 安装指南](https://github.com/chika0801/sing-box-examples/blob/main/README.md)，使用这个[sing-box 服务端配置文件](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_server.json)。
 
 **工作流程**
 
