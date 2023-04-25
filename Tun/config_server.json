@@ -43,11 +43,11 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.apple.com",
+                "server_name": "www.lovelive-anime.jp",
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "www.apple.com",
+                        "server": "www.lovelive-anime.jp",
                         "server_port": 443
                     },
                     "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU",
