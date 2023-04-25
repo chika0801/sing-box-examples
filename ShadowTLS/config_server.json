@@ -10,6 +10,13 @@
                     "cn"
                 ],
                 "outbound": "block"
+            },
+            {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
             }
         ]
     },
@@ -30,7 +37,7 @@
                 }
             ],
             "handshake": {
-                "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3
+                "server": "www.apple.com", // 目标网站最低标准：国外网站，支持 TLSv1.3
                 "server_port": 443
             },
             "strict_mode": true
