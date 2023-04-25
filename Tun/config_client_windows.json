@@ -177,7 +177,7 @@
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
+                "server_name": "www.apple.com",
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
