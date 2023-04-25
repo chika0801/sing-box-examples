@@ -41,7 +41,7 @@
             "flow": "", // 留空
             "tls": {
                 "enabled": true,
-                "server_name": "www.apple.com", // 与服务端一致
+                "server_name": "www.lovelive-anime.jp", // 与服务端一致
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome" // 使用 uTLS 库模拟客户端 TLS 指纹
