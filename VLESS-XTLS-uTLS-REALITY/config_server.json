@@ -37,11 +37,11 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.apple.com", // 客户端可用的 serverName 列表，暂不支持 * 通配符
+                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName 列表，暂不支持 * 通配符
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "www.apple.com", // 目标网站最低标准：国外网站，支持 TLSv1.3、X25519 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
+                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3、X25519 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
                         "server_port": 443
                     },
                     "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，填 "PrivateKey" 的值
