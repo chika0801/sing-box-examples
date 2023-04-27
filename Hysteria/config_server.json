@@ -6,15 +6,16 @@
     "route": {
         "rules": [
             {
-                "geoip": [
-                    "cn"
+                "network": "udp",
+                "port": [
+                    443
                 ],
                 "outbound": "block"
             },
             {
-                "network": "udp",
-                "port": [
-                    443
+                "geoip": [
+                    "cn",
+                    "private"
                 ],
                 "outbound": "block"
             }
