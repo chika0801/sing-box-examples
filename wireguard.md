@@ -29,6 +29,13 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
 ```
         "rules": [
             {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
                 "domain_keyword": [
                     "bgp.he.net"
                 ],
@@ -41,9 +48,8 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
                 "outbound": "wireguard-out"
             },
             {
-                "network": "udp",
-                "port": [
-                    443
+                "geoip": [
+                    "private"
                 ],
                 "outbound": "block"
             }
