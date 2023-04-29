@@ -11,7 +11,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         {
             "type": "wireguard",
             "tag": "wireguard-out",
-            "server": "engage.cloudflareclient.com",
+            "server": "162.159.192.1",
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32"
@@ -144,7 +144,7 @@ mkdir warp && curl -sLo ./warp/warp https://gitlab.com/ProjectWARP/warp-go/-/rel
         {
             "type": "wireguard",
             "tag": "wireguard-out",
-            "server": "engage.cloudflareclient.com",
+            "server": "162.159.192.1",
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32"
