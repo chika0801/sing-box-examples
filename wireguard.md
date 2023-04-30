@@ -66,7 +66,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "domain_strategy": "ipv4_only",
 ```
 
-:exclamation:配置示例用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
+**配置示例**
 
 ```jsonc
 {
@@ -104,36 +104,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
         ]
     },
     "inbounds": [
-        {
-            "type": "vless",
-            "tag": "vless-in",
-            "listen": "::",
-            "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
-            "users": [
-                {
-                    "uuid": "chika",
-                    "flow": "xtls-rprx-vision"
-                }
-            ],
-            "tls": {
-                "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
-                "reality": {
-                    "enabled": true,
-                    "handshake": {
-                        "server": "www.lovelive-anime.jp",
-                        "server_port": 443
-                    },
-                    "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU",
-                    "short_id": [
-                        "6ba85179e30d4fc2"
-                    ]
-                }
-            }
-        }
+    // 此处省略
     ],
     "outbounds": [
         {
