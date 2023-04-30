@@ -32,7 +32,7 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "password": "chika"
+                    "password": "chika" // 认证密码
                 }
             ],
             "tls": {
