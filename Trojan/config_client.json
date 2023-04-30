@@ -37,13 +37,13 @@
             "tag": "proxy",
             "server": "", // 服务端的域名或 IP
             "server_port": 443,
-            "password": "chika",
+            "password": "chika", // 与服务端一致
             "tls": {
                 "enabled": true,
                 "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
                 "utls": {
                     "enabled": true,
-                    "fingerprint": "chrome" // 使用 uTLS 库模拟客户端 TLS 指纹
+                    "fingerprint": "chrome"
                 }
             },
             "multiplex": {
