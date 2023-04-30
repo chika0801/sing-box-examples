@@ -5,8 +5,8 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
 ```
 
 - 复制输出的 IPv6 地址，替换下面配置中的 `2606:4700::/128`
-- 复制输出的 `private_key` 值，粘贴到 `private_key` 后的`""`中
-- 复制输出的 `reserved` 值，粘贴到 `reserved` 后的`[]`中
+- 复制输出的 `private_key` 值，粘贴到 `private_key` 后的 `""` 中
+- 复制输出的 `reserved` 值，粘贴到 `reserved` 后的 `[]` 中
 
 **"outbounds"**
 ```jsonc
