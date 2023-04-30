@@ -32,7 +32,7 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成
+                    "uuid": "chika", // 执行 ./sing-box generate uuid 生成
                     "flow": "xtls-rprx-vision"
                 }
             ],
