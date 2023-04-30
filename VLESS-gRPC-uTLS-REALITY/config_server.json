@@ -32,7 +32,7 @@
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 ./sing-box generate uuid 生成
+                    "uuid": "chika", // 或执行 ./sing-box generate uuid 生成
                     "flow": "" // 留空
                 }
             ],
@@ -47,7 +47,7 @@
                     },
                     "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，填 "Privatekey" 的值
                     "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成
+                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 ./sing-box generate rand --hex 8 生成
                     ]
                 }
             },
