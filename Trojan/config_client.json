@@ -35,20 +35,15 @@
         {
             "type": "trojan",
             "tag": "proxy",
-            "server": "", // 服务端的 IP
+            "server": "", // 服务端的域名或 IP
             "server_port": 443,
             "password": "chika",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 与服务端一致
+                "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome" // 使用 uTLS 库模拟客户端 TLS 指纹
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw", // 服务端执行 ./sing-box generate reality-keypair 生成，私钥对应的公钥，填 "PublicKey" 的值
-                    "short_id": "6ba85179e30d4fc2" // 与服务端一致
                 }
             },
             "multiplex": {
