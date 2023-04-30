@@ -37,18 +37,11 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName 列表，暂不支持 * 通配符
-                "reality": {
-                    "enabled": true,
-                    "handshake": {
-                        "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3、X25519 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
-                        "server_port": 443
-                    },
-                    "private_key": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 ./sing-box generate reality-keypair 生成，填 "PrivateKey" 的值
-                    "short_id": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成
-                    ]
-                }
+                "alpn": [
+                    "h3"
+                ],
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
             }
         }
     ],
