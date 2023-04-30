@@ -114,7 +114,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "domain_strategy": "ipv4_only",
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
+                    "uuid": "chika",
                     "flow": "xtls-rprx-vision"
                 }
             ],
