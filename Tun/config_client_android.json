@@ -150,7 +150,7 @@
             "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
-            "endpoint_independent_nat": true,
+            "endpoint_independent_nat": false,
             "stack": "gvisor",
             "sniff": true,
             "sniff_override_destination": false,
