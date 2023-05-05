@@ -17,13 +17,6 @@
                     443
                 ],
                 "outbound": "block"
-            },
-            {
-                "geoip": [
-                    "cn",
-                    "private"
-                ],
-                "outbound": "block"
             }
         ]
     },
@@ -35,7 +28,6 @@
             "listen_port": 443,
             "sniff": false,
             "sniff_override_destination": false,
-            "domain_strategy": "ipv4_only",
             "users": [
                 {
                     "uuid": "chika",
