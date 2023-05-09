@@ -21,8 +21,8 @@
             "listen_port": 443,
             "sniff": false,
             "sniff_override_destination": false,
-            "up_mbps": 1000,
-            "down_mbps": 1000,
+            "up_mbps": 150,
+            "down_mbps": 50,
             "users": [
                 {
                     "auth_str": "chika" // 认证密码
