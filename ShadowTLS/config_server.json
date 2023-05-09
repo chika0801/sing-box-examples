@@ -6,16 +6,8 @@
     "route": {
         "rules": [
             {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            },
-            {
-                "geoip": [
-                    "cn",
-                    "private"
+                "protocol": [
+                    "quic"
                 ],
                 "outbound": "block"
             }
@@ -27,9 +19,8 @@
             "tag": "shadowtls-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
-            "domain_strategy": "ipv4_only",
+            "sniff": false,
+            "sniff_override_destination": false,
             "detour": "shadowsocks-in",
             "version": 3,
             "users": [
