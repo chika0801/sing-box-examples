@@ -10,7 +10,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/warp-go_1.0.8_linux_amd64.tar.gz | tar -zxf- warp-go && chmod +x warp-go && ./warp-go -register > /dev/null && ./warp-go -export-singbox wg.json > /dev/null && grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]' wg.json && rm warp-go warp.conf wg.json
 ```
 
-- 复制输出的 IPv6 地址，替换下面配置中的 `2606:4700::/128`
+- 复制输出的 IPv6 地址，替换下面配置中的 `2606:4700::`
 - 复制输出的 `private_key` 值，粘贴到下面配置中 `private_key` 后的 `""` 中
 - 复制输出的 `reserved` 值，粘贴到下面配置中 `reserved` 后的 `[]` 中
 
