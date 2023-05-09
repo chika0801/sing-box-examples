@@ -21,6 +21,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "tag": "wireguard-out",
             "server": "162.159.192.1",
             "server_port": 2408,
+            "interface_name": "warp",
             "local_address": [
                 "172.16.0.2/32",
                 "2606:4700::/128" // 粘贴你获得的 warp IPv6 地址，结尾加 /128
@@ -106,6 +107,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "tag": "wireguard-out",
             "server": "162.159.192.1",
             "server_port": 2408,
+            "interface_name": "warp",
             "local_address": [
                 "172.16.0.2/32",
                 "/128" // 粘贴你获得的 warp IPv6 地址，结尾加 /128
