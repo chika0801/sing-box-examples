@@ -7,14 +7,14 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "tcp://1.1.1.1",
+                "address": "tls://1.1.1.1",
                 "address_resolver": "dns_direct",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
-                "address": "https://223.5.5.5/dns-query",
+                "address": "tls://223.6.6.6",
                 "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
@@ -24,6 +24,12 @@
             }
         ],
         "rules": [
+            {
+                "domain_keyword": [
+                    "jsdelivr.net"
+                ],
+                "server": "dns_direct"
+            },
             {
                 "geosite": [
                     "category-ads-all"
@@ -54,10 +60,12 @@
     },
     "route": {
         "geoip": {
-            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+            "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db",
+            "download_detour": "direct"
         },
         "geosite": {
-            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+            "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
+            "download_detour": "direct"
         },
         "rules": [
             {
@@ -160,7 +168,7 @@
             "inet6_address": "fdfe:dcba:9876::1/126",
             "mtu": 9000,
             "auto_route": true,
-            "strict_route": true,
+            "strict_route": false,
             "endpoint_independent_nat": false,
             "stack": "system",
             "sniff": true,
