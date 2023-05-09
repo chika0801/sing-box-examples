@@ -24,12 +24,6 @@
         ],
         "rules": [
             {
-                "domain_keyword": [
-                    "jsdelivr.net"
-                ],
-                "server": "dns_direct"
-            },
-            {
                 "geosite": [
                     "category-ads-all"
                 ],
@@ -63,6 +57,12 @@
                 ],
                 "rewrite_ttl": 300,
                 "server": "dns_proxy"
+            },
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_direct"
             }
         ],
         "fakeip": {
