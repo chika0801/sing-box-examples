@@ -25,12 +25,6 @@
         ],
         "rules": [
             {
-                "domain_keyword": [
-                    "jsdelivr.net"
-                ],
-                "server": "dns_direct"
-            },
-            {
                 "geosite": [
                     "category-ads-all"
                 ],
@@ -53,6 +47,12 @@
                 "geosite": [
                     "cn",
                     "private"
+                ],
+                "server": "dns_direct"
+            },
+            {
+                "outbound": [
+                    "any"
                 ],
                 "server": "dns_direct"
             }
