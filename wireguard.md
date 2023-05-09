@@ -83,9 +83,8 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
     "route": {
         "rules": [
             {
-                "network": "udp",
-                "port": [
-                    443
+                "protocol": [
+                    "quic"
                 ],
                 "outbound": "block"
             },
@@ -96,16 +95,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
                 "geosite": [
                     "openai"
                 ],
-                "geoip": [
-                    "cn"
-                ],
                 "outbound": "wireguard-out"
-            },
-            {
-                "geoip": [
-                    "private"
-                ],
-                "outbound": "block"
             }
         ]
     },
@@ -128,7 +118,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700::/128" // 粘贴你获得的 warp IPv6 地址
+                "2606:4700::/128" // 粘贴你获得的 warp IPv6 地址，结尾加 /128
             ],
             "private_key": "", // 粘贴你的 "private_key" 值
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
