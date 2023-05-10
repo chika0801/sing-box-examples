@@ -7,8 +7,9 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "fakeip",
-                "strategy": "prefer_ipv6",
+                "address": "tls://1.1.1.1",
+                "address_resolver": "dns_direct",
+                "strategy": "ipv4_only",
                 "detour": "proxy"
             },
             {
@@ -20,6 +21,12 @@
             {
                 "tag": "dns_block",
                 "address": "rcode://success"
+            },
+            {
+                "tag": "dns_fakeip",
+                "address": "fakeip",
+                "strategy": "prefer_ipv6",
+                "detour": "proxy"
             }
         ],
         "rules": [
@@ -37,11 +44,23 @@
                 "server": "dns_direct"
             },
             {
-                "geosite": [
-                    "geolocation-!cn"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "geolocation-!cn"
+                        ]
+                    },
+                    {
+                        "query_type": [
+                            "A",
+                            "AAAA"
+                        ]
+                    }
                 ],
                 "rewrite_ttl": 300,
-                "server": "dns_proxy"
+                "server": "dns_fakeip"
             },
             {
                 "geosite": [
@@ -51,12 +70,12 @@
                 "server": "dns_direct"
             },
             {
-                "source_ip_cidr": [
-                    "172.19.0.1/30",
-                    "fdfe:dcba:9876::1/126"
+                "query_type": [
+                    "A",
+                    "AAAA"
                 ],
                 "rewrite_ttl": 300,
-                "server": "dns_proxy"
+                "server": "dns_fakeip"
             },
             {
                 "outbound": [
