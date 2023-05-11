@@ -38,6 +38,12 @@
                 "disable_cache": true
             },
             {
+                "protocol": [
+                    "quic"
+                ],
+                "outbound": "block"
+            },
+            {
                 "geosite": [
                     "category-games@cn"
                 ],
