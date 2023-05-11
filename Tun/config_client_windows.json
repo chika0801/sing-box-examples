@@ -73,6 +73,12 @@
                 "outbound": "dns-out"
             },
             {
+                "protocol": [
+                    "quic"
+                ],
+                "outbound": "block"
+            },
+            {
                 "geosite": [
                     "category-ads-all"
                 ],
