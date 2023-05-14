@@ -150,13 +150,6 @@
                 "outbound": "direct"
             },
             {
-                "port": 53,
-                "process_name": [
-                    "xray.exe"
-                ],
-                "outbound": "dns-out"
-            },
-            {
                 "process_name": [
                     "xray.exe"
                 ],
