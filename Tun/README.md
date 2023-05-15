@@ -61,7 +61,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
             {
                 "tag": "dns_direct",
                 "address": "dhcp://auto",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only",
                 "detour": "direct"
             },
 ```
