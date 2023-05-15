@@ -143,7 +143,7 @@
                 "outbound": "direct"
             },
             {
-                "process_name": [
+                "process_name": [ // 直连的 Windows 可执行程序
                     "xray.exe"
                 ],
                 "outbound": "direct"
