@@ -43,7 +43,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ### 注意事项：
 
-1. 协议组合用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
+1. 需要自行粘贴你的客户端和服务端配置到相应位置。
 
 ### Android 客户端使用方法：
 
