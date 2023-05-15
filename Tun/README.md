@@ -38,12 +38,33 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 ### 工作流程
 
-1. 由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得DNS解析前的域名（直接请求的IP无域名）。IP和域名作为条件，按预设的规则进行分流。客户端发送到服务端的是 **IP**，并且不使用 **"sniff_override_destination"** 参数，不会把IP还原成域名。
+1. 由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行匹配并做DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得DNS解析前的域名（直接请求的IP无域名）。IP和域名作为条件，按预设的规则进行分流。客户端发送到服务端的是 **IP**，并且不使用 **"sniff_override_destination"** 参数，不会把IP还原成域名。
 2. 服务端接收到客户端发送来的 **IP**，并且不使用 **"sniff"** + **"sniff_override_destination"** 参数，不会把IP还原成域名。
 
 ### 注意事项：
 
 1. 需要自行粘贴你的客户端和服务端配置到相应位置。
+2. 以 Windows 客户端配置举例，若你的客户端配置中 **"server"** 是填的域名。只会命中 **"dns"** 里的如下规则，将使用系统默认DNS将域名解析成IP。
+
+```json
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_direct"
+            }
+```
+
+3. 若直连的 Windows 可执行程序，地址是填的域名。域名进入 **"dns"** 部分，按预设的规则进行匹配。通常不会命中任何DNS规则，便默认使用第1个DNS服务器，即使用系统默认DNS将域名解析成IP。
+
+```json
+            {
+                "tag": "dns_direct",
+                "address": "dhcp://auto",
+                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "direct"
+            },
+```
 
 ### Android 客户端使用方法：
 
