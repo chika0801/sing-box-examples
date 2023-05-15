@@ -63,7 +63,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
                 "address": "dhcp://auto",
                 "strategy": "ipv4_only",
                 "detour": "direct"
-            },
+            }
 ```
 
 ### Android 客户端使用方法：
