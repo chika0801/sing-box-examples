@@ -3,16 +3,6 @@
         "level": "info",
         "timestamp": true
     },
-    "route": {
-        "rules": [
-            {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            }
-        ]
-    },
     "inbounds": [
         {
             // 粘贴你的服务端配置
