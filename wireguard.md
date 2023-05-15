@@ -94,7 +94,7 @@ curl -Lso- https://gitlab.com/ProjectWARP/warp-go/-/releases/v1.0.8/downloads/wa
             "sniff": true,
             "sniff_override_destination": true,
             "domain_strategy": "prefer_ipv6",
-            // 此处省略
+            // 粘贴你的服务端配置
         }
     ],
     "outbounds": [
