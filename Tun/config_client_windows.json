@@ -6,17 +6,17 @@
     "dns": {
         "servers": [
             {
+                "tag": "dns_direct",
+                "address": "dhcp://auto",
+                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "direct"
+            },
+            {
                 "tag": "dns_proxy",
                 "address": "tls://1.1.1.1",
                 "address_resolver": "dns_direct",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
-            },
-            {
-                "tag": "dns_direct",
-                "address": "tls://223.6.6.6",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
-                "detour": "direct"
             },
             {
                 "tag": "dns_block",
@@ -44,13 +44,6 @@
                 "server": "dns_proxy"
             },
             {
-                "geosite": [
-                    "cn",
-                    "private"
-                ],
-                "server": "dns_direct"
-            },
-            {
                 "outbound": [
                     "any"
                 ],
@@ -60,11 +53,11 @@
     },
     "route": {
         "geoip": {
-            "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db",
+            "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geoip@release/geoip.db",
             "download_detour": "direct"
         },
         "geosite": {
-            "download_url": "https://cdn.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
+            "download_url": "https://fastly.jsdelivr.net/gh/soffchen/sing-geosite@release/geosite.db",
             "download_detour": "direct"
         },
         "rules": [
@@ -174,26 +167,8 @@
     ],
     "outbounds": [
         {
-            "type": "vless",
             "tag": "proxy",
-            "server": "", // 服务端的 IP
-            "server_port": 443,
-            "uuid": "chika",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
-                    "short_id": "6ba85179e30d4fc2"
-                }
-            },
-            "packet_encoding": "xudp"
+            // 粘贴你的客户端配置，需要保留 "tag": "proxy",
         },
         {
             "type": "direct",
