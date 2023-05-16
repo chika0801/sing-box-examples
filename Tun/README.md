@@ -44,7 +44,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 ### 注意事项：
 
 1. 需要自行粘贴你的客户端和服务端配置到相应位置。
-2. 以 Windows 客户端配置举例，若你的客户端配置中 **"server"** 是填的域名。域名进入 **"dns"** 部分，只会命中下面的规则，将使用系统默认DNS将域名解析成IP。
+2. 以 Windows 客户端配置举例，若你的客户端配置中 **"server"** 是填的域名。域名进入 **"dns"** 部分，会命中下面的规则，将使用系统默认DNS将域名解析成IP。
 
 ```json
             {
