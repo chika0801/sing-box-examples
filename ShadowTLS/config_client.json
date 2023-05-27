@@ -10,9 +10,6 @@
                     "cn",
                     "private"
                 ],
-                "outbound": "direct"
-            },
-            {
                 "geoip": [
                     "cn",
                     "private"
@@ -69,10 +66,6 @@
         {
             "type": "direct",
             "tag": "direct"
-        },
-        {
-            "type": "block",
-            "tag": "block"
         }
     ]
 }
