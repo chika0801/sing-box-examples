@@ -38,11 +38,12 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
                 "outbound": "block"
             },
             {
-                "domain_keyword": [
-                    "bgp.he.net"
-                ],
                 "geosite": [
                     "openai"
+                ],
+                "domain_keyword": [
+                    "bgp.he.net",
+                    "sentry.io"
                 ],
                 "outbound": "wireguard-out"
             }
@@ -73,11 +74,12 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
                 "outbound": "block"
             },
             {
-                "domain_keyword": [
-                    "bgp.he.net"
-                ],
                 "geosite": [
                     "openai"
+                ],
+                "domain_keyword": [
+                    "bgp.he.net",
+                    "sentry.io"
                 ],
                 "outbound": "wireguard-out"
             }
