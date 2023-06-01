@@ -39,8 +39,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
             },
             {
                 "domain_keyword": [
-                    "bgp.he.net",
-                    "sentry.io"
+                    "bgp.he.net"
                 ],
                 "geosite": [
                     "openai"
@@ -75,8 +74,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
             },
             {
                 "domain_keyword": [
-                    "bgp.he.net",
-                    "sentry.io"
+                    "bgp.he.net"
                 ],
                 "geosite": [
                     "openai"
