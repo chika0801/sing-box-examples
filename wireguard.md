@@ -13,7 +13,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         {
             "type": "wireguard",
             "tag": "wireguard-out",
-            "server": "162.159.192.1",
+            "server": "162.159.192.1",  // 或填写 engage.cloudflareclient.com
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32",
