@@ -66,6 +66,15 @@
                 "outbound": "dns-out"
             },
             {
+                "process_name": [ // 直连的 Windows 可执行程序
+                    "xray.exe",
+                    "hysteria.exe",
+                    "tuic.exe",
+                    "IDMan.exe"
+                ],
+                "outbound": "direct"
+            },
+            {
                 "network": "udp",
                 "port": [
                     443
@@ -140,13 +149,6 @@
                 "geoip": [
                     "cn",
                     "private"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "process_name": [ // 直连的 Windows 可执行程序
-                    "xray.exe",
-                    "IDMan.exe"
                 ],
                 "outbound": "direct"
             }
