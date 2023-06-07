@@ -6,17 +6,17 @@
     "dns": {
         "servers": [
             {
-                "tag": "dns_direct",
-                "address": "223.5.5.5",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
-                "detour": "direct"
-            },
-            {
                 "tag": "dns_proxy",
                 "address": "tls://1.1.1.1",
                 "address_resolver": "dns_direct",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "223.5.5.5",
+                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "direct"
             },
             {
                 "tag": "dns_block",
