@@ -33,12 +33,6 @@
             },
             {
                 "geosite": [
-                    "category-games@cn"
-                ],
-                "server": "dns_direct"
-            },
-            {
-                "geosite": [
                     "geolocation-!cn"
                 ],
                 "server": "dns_proxy"
@@ -86,23 +80,6 @@
                     "category-ads-all"
                 ],
                 "outbound": "block"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "geosite": [
-                            "category-games@cn"
-                        ]
-                    },
-                    {
-                        "geoip": [
-                            "cn"
-                        ]
-                    }
-                ],
-                "outbound": "direct"
             },
             {
                 "type": "logical",
