@@ -11,7 +11,6 @@
                     "private"
                 ],
                 "geoip": [
-                    "cn",
                     "private"
                 ],
                 "outbound": "direct"
@@ -24,7 +23,6 @@
             "tag": "mixed-in",
             "listen": "::",
             "listen_port": 10000,
-            "domain_strategy": "ipv4_only",
             "set_system_proxy": false
         }
     ],
@@ -37,9 +35,6 @@
             "up_mbps": 50,
             "down_mbps": 150,
             "auth_str": "chika", // 与服务端一致
-            "recv_window_conn": 26843545,
-            "recv_window": 67108864,
-            "disable_mtu_discovery": false,
             "tls": {
                 "enabled": true,
                 "server_name": "", // 如果"server"填的是服务端的域名，可留空，如果"server"填的是服务端的IP，此处填服务端的证书中包含的域名
