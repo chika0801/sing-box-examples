@@ -30,12 +30,12 @@
         {
             "type": "trojan",
             "tag": "proxy",
-            "server": "", // 服务端的域名或IP；域名需确保是包含在服务端的证书中，且已正确指向了服务端的IP
+            "server": "", // 服务端的域名或 IP；域名需确保是包含在服务端的证书中，且已正确指向了服务端的 IP
             "server_port": 443,
             "password": "chika", // 与服务端一致
             "tls": {
                 "enabled": true,
-                "server_name": "", // 如果"server"填的是域名，可留空；如果"server"填的是IP，填服务端的证书中包含的域名，且可不指向服务端的IP
+                "server_name": "", // 如果 "server" 填的是域名，可留空；如果 "server" 填的是 IP，填服务端的证书中包含的域名，且可不指向服务端的 IP
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
