@@ -30,20 +30,12 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 
 **"route"**
 ```
-        "rules": [
-            {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
             {
                 "geosite": [
                     "openai"
                 ],
                 "outbound": "wireguard-out"
             }
-        ]
 ```
 
 **"inbounds"**
@@ -64,12 +56,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
     "route": {
         "rules": [
             {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geosite": [
                     "openai"
                 ],
@@ -81,7 +67,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         {
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "prefer_ipv6",
             // 粘贴你的服务端配置
         }
     ],
@@ -89,10 +74,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         {
             "type": "direct",
             "tag": "direct"
-        },
-        {
-            "type": "block",
-            "tag": "block"
         },
         {
             "type": "wireguard",
