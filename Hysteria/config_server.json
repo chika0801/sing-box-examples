@@ -29,10 +29,6 @@
                     "auth_str": "chika" // 认证密码
                 }
             ],
-            "recv_window_conn": 26843545,
-            "recv_window_client": 67108864,
-            "max_conn_client": 4096,
-            "disable_mtu_discovery": false,
             "tls": {
                 "enabled": true,
                 "alpn": [
