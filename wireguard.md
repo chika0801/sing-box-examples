@@ -42,7 +42,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 ```
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "prefer_ipv6",
 ```
 
 **配置示例**
