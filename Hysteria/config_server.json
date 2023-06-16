@@ -3,17 +3,6 @@
         "level": "info",
         "timestamp": true
     },
-    "route": {
-        "rules": [
-            {
-                "network": "udp",
-                "port": [
-                    443
-                ],
-                "outbound": "block"
-            }
-        ]
-    },
     "inbounds": [
         {
             "type": "hysteria",
