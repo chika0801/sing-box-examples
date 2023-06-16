@@ -42,7 +42,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 ```
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "prefer_ipv6",
+            "domain_strategy": "prefer_ipv6", // 若需使用Cloudflare的IPv4，改为 "ipv4_only"
 ```
 
 **配置示例**
