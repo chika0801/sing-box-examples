@@ -33,7 +33,7 @@
             "server": "",
             "server_port": 443,
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==",
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==", // 与服务端一致
             "multiplex": {
                 "enabled": true,
                 "protocol": "h2mux",
