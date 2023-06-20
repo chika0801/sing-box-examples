@@ -1,0 +1,50 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "geoip": [
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 10000,
+            "set_system_proxy": false
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "shadowsocks",
+            "tag": "proxy",
+            "server": "",
+            "server_port": 443,
+            "method": "2022-blake3-aes-128-gcm",
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==",
+            "multiplex": {
+                "enabled": true,
+                "protocol": "h2mux",
+                "max_connections": 4,
+                "min_streams": 4,
+                "padding": true
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
