@@ -8,7 +8,7 @@
             "type": "shadowsocks",
             "tag": "shadowsocks-in",
             "listen": "::",
-            "listen_port": 443,
+            "listen_port": 80,
             "method": "2022-blake3-aes-128-gcm",
             "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
         }
