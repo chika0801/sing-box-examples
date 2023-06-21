@@ -11,8 +11,8 @@
             "listen_port": 443,
             "users": [
                 {
-                    "username": "chika",
-                    "password": "chika0801"
+                    "username": "chika0801",
+                    "password": "chika"
                 }
             ],
             "tls": {
