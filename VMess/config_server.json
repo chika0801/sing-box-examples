@@ -1,0 +1,32 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "inbounds": [
+        {
+            "type": "vmess",
+            "tag": "vmess-in",
+            "listen": "127.0.0.1",
+            "listen_port": 8001,
+            "users": [
+                {
+                    "uuid": "chika",
+                    "alterId": 0
+                }
+            ],
+            "transport": {
+                "type": "ws",
+                "path": "lovelive",
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
