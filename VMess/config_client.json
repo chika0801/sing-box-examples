@@ -57,7 +57,7 @@
                 "type": "ws",
                 "path": "lovelive",  // 与服务端一致
                 "max_early_data": 2048,
-                "early_data_header_name": "Sec-WebSocket-Protocol"
+                "early_data_header_name": "Sec-WebSocket-Protocol" // 与服务端一致
             }
         },
         {
