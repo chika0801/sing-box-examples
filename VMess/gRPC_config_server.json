@@ -1,0 +1,30 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "inbounds": [
+        {
+            "type": "vmess",
+            "tag": "vmess-in",
+            "listen": "127.0.0.1",
+            "listen_port": 8001,
+            "users": [
+                {
+                    "uuid": "chika", // 或执行 ./sing-box generate uuid 生成
+                    "alterId": 0
+                }
+            ],
+            "transport": {
+                "type": "grpc",
+                "service_name": "lovelive" // 指定服务名称
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
