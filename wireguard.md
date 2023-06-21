@@ -11,6 +11,18 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 **"outbounds"**
 ```jsonc
         {
+            "type": "direct",
+            "tag": "warp-IPv4-out",
+            "detour": "wireguard-out",
+            "domain_strategy": "ipv4_only"
+        },
+        {
+            "type": "direct",
+            "tag": "warp-IPv6-out",
+            "detour": "wireguard-out",
+            "domain_strategy": "ipv6_only"
+        },
+        {
             "type": "wireguard",
             "tag": "wireguard-out",
             "server": "162.159.192.1",  // 或填写 engage.cloudflareclient.com
@@ -26,7 +38,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         }
 ```
 
-编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"inbounds"**，**"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问[chat.openai.com/cdn-cgi/trace](https://chat.openai.com/cdn-cgi/trace)查看是否为Cloudflare的IPv6。
+编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"inbounds"**，**"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问[chat.openai.com/cdn-cgi/trace](https://chat.openai.com/cdn-cgi/trace)查看是否为Cloudflare的IP。
 
 **"route"**
 ```jsonc
@@ -34,7 +46,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "wireguard-out"
+                "outbound": "warp-IPv6-out" // 若需使用Cloudflare的IPv4，改为 "warp-IPv4-out"
             }
 ```
 
@@ -42,7 +54,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 ```jsonc
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "prefer_ipv6", // 若需使用Cloudflare的IPv4，改为 "ipv4_only"
 ```
 
 **服务端配置示例**
