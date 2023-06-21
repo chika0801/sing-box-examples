@@ -34,7 +34,7 @@
             "server_port": 443,
             "up_mbps": 50,
             "down_mbps": 150,
-            "auth_str": "chika", // 与服务端一致
+            "auth_str": "chika",
             "tls": {
                 "enabled": true,
                 "server_name": "", // 如果 "server" 填的是域名，可留空；如果 "server" 填的是 IP，填服务端的证书中包含的域名，且可不指向服务端的 IP
