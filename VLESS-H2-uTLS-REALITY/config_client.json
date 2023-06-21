@@ -32,7 +32,7 @@
             "tag": "proxy",
             "server": "", // 服务端的域名或 IP；域名需确保指向了服务端的 IP
             "server_port": 443,
-            "uuid": "chika", // 与服务端一致
+            "uuid": "chika",
             "flow": "", // 留空
             "tls": {
                 "enabled": true,
