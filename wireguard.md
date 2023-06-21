@@ -70,7 +70,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "wireguard-out"
+                "outbound": "warp-IPv6-out" // 若需使用Cloudflare的IPv4，改为 "warp-IPv4-out"
             }
         ]
     },
@@ -78,7 +78,6 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         {
             "sniff": true,
             "sniff_override_destination": true,
-            "domain_strategy": "prefer_ipv6",
             // 粘贴你的服务端配置
         }
     ],
@@ -86,6 +85,18 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
         {
             "type": "direct",
             "tag": "direct"
+        },
+        {
+            "type": "direct",
+            "tag": "warp-IPv4-out",
+            "detour": "wireguard-out",
+            "domain_strategy": "ipv4_only"
+        },
+        {
+            "type": "direct",
+            "tag": "warp-IPv6-out",
+            "detour": "wireguard-out",
+            "domain_strategy": "ipv6_only"
         },
         {
             "type": "wireguard",
