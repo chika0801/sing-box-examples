@@ -38,6 +38,13 @@
                 "server": "dns_proxy"
             },
             {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "server": "dns_direct"
+            },
+            {
                 "outbound": [
                     "any"
                 ],
