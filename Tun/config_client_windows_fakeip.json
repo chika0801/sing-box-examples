@@ -118,6 +118,13 @@
                 "outbound": "direct"
             },
             {
+                "network": "udp",
+                "port": [
+                    443
+                ],
+                "outbound": "block"
+            },
+            {
                 "geosite": [
                     "category-ads-all"
                 ],
