@@ -1,7 +1,5 @@
 ### 快速安装
 
-<details><summary>点击查看</summary><br>
-
 1. 下载程序（**linux-amd64**）
 
 ```
@@ -33,8 +31,6 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 | 检查 | `/root/sing-box check -c sing-box_config.json` |
 | 查看日志 | `journalctl -u sing-box --output cat -e` |
 | 实时日志 | `journalctl -u sing-box --output cat -f` |
-
-</details>
 
 ### 工作流程
 
