@@ -1,4 +1,4 @@
-客户端
+**客户端配置示例**
 
 ```jsonc
 {
@@ -50,7 +50,7 @@
             "type": "socks",
             "tag": "socks",
             "server": "127.0.0.1",
-            "server_port": 10808
+            "server_port": 50000
         },
         {
             "type": "direct",
@@ -60,7 +60,7 @@
 }
 ```
 
-服务端
+**服务端配置示例**
 
 ```jsonc
 {
@@ -75,7 +75,7 @@
             "listen": "127.0.0.1",
             "listen_port": 80,
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
+            "password": "3P+xaSaFiXsrQ1KCr2Xvxg=="
         }
     ],
     "outbounds": [
