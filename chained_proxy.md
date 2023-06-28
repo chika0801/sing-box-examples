@@ -37,13 +37,6 @@
             "server_port": 80,
             "method": "2022-blake3-aes-128-gcm",
             "password": "3P+xaSaFiXsrQ1KCr2Xvxg==",
-            "multiplex": {
-                "enabled": true,
-                "protocol": "h2mux",
-                "max_connections": 4,
-                "min_streams": 4,
-                "padding": true
-            },
             "detour": "socks"
         },
         {
