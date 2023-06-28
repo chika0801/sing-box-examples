@@ -43,7 +43,8 @@
                 "max_connections": 4,
                 "min_streams": 4,
                 "padding": true
-            }
+            },
+            "detour": "socks"
         },
         {
             "type": "socks",
