@@ -116,9 +116,8 @@
                 "outbound": "direct"
             },
             {
-                "network": "udp",
-                "port": [
-                    443
+                "protocol": [
+                    "quic"
                 ],
                 "outbound": "block"
             },
