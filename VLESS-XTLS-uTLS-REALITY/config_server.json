@@ -17,7 +17,7 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName 列表，暂不支持 * 通配符
+                "server_name": "www.lovelive-anime.jp", // 客户端可用的 serverName，暂不支持 * 通配符
                 "reality": {
                     "enabled": true,
                     "handshake": {
