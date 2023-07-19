@@ -51,7 +51,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
             }
 ```
 
-3. 若直连的 Windows 可执行程序，地址是填的域名。域名进入 **"dns"** 部分，按预设的规则进行匹配。当未命中任何规则时（或命中某个规则时），默认使用第1个服务器做DNS解析。需确保此服务器使用的 **"detour": "proxy"** 状态正常。
+3. 若直连的 Windows 可执行程序，地址是填的域名。域名进入 **"dns"** 部分，按预设的规则进行匹配。当未命中任何规则时，使用第1个DNS服务器做DNS解析，需确保此DNS服务器使用的 **"detour": "proxy"** 状态正常。当命中某个规则时，使用对应DNS服务器做DNS解析，需确保此DNS服务器使用的对应 **"detour": ""** 状态正常。
 
 ```json
             {
