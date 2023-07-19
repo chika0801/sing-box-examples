@@ -16,7 +16,7 @@ curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.3.0/
 curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-examples/main/sing-box.service && systemctl daemon-reload
 ```
 
-3. 根据需要，修改配置，上传证书和私钥
+3. 修改配置
 
 4. 启动程序
 
