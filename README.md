@@ -10,23 +10,15 @@
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.3.0/sing-box-1.3.0-linux-amd64.tar.gz && tar -xzf /root/sb && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box
 ```
 
-2. 下载配置
-
-```
-curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-examples/main/Tun/config_server.json
-```
-
-3. 下载systemctl配置
+2. 下载systemctl配置
 
 ```
 curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-examples/main/sing-box.service && systemctl daemon-reload
 ```
 
-4. 上传证书和私钥
+3. 根据需要，修改配置，上传证书和私钥
 
-- 将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/root** 目录
-
-5. 启动程序
+4. 启动程序
 
 ```
 systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
