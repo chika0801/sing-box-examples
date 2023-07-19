@@ -1,37 +1,3 @@
-### 快速安装
-
-1. 下载程序（**linux-amd64**）
-
-```
-curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.3.0/sing-box-1.3.0-linux-amd64.tar.gz && tar -xzf /root/sb && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box
-```
-
-2. 下载配置
-
-```
-curl -Lo /root/sing-box_config.json https://raw.githubusercontent.com/chika0801/sing-box-examples/main/Tun/config_server.json
-```
-
-3. 下载systemctl配置
-
-```
-curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/chika0801/sing-box-examples/main/sing-box.service && systemctl daemon-reload
-```
-
-4. 启动程序
-
-```
-systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
-```
-
-| 项目 | |
-| :--- | :--- |
-| 程序 | **/root/sing-box** |
-| 配置 | **/root/sing-box_config.json** |
-| 检查 | `/root/sing-box check -c sing-box_config.json` |
-| 查看日志 | `journalctl -u sing-box --output cat -e` |
-| 实时日志 | `journalctl -u sing-box --output cat -f` |
-
 ### 工作流程
 
 1. 由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行匹配并做DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得DNS解析前的域名（直接请求的IP无域名）。IP和域名作为条件，按预设的规则进行分流。客户端发送到服务端的是 **IP**，并且不使用 **"sniff_override_destination"** 参数，不会把IP还原成域名。
