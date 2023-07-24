@@ -14,6 +14,7 @@
                     "private"
                 ],
                 "geoip": [
+                    "cn",
                     "private"
                 ],
                 "outbound": "direct"
@@ -25,8 +26,7 @@
             "type": "mixed",
             "tag": "mixed-in",
             "listen": "::",
-            "listen_port": 10000,
-            "set_system_proxy": false
+            "listen_port": 10000
         }
     ],
     "outbounds": [
