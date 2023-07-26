@@ -11,7 +11,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "username": "chika0801",
+                    "username": "chika",
                     "password": "chika"
                 }
             ],
