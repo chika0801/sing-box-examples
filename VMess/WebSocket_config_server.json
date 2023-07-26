@@ -9,6 +9,8 @@
             "tag": "vmess-in",
             "listen": "127.0.0.1",
             "listen_port": 8001,
+            "sniff": true,
+            "sniff_override_destination": true,
             "users": [
                 {
                     "uuid": "chika", // 或执行 sing-box generate uuid 生成
