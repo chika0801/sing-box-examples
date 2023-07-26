@@ -9,6 +9,8 @@
             "tag": "vless-in",
             "listen": "::",
             "listen_port": 443,
+            "sniff": true,
+            "sniff_override_destination": true,
             "users": [
                 {
                     "uuid": "chika", // 或执行 sing-box generate uuid 生成
