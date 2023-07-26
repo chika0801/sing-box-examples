@@ -7,12 +7,12 @@
 | :rocket:**VLESS-gRPC-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | :rocket:**VLESS-H2-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | **Hysteria** | :x: | :x: | :heavy_check_mark: | :x: |
-| **NaïveProxy** | :x: | :radio_button: | :radio_button: | :x: |
-| **ShadowTLS+h2mux+padding** | :heavy_check_mark: | :radio_button: | :heavy_check_mark: | :x: |
-| **Shadowsocks+h2mux+padding** | :heavy_check_mark: | :radio_button: | :heavy_check_mark: | :x: |
-| **Trojan+h2mux+padding** | :x: | :radio_button: | :heavy_check_mark: | :x: |
-| **VMess+WebSocket+h2mux+padding** | :x: | :radio_button: | :heavy_check_mark: | :heavy_check_mark: |
-| **VMess+gRPC+padding** | :x: | :radio_button: | :heavy_check_mark: | :heavy_check_mark: |
+| **NaïveProxy** | :x: | :x: | :radio_button: | :x: |
+| **ShadowTLS+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| **Shadowsocks+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| **Trojan+h2mux+padding** | :x: | :x: | :heavy_check_mark: | :x: |
+| **VMess+WebSocket+h2mux+padding** | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| **VMess+gRPC+padding** | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
