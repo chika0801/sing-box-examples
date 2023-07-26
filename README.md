@@ -21,7 +21,7 @@ curl -Lo /etc/systemd/system/sing-box.service https://raw.githubusercontent.com/
 4. 启动程序
 
 ```
-systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
+systemctl enable --now sing-box
 ```
 
 | 项目 | |
