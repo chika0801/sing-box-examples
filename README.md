@@ -40,5 +40,8 @@ systemctl enable --now sing-box
 
 ```
 systemctl disable --now sing-box
+```
+
+```
 rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
 ```
