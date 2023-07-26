@@ -48,7 +48,7 @@
             "packet_encoding": "packetaddr",
             "transport": {
                 "type": "grpc",
-                "service_name": "lovelive" // 与服务端一致
+                "service_name": "chika" // 与服务端一致
             }
         },
         {
