@@ -6,8 +6,6 @@
     "inbounds": [
         {
             // 粘贴你的服务端配置
-            "sniff": false,
-            "sniff_override_destination": false
         }
     ],
     "outbounds": [
