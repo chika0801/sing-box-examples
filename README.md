@@ -7,7 +7,7 @@
 | **VLESS-gRPC-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | **VLESS-H2-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | **Hysteria** | :x: | :x: | :heavy_check_mark: | :x: |
-| **Naive** | :x: | :x: | :radio_button: | :x: |
+| **Naive** | :x: | :x: | :heavy_check_mark: | :x: |
 | **ShadowTLS+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | **Shadowsocks+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | **Trojan+h2mux+padding** | :x: | :x: | :heavy_check_mark: | :x: |
