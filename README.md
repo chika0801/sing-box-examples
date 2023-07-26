@@ -26,7 +26,7 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 
 | 项目 | |
 | :--- | :--- |
-| 程序 | **/root/sing-box** |
+| 程序 | **/usr/local/bin/sing-box** |
 | 配置 | **/root/sing-box_config.json** |
 | 检查 | `/root/sing-box check -c sing-box_config.json` |
 | 重启 | `systemctl restart sing-box` |
@@ -37,5 +37,5 @@ systemctl enable --now sing-box && sleep 0.2 && systemctl status sing-box
 ### 卸载
 
 ```
-systemctl disable --now sing-box && rm /root/sing-box && rm /root/sing-box_config.json && rm /etc/systemd/system/sing-box.service
+systemctl disable --now sing-box && rm /usr/local/bin/sing-box && rm /root/sing-box_config.json && rm /etc/systemd/system/sing-box.service
 ```
