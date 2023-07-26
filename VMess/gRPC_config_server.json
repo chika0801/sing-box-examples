@@ -11,7 +11,7 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "uuid": "chika", // 或执行 ./sing-box generate uuid 生成
+                    "uuid": "chika", // 或执行 sing-box generate uuid 生成
                     "alterId": 0
                 }
             ],
