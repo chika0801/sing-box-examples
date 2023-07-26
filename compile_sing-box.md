@@ -29,4 +29,4 @@ GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_dhc
 ```
 [sing-box Build Tag](https://sing-box.sagernet.org/zh/installation/from-source/)
 
-[GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
+[About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
