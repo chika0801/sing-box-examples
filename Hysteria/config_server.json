@@ -13,7 +13,7 @@
             "down_mbps": 50,
             "users": [
                 {
-                    "auth_str": "chika" // 认证密码
+                    "auth_str": "chika"
                 }
             ],
             "tls": {
