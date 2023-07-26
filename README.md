@@ -12,7 +12,7 @@
 | **Shadowsocks+h2mux+padding** | :heavy_check_mark: | :radio_button: | :heavy_check_mark: | :x: |
 | **Trojan+h2mux+padding** | :x: | :radio_button: | :heavy_check_mark: | :x: |
 | **VMess+WebSocket+h2mux+padding** | :x: | :radio_button: | :heavy_check_mark: | :heavy_check_mark: |
-| **VMess+gRPC+h2mux+padding** | :x: | :radio_button: | :heavy_check_mark: | :heavy_check_mark: |
+| **VMess+gRPC+padding** | :x: | :radio_button: | :heavy_check_mark: | :heavy_check_mark: |
 
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
