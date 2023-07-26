@@ -11,7 +11,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "password": "chika" // 认证密码
+                    "password": "chika"
                 }
             ],
             "tls": {
