@@ -48,13 +48,13 @@
         {
             "type": "shadowtls",
             "tag": "shadowtls-out",
-            "server": "", // 服务端的域名或 IP；域名需确保指向了服务端的 IP
+            "server": "",
             "server_port": 443,
             "version": 3,
             "password": "chika",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp", // 与服务端一致
+                "server_name": "www.lovelive-anime.jp",
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
