@@ -12,7 +12,7 @@ curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.3.4/
 
 2. 上传配置、证书和私钥
 
-- 将配置文件改名为 **sing-box_config.json**，证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/root** 目录
+- 将配置文件改名为 **sing-box_config.json**，将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/root** 目录
 
 3. 下载systemctl配置
 
