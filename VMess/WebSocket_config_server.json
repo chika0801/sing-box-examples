@@ -17,7 +17,7 @@
             ],
             "transport": {
                 "type": "ws",
-                "path": "lovelive", // HTTP 请求路径
+                "path": "chika", // HTTP 请求路径
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol" // 要与 Xray-core 兼容，设置为 Sec-WebSocket-Protocol
             }
