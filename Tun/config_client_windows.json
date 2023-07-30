@@ -69,7 +69,7 @@
                     "xray.exe",
                     "hysteria.exe",
                     "tuic.exe",
-                    "IDMan.exe"
+                    "juicity.exe"
                 ],
                 "outbound": "direct"
             },
