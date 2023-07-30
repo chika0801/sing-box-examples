@@ -50,8 +50,8 @@ systemctl enable --now sing-box
 | 检查 | `sing-box check -c sing-box_config.json` |
 | 重启 | `systemctl restart sing-box` |
 | 状态 | `systemctl status sing-box` |
-| 查看日志 | `journalctl -u sing-box --output cat -e` |
-| 实时日志 | `journalctl -u sing-box --output cat -f` |
+| 查看日志 | `journalctl -u sing-box -o cat -e` |
+| 实时日志 | `journalctl -u sing-box -o cat -f` |
 
 ### 卸载
 
