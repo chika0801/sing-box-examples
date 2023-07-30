@@ -28,12 +28,12 @@
             },
 ```
 
-### Android 客户端使用方法：
+### Android 使用方法：
 
 1. 安装[客户端](https://install.appcenter.ms/users/nekohasekai/apps/sfa/distribution_groups/publictest)。
 3. 参考[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_android.json)示例，按需修改后导入。
 
-### Windows 客户端使用方法：
+### Windows 使用方法：
 
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`。
 2. 参考[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json)示例，按需修改后将文件名改为 **config.json**，与 **sing-box.exe**，批处理文件放在同一文件夹里。
