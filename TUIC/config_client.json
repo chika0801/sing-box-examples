@@ -1,0 +1,49 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "tuic",
+            "tag": "proxy",
+            "server": "",
+            "server_port": 443,
+            "uuid": "chika",
+            "password": "chika",
+            "congestion_control": "bbr",
+            "udp_relay_mode": "native",
+            "tls": {
+                "enabled": true,
+                "server_name": ""
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
