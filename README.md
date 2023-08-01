@@ -41,9 +41,5 @@ systemctl enable --now sing-box
 ### 卸载
 
 ```
-systemctl disable --now sing-box
-```
-
-```
-rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
+systemctl disable --now sing-box && rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
 ```
