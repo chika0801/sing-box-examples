@@ -10,6 +10,8 @@
 curl -Lo /root/sb https://github.com/SagerNet/sing-box/releases/download/v1.3.4/sing-box-1.3.4-linux-amd64.tar.gz && tar -xzf /root/sb && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sb /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box && mv -f /root/sing-box /usr/local/bin
 ```
 
+- [编译程序](https://github.com/chika0801/sing-box-examples/blob/main/compile_sing-box.md)
+
 2. 上传配置、证书和私钥
 
 - 将配置文件改名为 **sing-box_config.json**，将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/root** 目录
