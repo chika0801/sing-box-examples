@@ -1,20 +1,3 @@
-## **配置介绍：** 
-
-| | 无需注册域名 | 解决 TLS in TLS | 自带多路复用 | 通过 CDN 访问 |
-| :--- | :---: | :---: | :---: | :---: |
-| **Hysteria** | :x: | :x: | :heavy_check_mark: | :x: |
-| **Naive** | :x: | :x: | :heavy_check_mark: | :x: |
-| **ShadowTLS+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| **Shadowsocks+h2mux+padding** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| **Trojan+h2mux+padding** | :x: | :x: | :heavy_check_mark: | :x: |
-| **VLESS-XTLS-Vision** | :x: | :heavy_check_mark: | :x: | :x: |
-| **VLESS-XTLS-uTLS-REALITY** | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| **VLESS-gRPC-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| **VLESS-H2-uTLS-REALITY** | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| **VMess+WebSocket+h2mux+padding** | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-| **VMess+gRPC+padding** | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-
-
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
 ## 服务端
