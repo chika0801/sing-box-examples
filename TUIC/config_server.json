@@ -1,0 +1,34 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "inbounds": [
+        {
+            "type": "tuic",
+            "tag": "tuic-in",
+            "listen": "::",
+            "listen_port": 443,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "users": [
+                {
+                    "uuid": "chika", // 或执行 sing-box generate uuid 生成
+                    "password": "chika"
+                }
+            ],
+            "congestion_control": "bbr",
+            "tls": {
+                "enabled": true,
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
