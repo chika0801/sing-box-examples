@@ -1,5 +1,5 @@
 ```
-curl -sLo go.tar.gz https://go.dev/dl/go1.20.6.linux-amd64.tar.gz
+curl -sLo go.tar.gz https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
 tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
 echo -e "export PATH=$PATH:/usr/local/go/bin" > /etc/profile.d/go.sh
