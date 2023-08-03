@@ -1,3 +1,5 @@
+准备环境
+
 ```
 curl -sLo go.tar.gz https://go.dev/dl/go1.20.7.linux-amd64.tar.gz
 tar -C /usr/local -xzf go.tar.gz
@@ -16,6 +18,8 @@ go env -w CGO_ENABLED=1
 go env
 ```
 
+首次编译 / 再次编译
+
 **linux-amd64**
 
 ```
@@ -30,3 +34,9 @@ GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_dhc
 [sing-box Build Tag](https://sing-box.sagernet.org/installation/from-source/)
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
+
+复制文件
+
+```
+cp -f ./go/bin/sing-box /usr/local/bin && cp -f ./go/bin/windows_amd64/sing-box.exe .
+```
