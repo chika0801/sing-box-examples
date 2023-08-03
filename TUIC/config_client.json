@@ -37,7 +37,10 @@
             "congestion_control": "bbr",
             "tls": {
                 "enabled": true,
-                "server_name": ""
+                "server_name": "",
+                "alpn": [
+                    "h3"
+                ]
             }
         },
         {
