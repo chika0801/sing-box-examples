@@ -13,7 +13,7 @@
             "sniff_override_destination": true,
             "users": [
                 {
-                    "uuid": "chika", // 或执行 sing-box generate uuid 生成
+                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 或执行 sing-box generate uuid 生成
                     "password": "chika"
                 }
             ],
