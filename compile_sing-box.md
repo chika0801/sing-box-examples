@@ -37,6 +37,14 @@ GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_dhc
 
 复制文件
 
+**linux-amd64**
+
 ```
-cp -f ./go/bin/sing-box /usr/local/bin && cp -f ./go/bin/windows_amd64/sing-box.exe .
+cp -f ./go/bin/sing-box /usr/local/bin
+```
+
+**windows-amd64**
+
+```
+cp -f ./go/bin/windows_amd64/sing-box.exe .
 ```
