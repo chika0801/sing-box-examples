@@ -20,9 +20,6 @@
             "congestion_control": "bbr",
             "tls": {
                 "enabled": true,
-                "alpn": [
-                    "h3"
-                ],
                 "certificate_path": "/root/fullchain.cer",
                 "key_path": "/root/private.key"
             }
