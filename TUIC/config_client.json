@@ -32,13 +32,15 @@
             "tag": "proxy",
             "server": "",
             "server_port": 443,
-            "uuid": "chika",
+            "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
             "password": "chika",
             "congestion_control": "bbr",
-            "udp_relay_mode": "native",
             "tls": {
                 "enabled": true,
-                "server_name": ""
+                "server_name": "",
+                "alpn": [
+                    "h3"
+                ]
             }
         },
         {
