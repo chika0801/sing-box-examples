@@ -7,7 +7,7 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "tls://1.1.1.1",
+                "address": "1.1.1.1",
                 "address_resolver": "dns_direct",
                 "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
@@ -105,7 +105,6 @@
             "tag": "tun-in",
             "inet4_address": "172.19.0.1/30",
             "inet6_address": "fdfe:dcba:9876::1/126",
-            "mtu": 1400,
             "auto_route": true,
             "strict_route": false,
             "stack": "gvisor",
