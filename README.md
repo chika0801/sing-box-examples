@@ -53,6 +53,7 @@ systemctl disable --now sing-box && rm -f /usr/local/bin/sing-box /root/sing-box
 
 ### Windows 使用方法：
 
+1. 下载Windows客户端程序[sing-box-windows-amd64.zip](https://github.com/SagerNet/sing-box/releases)。
 1. 新建一个批处理文件，内容为 `start /min sing-box.exe run`。
 2. 参考[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json)示例，按需修改后将文件名改为 **config.json**，与 **sing-box.exe**，批处理文件放在同一文件夹里。
 3. 右键点击 **sing-box.exe** 选择属性，选择兼容性，选择以管理员身份运行此程序，确定。
