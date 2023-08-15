@@ -33,7 +33,6 @@
             "server": "",
             "server_port": 443,
             "uuid": "chika",
-            "flow": "", // 留空
             "tls": {
                 "enabled": true,
                 "server_name": "www.lovelive-anime.jp", // 与服务端一致
