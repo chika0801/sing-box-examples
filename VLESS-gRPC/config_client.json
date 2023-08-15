@@ -28,15 +28,11 @@
     ],
     "outbounds": [
         {
-            "type": "vmess",
+            "type": "vless",
             "tag": "proxy",
             "server": "",
             "server_port": 443,
             "uuid": "chika",
-            "security": "aes-128-gcm",
-            "alter_id": 0,
-            "global_padding": true,
-            "authenticated_length": true,
             "tls": {
                 "enabled": true,
                 "server_name": "",
@@ -45,7 +41,7 @@
                     "fingerprint": "chrome"
                 }
             },
-            "packet_encoding": "packetaddr",
+            "packet_encoding": "xudp",
             "transport": {
                 "type": "grpc",
                 "service_name": "chika" // 与服务端一致
