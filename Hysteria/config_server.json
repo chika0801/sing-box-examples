@@ -9,8 +9,6 @@
             "tag": "hysteria-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
             "up_mbps": 150,
             "down_mbps": 50,
             "users": [
