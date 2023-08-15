@@ -34,7 +34,7 @@
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "lovelive" // 指定服务名称
+                "service_name": "lovelive" // gRPC 服务名称
             }
         }
     ],
