@@ -9,8 +9,6 @@
             "tag": "tuic-in",
             "listen": "::",
             "listen_port": 443,
-            "sniff": true,
-            "sniff_override_destination": true,
             "users": [
                 {
                     "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 sing-box generate uuid 生成
