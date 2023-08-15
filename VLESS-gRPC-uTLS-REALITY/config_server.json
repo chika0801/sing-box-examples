@@ -13,8 +13,7 @@
             "sniff_override_destination": true,
             "users": [
                 {
-                    "uuid": "chika", // 执行 sing-box generate uuid 生成
-                    "flow": "" // 留空
+                    "uuid": "chika" // 执行 sing-box generate uuid 生成
                 }
             ],
             "tls": {
