@@ -19,7 +19,7 @@
             ],
             "transport": {
                 "type": "grpc",
-                "service_name": "chika" // 指定服务名称
+                "service_name": "chika" // gRPC 服务名称
             }
         }
     ],
