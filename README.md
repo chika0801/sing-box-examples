@@ -1,5 +1,20 @@
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
+### 一键脚本
+
+```
+bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install
+```
+
+```
+installed: /etc/systemd/system/sing-box.service
+installed: /etc/systemd/system/sing-box@.service
+
+installed: /usr/local/bin/sing-box
+
+installed: /var/log/sing-box/sing.log
+```
+
 ## 服务端
 
 ### 安装
