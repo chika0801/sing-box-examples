@@ -1,9 +1,15 @@
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
-### 一键脚本
+## 一键脚本 [sing-box-install](https://github.com/KoinuDayo/Sing-box-Install) 
 
+安装
 ```
 bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install
+```
+
+卸载
+```
+bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- remove
 ```
 
 ```
@@ -15,9 +21,9 @@ installed: /usr/local/bin/sing-box
 installed: /var/log/sing-box/sing.log
 ```
 
-## 服务端
+## 手动安装
 
-### 安装
+### 服务端
 
 1. 下载程序（**linux-amd64**）
 
@@ -53,20 +59,20 @@ systemctl enable --now sing-box
 | 查看日志 | `journalctl -u sing-box -o cat -e` |
 | 实时日志 | `journalctl -u sing-box -o cat -f` |
 
-### 卸载
+#### 卸载
 
 ```
 systemctl disable --now sing-box && rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
 ```
 
-## 客户端
+### 客户端
 
-### Android 使用方法：
+#### Android 使用方法：
 
 1. 下载Android客户端程序[SFA-arm64-v8a.apk](https://github.com/SagerNet/sing-box/releases)。
 3. 参考[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_android.json)示例，按需修改后导入。
 
-### Windows 使用方法：
+#### Windows 使用方法：
 
 1. 下载Windows客户端程序[sing-box-windows-amd64.zip](https://github.com/SagerNet/sing-box/releases)。
 2. 新建一个批处理文件，内容为 `start /min sing-box.exe run`。
