@@ -69,14 +69,14 @@ systemctl enable --now sing-box
 systemctl disable --now sing-box && rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
 ```
 
-### 客户端
+## 客户端
 
-#### Android 使用方法：
+### Android 使用方法：
 
 1. 下载Android客户端程序[SFA-arm64-v8a.apk](https://github.com/SagerNet/sing-box/releases)。
 3. 参考[客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_android.json)示例，按需修改后导入。
 
-#### Windows 使用方法：
+### Windows 使用方法：
 
 1. 下载Windows客户端程序[sing-box-windows-amd64.zip](https://github.com/SagerNet/sing-box/releases)。
 2. 新建一个批处理文件，内容为 `start /min sing-box.exe run`。
