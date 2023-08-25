@@ -17,6 +17,10 @@ installed: /etc/systemd/system/sing-box.service
 installed: /etc/systemd/system/sing-box@.service
 
 installed: /usr/local/bin/sing-box
+Installed: /usr/local/etc/sing-box/*.json
+
+Installed: /usr/local/etc/sing-box/geoip.db
+Installed: /usr/local/etc/sing-box/geosite.db
 
 installed: /var/log/sing-box/sing.log
 ```
