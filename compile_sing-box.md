@@ -1,9 +1,3 @@
-一键脚本
-
-```
-bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install --go
-```
-
 准备环境
 
 ```
