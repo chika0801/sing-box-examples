@@ -55,6 +55,8 @@ systemctl enable --now sing-box
 | :--- | :--- |
 | 程序 | **/usr/local/bin/sing-box** |
 | 配置 | **/root/sing-box_config.json** |
+| geoip | **/root/geoip.db** |
+| geosite | **/root/geosite.db** |
 | 重启 | `systemctl restart sing-box` |
 | 状态 | `systemctl status sing-box` |
 | 查看日志 | `journalctl -u sing-box -o cat -e` |
