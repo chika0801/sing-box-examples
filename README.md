@@ -12,18 +12,16 @@ bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/inst
 bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- remove
 ```
 
-```
-installed: /etc/systemd/system/sing-box.service
-installed: /etc/systemd/system/sing-box@.service
-
-installed: /usr/local/bin/sing-box
-Installed: /usr/local/etc/sing-box/*.json
-
-Installed: /usr/local/share/sing-box/geoip.db
-Installed: /usr/local/share/sing-box/geosite.db
-
-installed: /var/log/sing-box/sing.log
-```
+| 项目 | |
+| :--- | :--- |
+| 程序 | **/usr/local/bin/sing-box** |
+| 配置 | **/usr/local/etc/sing-box/config.json** |
+| geoip | **/usr/local/share/sing-box/geoip.db** |
+| geosite | **/usr/local/share/sing-box/geosite.db** |
+| 重启 | `systemctl restart sing-box` |
+| 状态 | `systemctl status sing-box` |
+| 查看日志 | `journalctl -u sing-box -o cat -e` |
+| 实时日志 | `journalctl -u sing-box -o cat -f` |
 
 ## 手动安装
 
