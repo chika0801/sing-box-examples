@@ -17,7 +17,7 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "chika.example.com", // 与 Nginx 配置中的 server_name 一致
+                "server_name": "chika.example.com",
                 "reality": {
                     "enabled": true,
                     "handshake": {
