@@ -2,9 +2,19 @@
 
 ## 一键脚本 [sing-box-install](https://github.com/KoinuDayo/Sing-box-Install) 
 
-安装
+安装正式版
 ```
 bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install
+```
+
+安装测试版
+```
+bash -c "$(curl -L https://github.com/KoinuDayo/sing-box-Install/raw/master/install.sh)" -- install --beta
+```
+
+编译安装最新版
+```
+bash -c "$(curl -L https://github.com/KoinuDayo/sing-box-Install/raw/master/install.sh)" -- install --go
 ```
 
 卸载
