@@ -81,12 +81,6 @@
             },
             {
                 "geosite": [
-                    "category-ads-all"
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
                     "geolocation-!cn"
                 ],
                 "outbound": "proxy"
