@@ -24,13 +24,13 @@ go env
 **linux-amd64**
 
 ```
-GOOS=linux GOARCH=amd64 GOAMD64=v2 go install -v -tags with_wireguard,with_quic,with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+GOOS=linux GOARCH=amd64 GOAMD64=v2 go install -v -tags with_wireguard,with_quic,with_ech,with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 
 **windows-amd64**
 
 ```
-GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_dhcp,with_quic,with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_dhcp,with_quic,with_ech,with_utls,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 [sing-box Build Tag](https://sing-box.sagernet.org/installation/from-source/)
 
