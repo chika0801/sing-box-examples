@@ -40,7 +40,7 @@ bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/inst
 1. 下载程序（**linux-amd64**）
 
 ```
-curl -Lo /root/sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.4.0-linux-amd64.tar.gz && tar -xzf /root/sing-box.tar.gz && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sing-box.tar.gz /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box && mv -f /root/sing-box /usr/local/bin
+curl -Lo /root/sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.4.1-linux-amd64.tar.gz && tar -xzf /root/sing-box.tar.gz && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sing-box.tar.gz /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box && mv -f /root/sing-box /usr/local/bin
 ```
 
 - [编译程序](https://github.com/chika0801/sing-box-examples/blob/main/compile_sing-box.md)
