@@ -10,6 +10,7 @@ ExecStart=/usr/local/bin/sing-box run -c /root/sing-box_config.json
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=10
+LimitNPROC=512
 LimitNOFILE=infinity
 
 [Install]
