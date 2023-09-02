@@ -4,7 +4,6 @@
 
 安装正式版
 ```
-bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install
 ```
 
