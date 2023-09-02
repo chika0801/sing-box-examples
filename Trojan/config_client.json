@@ -1,0 +1,21 @@
+{
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "trojan",
+            "server": "",
+            "server_port": 443,
+            "password": "chika",
+            "tls": {
+                "enabled": true,
+                "server_name": ""
+            }
+        }
+    ]
+}
