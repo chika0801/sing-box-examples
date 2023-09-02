@@ -22,11 +22,7 @@
             "password": "chika",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
+                "server_name": "www.lovelive-anime.jp"
             }
         }
     ]
