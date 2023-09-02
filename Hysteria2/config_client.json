@@ -2,7 +2,6 @@
     "inbounds": [
         {
             "type": "mixed",
-            "tag": "mixed-in",
             "listen": "::",
             "listen_port": 10000
         }
