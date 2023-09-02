@@ -1,0 +1,51 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "route": {
+        "rules": [
+            {
+                "geosite": [
+                    "cn",
+                    "private"
+                ],
+                "geoip": [
+                    "cn",
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "mixed",
+            "tag": "mixed-in",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "hysteria2",
+            "tag": "proxy",
+            "server": "",
+            "server_port": 443,
+            "up_mbps": 30,
+            "down_mbps": 150,
+            "password": "chika",
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "alpn": [
+                    "h3"
+                ]
+            }
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        }
+    ]
+}
