@@ -1,12 +1,7 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-    },
     "inbounds": [
         {
             "type": "vless",
-            "tag": "vless-in",
             "listen": "::",
             "listen_port": 443,
             "users": [
@@ -24,8 +19,7 @@
     ],
     "outbounds": [
         {
-            "type": "direct",
-            "tag": "direct"
+            "type": "direct"
         }
     ]
 }
