@@ -1,27 +1,7 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-    },
-    "route": {
-        "rules": [
-            {
-                "geosite": [
-                    "cn",
-                    "private"
-                ],
-                "geoip": [
-                    "cn",
-                    "private"
-                ],
-                "outbound": "direct"
-            }
-        ]
-    },
     "inbounds": [
         {
             "type": "mixed",
-            "tag": "mixed-in",
             "listen": "::",
             "listen_port": 10000
         }
@@ -29,7 +9,6 @@
     "outbounds": [
         {
             "type": "vless",
-            "tag": "proxy",
             "server": "",
             "server_port": 443,
             "uuid": "chika",
@@ -51,10 +30,6 @@
                 "type": "grpc",
                 "service_name": "lovelive" // 与服务端一致
             }
-        },
-        {
-            "type": "direct",
-            "tag": "direct"
         }
     ]
 }
