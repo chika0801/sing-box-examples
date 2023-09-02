@@ -11,6 +11,8 @@
             "type": "hysteria2",
             "server": "",
             "server_port": 443,
+            "up_mbps": 30,
+            "down_mbps": 150,
             "password": "chika",
             "tls": {
                 "enabled": true,
