@@ -1,16 +1,9 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-    },
     "inbounds": [
         {
             "type": "hysteria",
-            "tag": "hysteria-in",
             "listen": "::",
             "listen_port": 443,
-            "up_mbps": 150,
-            "down_mbps": 50,
             "users": [
                 {
                     "auth_str": "chika"
@@ -28,8 +21,7 @@
     ],
     "outbounds": [
         {
-            "type": "direct",
-            "tag": "direct"
+            "type": "direct"
         }
     ]
 }
