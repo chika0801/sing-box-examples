@@ -5,15 +5,18 @@
     },
     "inbounds": [
         {
-            "type": "hysteria",
-            "tag": "hysteria-in",
+            "type": "hysteria2",
+            "tag": "hysteria2-in",
             "listen": "::",
             "listen_port": 443,
-            "up_mbps": 150,
-            "down_mbps": 50,
             "users": [
                 {
                     "auth_str": "chika"
+                }
+            ],
+            "users": [
+                {
+                    "password": "goofy_ahh_password"
                 }
             ],
             "tls": {
