@@ -1,0 +1,25 @@
+{
+    "inbounds": [
+        {
+            "type": "naive",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "username": "chika",
+                    "password": "chika"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
