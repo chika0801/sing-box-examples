@@ -1,27 +1,7 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-    },
-    "route": {
-        "rules": [
-            {
-                "geosite": [
-                    "cn",
-                    "private"
-                ],
-                "geoip": [
-                    "cn",
-                    "private"
-                ],
-                "outbound": "direct"
-            }
-        ]
-    },
     "inbounds": [
         {
             "type": "mixed",
-            "tag": "mixed-in",
             "listen": "::",
             "listen_port": 10000
         }
@@ -29,7 +9,6 @@
     "outbounds": [
         {
             "type": "tuic",
-            "tag": "proxy",
             "server": "",
             "server_port": 443,
             "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
@@ -42,10 +21,6 @@
                     "h3"
                 ]
             }
-        },
-        {
-            "type": "direct",
-            "tag": "direct"
         }
     ]
 }
