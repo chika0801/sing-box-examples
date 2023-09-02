@@ -5,21 +5,22 @@
 安装正式版
 ```
 bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- install
+bash -c "$(curl -L https://sing-box.vercel.app)" @ install
 ```
 
 安装测试版
 ```
-bash -c "$(curl -L https://github.com/KoinuDayo/sing-box-Install/raw/master/install.sh)" -- install --beta
+bash -c "$(curl -L https://sing-box.vercel.app)" @ install --beta
 ```
 
 编译安装最新版
 ```
-bash -c "$(curl -L https://github.com/KoinuDayo/sing-box-Install/raw/master/install.sh)" -- install --go
+bash -c "$(curl -L https://sing-box.vercel.app)" @ install --go
 ```
 
 卸载
 ```
-bash -c "$(curl -L https://github.com/KoinuDayo/Sing-box-Install/raw/master/install.sh)" -- remove
+bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 ```
 
 | 项目 | |
