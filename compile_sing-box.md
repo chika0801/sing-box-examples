@@ -10,15 +10,6 @@ source /etc/profile.d/go.sh
 go version
 ```
 
-```
-apt install -y build-essential
-```
-
-```
-go env -w CGO_ENABLED=1
-go env
-```
-
 首次编译 / 再次编译
 
 **linux-amd64**
