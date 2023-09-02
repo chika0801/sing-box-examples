@@ -1,19 +1,9 @@
 {
-    "log": {
-        "level": "info",
-        "timestamp": true
-    },
     "inbounds": [
         {
             "type": "hysteria2",
-            "tag": "hysteria2-in",
             "listen": "::",
             "listen_port": 443,
-            "users": [
-                {
-                    "auth_str": "chika"
-                }
-            ],
             "users": [
                 {
                     "password": "chika"
@@ -31,8 +21,7 @@
     ],
     "outbounds": [
         {
-            "type": "direct",
-            "tag": "direct"
+            "type": "direct"
         }
     ]
 }
