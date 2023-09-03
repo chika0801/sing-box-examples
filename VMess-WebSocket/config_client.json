@@ -11,7 +11,7 @@
             "type": "vmess",
             "server": "",
             "server_port": 443,
-            "uuid": "chika",
+            "uuid": "",
             "security": "aes-128-gcm",
             "alter_id": 0,
             "tls": {
@@ -21,7 +21,7 @@
             "packet_encoding": "packetaddr",
             "transport": {
                 "type": "ws",
-                "path": "chika",  // 与服务端一致
+                "path": "",  // 与服务端一致
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol" // 与服务端一致
             }
