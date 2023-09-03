@@ -19,7 +19,7 @@
             "server": "",
             "server_port": 443,
             "version": 3,
-            "password": "chika",
+            "password": "",
             "tls": {
                 "enabled": true,
                 "server_name": ""
