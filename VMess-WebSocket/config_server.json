@@ -6,13 +6,13 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "uuid": "chika", // 执行 sing-box generate uuid 生成
+                    "uuid": "", // 执行 sing-box generate uuid 生成
                     "alterId": 0
                 }
             ],
             "transport": {
                 "type": "ws",
-                "path": "chika", // HTTP 请求路径
+                "path": "", // HTTP 请求路径
                 "max_early_data": 2048,
                 "early_data_header_name": "Sec-WebSocket-Protocol" // 要与 Xray-core 兼容，设置为 Sec-WebSocket-Protocol
             }
