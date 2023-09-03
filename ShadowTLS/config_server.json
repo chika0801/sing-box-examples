@@ -22,7 +22,7 @@
             "tag": "shadowsocks-in",
             "listen": "127.0.0.1",
             "method": "2022-blake3-aes-128-gcm",
-            "password": "" // 执行 openssl rand -base64 16 生成
+            "password": ""
         }
     ],
     "outbounds": [
