@@ -11,7 +11,7 @@
             "type": "trojan",
             "server": "",
             "server_port": 443,
-            "password": "chika",
+            "password": "",
             "tls": {
                 "enabled": true,
                 "server_name": ""
