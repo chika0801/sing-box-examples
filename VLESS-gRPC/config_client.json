@@ -23,7 +23,7 @@
             "packet_encoding": "xudp",
             "transport": {
                 "type": "grpc",
-                "service_name": "" // 与服务端一致
+                "service_name": ""
             }
         }
     ]
