@@ -6,7 +6,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "" // 执行 sing-box generate uuid 生成
+                    "uuid": ""
                 }
             ],
             "tls": {
@@ -26,7 +26,7 @@
             },
             "transport": {
                 "type": "grpc",
-                "service_name": "" // gRPC 服务名称
+                "service_name": ""
             }
         }
     ],
