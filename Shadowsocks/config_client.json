@@ -12,7 +12,7 @@
             "server": "",
             "server_port": 80,
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg=="
+            "password": ""
         }
     ]
 }
