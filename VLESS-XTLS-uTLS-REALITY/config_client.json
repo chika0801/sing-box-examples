@@ -15,15 +15,15 @@
             "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
-                "server_name": "", // 与服务端一致
+                "server_name": "",
                 "utls": {
                     "enabled": true,
                     "fingerprint": "chrome"
                 },
                 "reality": {
                     "enabled": true,
-                    "public_key": "", // 服务端执行 sing-box generate reality-keypair 生成，私钥对应的公钥，填 "PublicKey" 的值
-                    "short_id": "" // 与服务端一致
+                    "public_key": "",
+                    "short_id": ""
                 }
             },
             "packet_encoding": "xudp"
