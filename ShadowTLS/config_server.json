@@ -12,7 +12,7 @@
                 }
             ],
             "handshake": {
-                "server": "www.lovelive-anime.jp", // 目标网站最低标准：国外网站，支持 TLSv1.3
+                "server": "",
                 "server_port": 443
             },
             "strict_mode": true
@@ -22,7 +22,7 @@
             "tag": "shadowsocks-in",
             "listen": "127.0.0.1",
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg==" // 执行 openssl rand -base64 16 生成
+            "password": "" // 执行 openssl rand -base64 16 生成
         }
     ],
     "outbounds": [
