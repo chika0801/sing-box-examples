@@ -6,12 +6,12 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "uuid": "chika" // 执行 sing-box generate uuid 生成
+                    "uuid": "" // 执行 sing-box generate uuid 生成
                 }
             ],
             "transport": {
                 "type": "grpc",
-                "service_name": "chika" // gRPC 服务名称
+                "service_name": "" // gRPC 服务名称
             }
         }
     ],
