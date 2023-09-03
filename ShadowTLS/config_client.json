@@ -11,7 +11,7 @@
             "type": "shadowsocks",
             "detour": "shadowtls-out",
             "method": "2022-blake3-aes-128-gcm",
-            "password": "3P+xaSaFiXsrQ1KCr2Xvxg=="
+            "password": ""
         },
         {
             "type": "shadowtls",
@@ -22,7 +22,7 @@
             "password": "chika",
             "tls": {
                 "enabled": true,
-                "server_name": "www.lovelive-anime.jp"
+                "server_name": ""
             }
         }
     ]
