@@ -3,12 +3,6 @@
         "level": "info",
         "timestamp": true
     },
-    "experimental": {
-        "clash_api": {
-            "external_controller": "127.0.0.1:9090",
-            "store_fakeip": true
-        }
-    },
     "dns": {
         "servers": [
             {
@@ -180,5 +174,11 @@
             "type": "dns",
             "tag": "dns-out"
         }
-    ]
+    ],
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "store_fakeip": true
+        }
+    }
 }
