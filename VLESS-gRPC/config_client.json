@@ -11,7 +11,7 @@
             "type": "vless",
             "server": "",
             "server_port": 443,
-            "uuid": "chika",
+            "uuid": "",
             "tls": {
                 "enabled": true,
                 "server_name": "",
@@ -23,7 +23,7 @@
             "packet_encoding": "xudp",
             "transport": {
                 "type": "grpc",
-                "service_name": "chika" // 与服务端一致
+                "service_name": "" // 与服务端一致
             }
         }
     ]
