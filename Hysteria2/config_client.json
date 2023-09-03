@@ -13,7 +13,7 @@
             "server_port": 443,
             "up_mbps": 30,
             "down_mbps": 150,
-            "password": "chika",
+            "password": "",
             "tls": {
                 "enabled": true,
                 "server_name": "",
