@@ -11,8 +11,8 @@
             "type": "tuic",
             "server": "",
             "server_port": 443,
-            "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc",
-            "password": "chika",
+            "uuid": "",
+            "password": "",
             "congestion_control": "bbr",
             "tls": {
                 "enabled": true,
