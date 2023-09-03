@@ -8,7 +8,7 @@
             "down_mbps": 30,
             "users": [
                 {
-                    "auth_str": "chika"
+                    "auth_str": ""
                 }
             ],
             "tls": {
