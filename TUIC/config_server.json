@@ -6,8 +6,8 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "ee48f7be-6ae9-5654-9b61-8466aa8e16bc", // 执行 sing-box generate uuid 生成
-                    "password": "chika"
+                    "uuid": "", // 执行 sing-box generate uuid 生成
+                    "password": ""
                 }
             ],
             "congestion_control": "bbr",
