@@ -6,8 +6,8 @@
             "listen_port": 443,
             "users": [
                 {
-                    "username": "chika",
-                    "password": "chika"
+                    "username": "",
+                    "password": ""
                 }
             ],
             "tls": {
