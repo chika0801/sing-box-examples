@@ -107,7 +107,7 @@
             "inet6_address": "fdfe:dcba:9876::1/126",
             "mtu": 1400,
             "auto_route": true,
-            "strict_route": false,
+            "strict_route": true,
             "stack": "gvisor",
             "sniff": true,
             "sniff_override_destination": false,
