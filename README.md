@@ -1,6 +1,6 @@
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
-## 一键脚本 [sing-box-install](https://github.com/KoinuDayo/Sing-box-Install) 
+## 一键脚本 [sing-box-install](https://github.com/chise0713/sing-box-install) 
 
 安装正式版
 ```
