@@ -1,0 +1,34 @@
+name: sing-box
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21.1'
+
+    - name: Show go env
+      run: go env
+
+    - name: go build (linux)
+      run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 go install -v -tags with_wireguard,with_quic,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+
+    - name: go build (windows)
+      run: CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 go install -v -tags with_clash_api,with_quic,with_utls,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+
+    - name: Upload files
+      uses: actions/upload-artifact@v3
+      with:
+        name: sing-box
+        path: |
+          go/bin/sing-box
+          go/bin/windows_amd64/sing-box.exe
