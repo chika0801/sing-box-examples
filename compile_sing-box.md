@@ -1,7 +1,7 @@
 准备环境
 
 ```
-curl -sLo go.tar.gz https://go.dev/dl/go1.21.1.linux-amd64.tar.gz
+curl -L https://go.dev/dl/$(curl -sL https://golang.org/VERSION?m=text|head -1).linux-amd64.tar.gz >> go.tar.gz
 rm -rf /usr/local/go
 tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
