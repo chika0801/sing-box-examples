@@ -33,9 +33,9 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 | 查看日志 | `journalctl -u sing-box -o cat -e` |
 | 实时日志 | `journalctl -u sing-box -o cat -f` |
 
-## 手动安装
+## 服务端
 
-### 服务端
+### 安装
 
 1. 下载程序（**linux-amd64**）或 [编译程序](compile_sing-box.md)
 ```
