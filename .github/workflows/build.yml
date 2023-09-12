@@ -32,9 +32,9 @@ jobs:
     - name: go build
       run: | 
         cd sing-box
-        export ${{ env.ENV_LINUX }}
+        go env -w ${{ env.ENV_LINUX }}
         go build -v -tags ${{ env.TAG_LINUX }} -o sing-box -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
-        export ${{ env.ENV_WINDOWS }}
+        go env -w ${{ env.ENV_WINDOWS }}
         go build -v -tags ${{ env.TAG_WINDOWS }} -o sing-box.exe -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
 
     - name: Upload files
