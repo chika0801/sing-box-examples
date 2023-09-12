@@ -39,7 +39,7 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 
 1. 下载程序（**linux-amd64**）或 [编译程序](compile_sing-box.md)
 ```
-curl -Lo /root/sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.4.1-linux-amd64.tar.gz && tar -xzf /root/sing-box.tar.gz && cp -f /root/sing-box-*/sing-box /root && rm -r /root/sing-box.tar.gz /root/sing-box-* && chown root:root /root/sing-box && chmod +x /root/sing-box && mv -f /root/sing-box /usr/local/bin
+curl -Lo sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-1.4.2-linux-amd64.tar.gz && tar -xzf sing-box.tar.gz && cp -f sing-box-*/sing-box . && rm -r sing-box.tar.gz sing-box-* && chown root:root sing-box && chmod +x sing-box && mv -f sing-box /usr/local/bin/
 ```
 
 2. 上传配置、证书和私钥
