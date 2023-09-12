@@ -7,7 +7,7 @@
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install
 ```
 
-安装测试版
+安装预发布版
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install --beta
 ```
