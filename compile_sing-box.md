@@ -10,20 +10,42 @@ source /etc/profile.d/go.sh
 go version
 ```
 
-首次编译 / 再次编译
+```
+apt install -y git
+```
+
+下载代码
+
+```
+git clone https://github.com/SagerNet/sing-box.git
+```
+
+更新代码
+
+```
+cd sing-box
+git pull
+cd ..
+```
+
+编译命令
 
 **linux-amd64**
 
 ```
+cd sing-box
 go env -w CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
-go install -v -tags with_wireguard,with_quic,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+go build -tags with_wireguard,with_quic,with_ech,with_reality_server -v -o sing-box -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
+cd ..
 ```
 
 **windows-amd64**
 
 ```
+cd sing-box
 go env -w CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
-go install -v -tags with_clash_api,with_quic,with_utls,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+go build -tags with_clash_api,with_quic,with_utls,with_ech,with_reality_server -v -o sing-box.exe -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
+cd ..
 ```
 
 [sing-box Build Tag](https://sing-box.sagernet.org/installation/from-source/)
@@ -35,12 +57,12 @@ go install -v -tags with_clash_api,with_quic,with_utls,with_ech,with_reality_ser
 **linux-amd64**
 
 ```
-cp -f go/bin/sing-box /usr/local/bin
+cp -f sing-box/sing-box /usr/local/bin
 chmod +x /usr/local/bin/sing-box
 ```
 
 **windows-amd64**
 
 ```
-cp -f go/bin/windows_amd64/sing-box.exe .
+cp -f sing-box/sing-box.exe .
 ```
