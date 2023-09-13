@@ -57,7 +57,7 @@ cd ..
 **linux-amd64**
 
 ```
-cp -f sing-box/sing-box /usr/local/bin
+cp -f sing-box/sing-box /usr/local/bin/
 chmod +x /usr/local/bin/sing-box
 ```
 
