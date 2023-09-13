@@ -30,9 +30,9 @@ jobs:
       run: | 
         cd sing-box
         go env -w ${{ env.ENV_LINUX }}
-        go build -v -tags ${{ env.TAG_LINUX }} -o sing-box -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
+        go build -tags ${{ env.TAG_LINUX }} -v -o sing-box -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
         go env -w ${{ env.ENV_WINDOWS }}
-        go build -v -tags ${{ env.TAG_WINDOWS }} -o sing-box.exe -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
+        go build -tags ${{ env.TAG_WINDOWS }} -v -o sing-box.exe -trimpath -ldflags "-s -w -buildid=" ./cmd/sing-box
 
     - name: Upload files
       uses: actions/upload-artifact@v3
