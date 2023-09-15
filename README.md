@@ -74,7 +74,7 @@ systemctl enable --now sing-box
 | 查看日志 | `journalctl -u sing-box -o cat -e` |
 | 实时日志 | `journalctl -u sing-box -o cat -f` |
 
-#### 卸载
+### 卸载
 
 ```
 systemctl disable --now sing-box && rm -f /usr/local/bin/sing-box /root/sing-box_config.json /etc/systemd/system/sing-box.service
