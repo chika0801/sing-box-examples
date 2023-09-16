@@ -105,7 +105,9 @@
                     "xray.exe",
                     "hysteria.exe",
                     "tuic.exe",
-                    "juicity.exe"
+                    "tuic-client.exe",
+                    "juicity.exe",
+                    "juicity-client.exe"
                 ],
                 "outbound": "direct"
             },
