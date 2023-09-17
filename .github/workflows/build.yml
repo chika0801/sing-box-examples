@@ -20,9 +20,6 @@ jobs:
         go-version: '1.21.1'
         cache: false
 
-    - name: Show go env
-      run: go env
-
     - name: git clone
       run: |
         git clone --depth 1 https://github.com/SagerNet/sing-box.git
