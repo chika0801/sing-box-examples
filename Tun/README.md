@@ -37,9 +37,16 @@
 
 https://github.com/chika0801/sing-box-examples/blob/fcd8f7166b87304bc879a23c4b024210495af6e1/Tun/config_client_windows.json#L7-L31
 
+- 默认出站： `"tag": "proxy"`
+
+https://github.com/chika0801/sing-box-examples/blob/c88693a5b1b33a205647271f740217da2a27c859/Tun/config_client_windows.json#L166-L183
+
 2. 匹配顺序是**从上到下**，未命中任何规则，使用**默认值**
 
 - 默认值： `"tag": "dns_proxy"`
 
 https://github.com/chika0801/sing-box-examples/blob/fcd8f7166b87304bc879a23c4b024210495af6e1/Tun/config_client_windows.json#L32-L65
 
+- 默认值： `"tag": "proxy"`
+
+https://github.com/chika0801/sing-box-examples/blob/c88693a5b1b33a205647271f740217da2a27c859/Tun/config_client_windows.json#L74-L150
