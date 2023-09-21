@@ -31,6 +31,12 @@
         ],
         "rules": [
             {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_resolver"
+            },
+            {
                 "domain": [
                     "time.apple.com"
                 ],
@@ -55,12 +61,6 @@
                     "private"
                 ],
                 "server": "dns_direct"
-            },
-            {
-                "outbound": [
-                    "any"
-                ],
-                "server": "dns_resolver"
             }
         ]
     },
