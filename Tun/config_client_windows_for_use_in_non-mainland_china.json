@@ -1,0 +1,148 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns_proxy",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
+                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "proxy"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
+                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "detour": "direct"
+            },
+            {
+                "tag": "dns_block",
+                "address": "rcode://success"
+            },
+            {
+                "tag": "dns_resolver",
+                "address": "1.1.1.1",
+                "detour": "direct"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_resolver"
+            },
+            {
+                "domain": [
+                    "time.apple.com"
+                ],
+                "server": "dns_resolver"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "server": "dns_block",
+                "disable_cache": true
+            },
+            {
+                "geosite": [
+                    "private"
+                ],
+                "server": "dns_direct"
+            }
+        ]
+    },
+    "route": {
+        "geoip": {
+            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db"
+        },
+        "geosite": {
+            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db"
+        },
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "process_name": [ // 直连的 Windows 可执行程序
+                    "xray.exe",
+                    "hysteria.exe",
+                    "tuic.exe",
+                    "tuic-client.exe",
+                    "juicity.exe",
+                    "juicity-client.exe"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "protocol": [
+                    "quic"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "outbound": "block"
+            },
+            {
+                "geosite": [
+                    "private"
+                ],
+                "outbound": "direct"
+            },
+            {
+                "geoip": [
+                    "private"
+                ],
+                "outbound": "direct"
+            }
+        ],
+        "auto_detect_interface": true
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "inet4_address": "172.19.0.1/30",
+            "inet6_address": "fdfe:dcba:9876::1/126",
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "sniff": true,
+            "sniff_override_destination": false
+        }
+    ],
+    "outbounds": [
+        {
+            // 粘贴你的客户端配置，需要保留 "tag": "proxy"
+            "tag": "proxy"
+        },
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        },
+        {
+            "type": "dns",
+            "tag": "dns-out"
+        }
+    ],
+    "ntp": {
+        "enabled": true,
+        "server": "time.apple.com",
+        "server_port": 123,
+        "interval": "30m",
+        "detour": "direct"
+    }
+}
