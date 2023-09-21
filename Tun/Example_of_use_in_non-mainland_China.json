@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // If the server is IPv6 ready, change to prefer_ipv6.
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // If the client is IPv6 ready, change to prefer_ipv6.
                 "detour": "direct"
             },
             {
@@ -72,7 +72,7 @@
                 "outbound": "dns-out"
             },
             {
-                "process_name": [ // 直连的 Windows 可执行程序
+                "process_name": [ // Directly connected Windows executable programs.
                     "xray.exe",
                     "hysteria.exe",
                     "tuic.exe",
@@ -124,7 +124,7 @@
     ],
     "outbounds": [
         {
-            // 粘贴你的客户端配置，需要保留 "tag": "proxy"
+            // Paste your client configuration, you need to keep "tag": "proxy".
             "tag": "proxy"
         },
         {
