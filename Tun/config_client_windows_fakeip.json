@@ -36,6 +36,12 @@
         ],
         "rules": [
             {
+                "domain": [
+                    "time.apple.com"
+                ],
+                "server": "dns_resolver"
+            },
+            {
                 "geosite": [
                     "category-ads-all"
                 ],
@@ -183,6 +189,13 @@
             "tag": "dns-out"
         }
     ],
+    "ntp": {
+        "enabled": true,
+        "server": "time.apple.com",
+        "server_port": 123,
+        "interval": "30m",
+        "detour": "direct"
+    }
     "experimental": {
         "clash_api": {
             "external_controller": "127.0.0.1:9090",
