@@ -88,14 +88,42 @@
                 "outbound": "block"
             },
             {
-                "geosite": [
-                    "geolocation-!cn"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "geolocation-!cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "cn"
+                        ],
+                        "invert": true
+                    }
                 ],
                 "outbound": "proxy"
             },
             {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "cn"
+                        ]
+                    }
+                ],
+                "outbound": "direct"
+            },
+            {
                 "geosite": [
-                    "cn",
                     "private"
                 ],
                 "outbound": "direct"
