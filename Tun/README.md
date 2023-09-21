@@ -21,8 +21,8 @@
 ```json
             {
                 "tag": "dns_proxy",
-                "address": "tls://1.1.1.1",
-                "address_resolver": "dns_direct",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only",
                 "detour": "proxy"
             }
