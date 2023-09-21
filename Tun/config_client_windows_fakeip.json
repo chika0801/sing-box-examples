@@ -36,6 +36,12 @@
         ],
         "rules": [
             {
+                "outbound": [
+                    "any"
+                ],
+                "server": "dns_resolver"
+            },
+            {
                 "domain": [
                     "time.apple.com"
                 ],
@@ -85,12 +91,6 @@
                     "AAAA"
                 ],
                 "server": "dns_fakeip"
-            },
-            {
-                "outbound": [
-                    "any"
-                ],
-                "server": "dns_resolver"
             }
         ],
         "independent_cache": true,
