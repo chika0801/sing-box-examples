@@ -31,6 +31,12 @@
         ],
         "rules": [
             {
+                "domain": [
+                    "time.apple.com"
+                ],
+                "server": "dns_resolver"
+            },
+            {
                 "geosite": [
                     "category-ads-all"
                 ],
@@ -171,5 +177,12 @@
             "type": "dns",
             "tag": "dns-out"
         }
-    ]
+    ],
+    "ntp": {
+        "enabled": true,
+        "server": "time.apple.com",
+        "server_port": 123,
+        "interval": "30m",
+        "detour": "direct"
+    }
 }
