@@ -25,5 +25,5 @@
                 "address_resolver": "dns_direct",
                 "strategy": "ipv4_only",
                 "detour": "proxy"
-            },
+            }
 ```
