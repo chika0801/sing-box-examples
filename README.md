@@ -32,6 +32,7 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 | 配置 | **/usr/local/etc/sing-box/config.json** |
 | geoip | **/usr/local/share/sing-box/geoip.db** |
 | geosite | **/usr/local/share/sing-box/geosite.db** |
+| 热载 | `systemctl reload sing-box` |
 | 重启 | `systemctl restart sing-box` |
 | 状态 | `systemctl status sing-box` |
 | 查看日志 | `journalctl -u sing-box -o cat -e` |
