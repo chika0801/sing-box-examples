@@ -144,8 +144,24 @@
                 "outbound": "proxy"
             },
             {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "geosite": [
+                            "cn"
+                        ]
+                    },
+                    {
+                        "geoip": [
+                            "cn"
+                        ]
+                    }
+                ],
+                "outbound": "direct"
+            },
+            {
                 "geosite": [
-                    "cn",
                     "private"
                 ],
                 "outbound": "direct"
