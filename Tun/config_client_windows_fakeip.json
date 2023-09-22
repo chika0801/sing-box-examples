@@ -42,12 +42,6 @@
                 "server": "dns_resolver"
             },
             {
-                "domain": [
-                    "time.apple.com"
-                ],
-                "server": "dns_resolver"
-            },
-            {
                 "geosite": [
                     "category-ads-all"
                 ],
