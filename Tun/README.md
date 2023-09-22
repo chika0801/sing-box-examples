@@ -13,7 +13,7 @@
                 "outbound": [
                     "any"
                 ],
-                "server": "dns_direct"
+                "server": "dns_resolver"
             }
 ```
 
