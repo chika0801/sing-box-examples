@@ -21,7 +21,7 @@
             },
             {
                 "tag": "dns_block",
-                "address": "rcode://success"
+                "address": "rcode://refused"
             },
             {
                 "tag": "dns_resolver",
@@ -122,12 +122,6 @@
             {
                 "protocol": [
                     "quic"
-                ],
-                "outbound": "block"
-            },
-            {
-                "geosite": [
-                    "category-ads-all"
                 ],
                 "outbound": "block"
             },
