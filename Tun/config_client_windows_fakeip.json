@@ -14,7 +14,7 @@
             },
             {
                 "tag": "dns_direct",
-                "address": "https://dns.alidns.com/dns-query",
+                "address": "h3://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
@@ -24,14 +24,15 @@
                 "address": "rcode://refused"
             },
             {
-                "tag": "dns_resolver",
-                "address": "223.5.5.5",
-                "detour": "direct"
-            },
-            {
                 "tag": "dns_fakeip",
                 "address": "fakeip",
                 "strategy": "ipv4_only"
+            },
+            {
+                "tag": "dns_resolver",
+                "address": "223.5.5.5",
+                "strategy": "ipv4_only",
+                "detour": "direct"
             }
         ],
         "rules": [
