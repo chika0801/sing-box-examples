@@ -36,6 +36,13 @@
                     "any"
                 ],
                 "server": "dns_resolver"
+            },
+            {
+                "geosite": [
+                    "category-ads-all"
+                ],
+                "server": "dns_block",
+                "disable_cache": true
             }
         ]
     },
