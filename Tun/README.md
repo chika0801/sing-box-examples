@@ -35,18 +35,26 @@
 
 - 默认DNS服务器： `"tag": "dns_proxy"`
 
-https://github.com/chika0801/sing-box-examples/blob/fcd8f7166b87304bc879a23c4b024210495af6e1/Tun/config_client_windows.json#L7-L31
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L7-L32
 
 - 默认出站： `"tag": "proxy"`
 
-https://github.com/chika0801/sing-box-examples/blob/c88693a5b1b33a205647271f740217da2a27c859/Tun/config_client_windows.json#L166-L183
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L157-L174
 
 2. 匹配顺序是**从上到下**，未命中任何规则，使用**默认值**
 
+- 规则
+
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L33-L60
+
 - 默认值： `"tag": "dns_proxy"`
 
-https://github.com/chika0801/sing-box-examples/blob/fcd8f7166b87304bc879a23c4b024210495af6e1/Tun/config_client_windows.json#L32-L65
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L8-L14
+
+- 规则
+
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L71-L141
 
 - 默认值： `"tag": "proxy"`
 
-https://github.com/chika0801/sing-box-examples/blob/c88693a5b1b33a205647271f740217da2a27c859/Tun/config_client_windows.json#L74-L150
+https://github.com/chika0801/sing-box-examples/blob/8e89d5f3161a2b3b8aae44d00267d5875646aa54/Tun/config_client_windows.json#L158-L161
