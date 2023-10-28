@@ -23,7 +23,7 @@ go install -v -tags with_wireguard,with_quic,with_ech,with_reality_server github
 
 ```
 go env -w CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
-go install -v -tags with_clash_api,with_quic,with_utls,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
+go install -v -tags with_gvisor,with_clash_api,with_quic,with_utls,with_ech,with_reality_server github.com/sagernet/sing-box/cmd/sing-box@dev-next
 ```
 
 [sing-box Build Tag](https://sing-box.sagernet.org/installation/from-source/)
