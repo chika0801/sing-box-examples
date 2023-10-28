@@ -4,7 +4,7 @@ env:
   ENV_LINUX: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
   ENV_WINDOWS: CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
   TAG_LINUX: with_wireguard,with_quic,with_ech,with_reality_server
-  TAG_WINDOWS: with_clash_api,with_quic,with_utls,with_ech,with_reality_server
+  TAG_WINDOWS: with_gvisor,with_clash_api,with_quic,with_utls,with_ech,with_reality_server
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     - name: Setup Go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.21.1'
+        go-version: '1.21.3'
         cache: false
 
     - name: git clone
