@@ -24,7 +24,7 @@ client
             "multiplex": {
                 "enabled": false,
                 "padding": false,
-                "brutal": {  // experimental
+                "brutal": { // experimental
                     "enabled": true,
                     "up_mbps": 20,
                     "down_mbps": 100
@@ -66,7 +66,7 @@ server
             "multiplex": {
                 "enabled": false,
                 "padding": false,
-                "brutal": {  // experimental
+                "brutal": { // experimental
                     "enabled": true,
                     "up_mbps": 100,
                     "down_mbps": 20
