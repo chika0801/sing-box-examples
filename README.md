@@ -38,6 +38,52 @@
             }
 ```
 
+<details> <summary>示例配置</summary>
+
+```jsonc
+{
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "server": "233.33.33.33",
+            "server_port": 443,
+            "uuid": "chika",
+            "flow": "",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.lovelive-anime.jp",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+             },
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": true,
+                "protocol": "h2mux",
+                "max_connections": 4,
+                "min_streams": 4,
+                "padding": true,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 50,
+                    "down_mbps": 1000
+                }
+            }
+        }
+    ]
+}
+```
+
+</details
+
 ### 服务端
 
 | | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
@@ -67,6 +113,47 @@
                 }
             }
 ```
+
+<details> <summary>示例配置</summary>
+
+```jsonc
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "uuid": "chika",
+                    "flow": ""
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "certificate_path": "/root/fullchain.cer",
+                "key_path": "/root/private.key"
+            },
+            "multiplex": {
+                "enabled": true,
+                "padding": true,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 100,
+                    "down_mbps": 1000
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
+```
+
+</details>
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
