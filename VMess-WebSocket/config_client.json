@@ -16,7 +16,11 @@
             "alter_id": 0,
             "tls": {
                 "enabled": true,
-                "server_name": ""
+                "server_name": "",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
             },
             "packet_encoding": "packetaddr",
             "transport": {
