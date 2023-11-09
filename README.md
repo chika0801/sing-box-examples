@@ -1,12 +1,12 @@
 # [TCP Brutal](https://github.com/apernet/tcp-brutal) 使用指南
 
-## 安装 [TCP Brutal](https://github.com/apernet/tcp-brutal/blob/master/README.zh.md#%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97)
+## 服务端安装 [TCP Brutal](https://github.com/apernet/tcp-brutal/blob/master/README.zh.md#%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97)
 
 ## sing-box 配置
 
 ### 客户端
 
-| | ShadowTLS | Shadowsocks | Trojan | VLESS-XTLS-Vision | VLESS-XTLS-uTLS-REALITY | VMess-WebSocket |
+| | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | "multiplex" | |
 | - "enabled": | true | true | true | true | true | true |
@@ -21,12 +21,25 @@
 
 2. **"up_mbps" / "down_mbps"** 必填，不会生效
 
-3. 两端 **"protocol" / "padding"** 需一致
+3. 两端 "padding"** 必须一致
 
+### 服务端
 
+| | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| "multiplex" | |
+| - "enabled": | true | true | true | true | true | true |
+| - "padding" | false / true | false / true | false / true | false / true | false / true | false / true |
+| - "brutal" | |
+| -- "enabled" | true | true | true | true | true | true |
+| -- "up_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
+| -- "down_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
 
+1. **VLESS-XTLS-Vision / VLESS-XTLS-uTLS-REALITY** 中 `"flow": ""` 必须留空
 
+2. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
 
+3. 两端 "padding"** 必须一致
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
