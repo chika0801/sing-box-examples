@@ -71,7 +71,6 @@
                 ],
                 "outbound": "direct"
             },
-
             {
                 "geosite": [
                     "private"
