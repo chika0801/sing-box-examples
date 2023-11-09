@@ -19,7 +19,7 @@
             }
 ```
 
-**支持的：ShadowTLS / Shadowsocks / Trojan / VLESS / VLESS-REALITY / VMess-WebSocket**
+**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-WebSocket](VMess-WebSocket)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
@@ -87,7 +87,7 @@
             }
 ```
 
-**支持的：ShadowTLS / Shadowsocks / Trojan / VLESS / VLESS-REALITY / VMess-WebSocket**
+**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-WebSocket](VMess-WebSocket)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
