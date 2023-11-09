@@ -71,12 +71,7 @@
                 ],
                 "outbound": "direct"
             },
-            {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
+
             {
                 "geosite": [
                     "private"
