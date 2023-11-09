@@ -49,13 +49,6 @@
                     "geolocation-!cn"
                 ],
                 "server": "dns_proxy"
-            },
-            {
-                "geosite": [
-                    "cn",
-                    "private"
-                ],
-                "server": "dns_direct"
             }
         ]
     },
@@ -74,45 +67,10 @@
                 "outbound": "dns-out"
             },
             {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "geosite": [
-                            "geolocation-!cn"
-                        ]
-                    },
-                    {
-                        "geoip": [
-                            "cn"
-                        ],
-                        "invert": true
-                    }
+                "geosite": [
+                    "geolocation-!cn"
                 ],
                 "outbound": "proxy"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "geosite": [
-                            "cn"
-                        ]
-                    },
-                    {
-                        "geoip": [
-                            "cn"
-                        ]
-                    }
-                ],
-                "outbound": "direct"
             },
             {
                 "geosite": [
