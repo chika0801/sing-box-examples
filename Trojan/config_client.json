@@ -14,7 +14,11 @@
             "password": "",
             "tls": {
                 "enabled": true,
-                "server_name": ""
+                "server_name": "",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
             }
         }
     ]
