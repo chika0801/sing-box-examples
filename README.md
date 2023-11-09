@@ -2,41 +2,30 @@
 
 ## 服务端安装 [TCP Brutal](https://github.com/apernet/tcp-brutal/blob/master/README.zh.md#%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97)
 
-## sing-box 配置
-
-### 客户端
-
-| | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **"multiplex"** | |
-| *"enabled"* | true | true | true | true | true | true |
-| *"protocol"* | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux |
-| *"padding"* | false / true | false / true | false / true | false / true | false / true | false / true |
-| **"brutal"** | |
-| *"enabled"* | true | true | true | true | true | true |
-| *"up_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
-| *"down_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
-
-1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
-
-2. **"up_mbps" / "down_mbps"** 必填，不会生效
-
-3. 两端 **"padding"** 必须一致
+## 客户端配置
 
 ```jsonc
             "multiplex": {
-                "enabled": true, // 必须填 true
-                "protocol": "h2mux",
+                "enabled": true,
+                "protocol": "h2mux", // smux / yamux / h2mux
                 "max_connections": 4,
                 "min_streams": 4,
-                "padding": true, // 两端 "padding" 必须一致
+                "padding": true, // false / true
                 "brutal": {
-                    "enabled": true, // 必须填 true
-                    "up_mbps": 50, // 必填，不会生效
-                    "down_mbps": 1000 // 必填，不会生效
+                    "enabled": true,
+                    "up_mbps": 50,
+                    "down_mbps": 1000
                 }
             }
 ```
+
+**支持的：ShadowTLS / Shadowsocks / Trojan / VLESS / VLESS-REALITY / VMess-WebSocket**
+
+1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
+
+2. 两端 **"padding"** 必须一致
+
+3. **"up_mbps" / "down_mbps"** 必填，不会生效
 
 <details> <summary>示例配置</summary>
 
@@ -82,37 +71,29 @@
 }
 ```
 
-</details
+</details>
 
-### 服务端
-
-| | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **"multiplex"** | |
-| *"enabled"* | true | true | true | true | true | true |
-| *"padding"* | false / true | false / true | false / true | false / true | false / true | false / true |
-| **"brutal"** | |
-| *"enabled"* | true | true | true | true | true | true |
-| *"up_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
-| *"down_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
-
-1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
-
-2. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
-
-3. 两端 **"padding"** 必须一致
+## 服务端配置
 
 ```jsonc
             "multiplex": {
-                "enabled": true, // 必须填 true
-                "padding": true, // 两端 "padding" 必须一致
+                "enabled": true,
+                "padding": true, // false / true
                 "brutal": {
-                    "enabled": true, // 必须填 true
+                    "enabled": true,
                     "up_mbps": 100, // 客户端的下行速率
-                    "down_mbps": 1000 // 必填，不会生效
+                    "down_mbps": 1000
                 }
             }
 ```
+
+**支持的：ShadowTLS / Shadowsocks / Trojan / VLESS / VLESS-REALITY / VMess-WebSocket**
+
+1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
+
+2. 两端 **"padding"** 必须一致
+
+3. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
 
 <details> <summary>示例配置</summary>
 
