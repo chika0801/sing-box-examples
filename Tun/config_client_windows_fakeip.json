@@ -64,22 +64,9 @@
                     "geolocation-!cn"
                 ],
                 "server": "dns_proxy"
-            },
-            {
-                "geosite": [
-                    "cn",
-                    "private"
-                ],
-                "server": "dns_direct"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "dns_fakeip"
             }
         ],
+        "final": "dns_direct",
         "independent_cache": true,
         "fakeip": {
             "enabled": true,
@@ -113,33 +100,10 @@
                 "outbound": "direct"
             },
             {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
-            {
                 "geosite": [
                     "geolocation-!cn"
                 ],
                 "outbound": "proxy"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "geosite": [
-                            "cn"
-                        ]
-                    },
-                    {
-                        "geoip": [
-                            "cn"
-                        ]
-                    }
-                ],
-                "outbound": "direct"
             },
             {
                 "geosite": [
@@ -165,7 +129,7 @@
             "inet6_address": "fdfe:dcba:9876::1/126",
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
+            "stack": "mixed",
             "sniff": true,
             "sniff_override_destination": false
         }
