@@ -17,7 +17,7 @@
 | -- "up_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
 | -- "down_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
 
-1. **VLESS-XTLS-Vision / VLESS-XTLS-uTLS-REALITY** 中 `"flow": ""` 必须留空
+1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
 2. **"up_mbps" / "down_mbps"** 必填，不会生效
 
@@ -25,13 +25,13 @@
 
 ```jsonc
             "multiplex": {
-                "enabled": true,
+                "enabled": true, // 必填
                 "protocol": "h2mux",
                 "max_connections": 4,
                 "min_streams": 4,
-                "padding": true,
+                "padding": true, // 两端 **"padding"** 必须一致
                 "brutal": {
-                    "enabled": true,
+                    "enabled": true, // 必填
                     "up_mbps": 50, // 必填，不会生效
                     "down_mbps": 1000 // 必填，不会生效
                 }
@@ -50,7 +50,7 @@
 | -- "up_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
 | -- "down_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
 
-1. **VLESS-XTLS-Vision / VLESS-XTLS-uTLS-REALITY** 中 `"flow": ""` 必须留空
+1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
 2. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
 
@@ -58,10 +58,10 @@
 
 ```jsonc
             "multiplex": {
-                "enabled": true,
-                "padding": true,
+                "enabled": true, // 必填
+                "padding": true, // 两端 **"padding"** 必须一致
                 "brutal": {
-                    "enabled": true,
+                    "enabled": true, // 必填
                     "up_mbps": 100, // 客户端的下行速率
                     "down_mbps": 1000 // 必填，不会生效
                 }
