@@ -8,14 +8,14 @@
 
 | | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| "multiplex" | |
-| - "enabled": | true | true | true | true | true | true |
-| - "protocol": | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux |
-| - "padding" | false / true | false / true | false / true | false / true | false / true | false / true |
-| - "brutal" | |
-| -- "enabled" | true | true | true | true | true | true |
-| -- "up_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
-| -- "down_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
+| **"multiplex"** | |
+| *"enabled"* | true | true | true | true | true | true |
+| *"protocol"* | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux | smux / yamux / h2mux |
+| *"padding"* | false / true | false / true | false / true | false / true | false / true | false / true |
+| **"brutal"** | |
+| *"enabled"* | true | true | true | true | true | true |
+| *"up_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
+| *"down_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
@@ -25,13 +25,13 @@
 
 ```jsonc
             "multiplex": {
-                "enabled": true, // 必填
+                "enabled": true, // 必须填 true
                 "protocol": "h2mux",
                 "max_connections": 4,
                 "min_streams": 4,
-                "padding": true, // 两端 **"padding"** 必须一致
+                "padding": true, // 两端 "padding" 必须一致
                 "brutal": {
-                    "enabled": true, // 必填
+                    "enabled": true, // 必须填 true
                     "up_mbps": 50, // 必填，不会生效
                     "down_mbps": 1000 // 必填，不会生效
                 }
@@ -42,13 +42,13 @@
 
 | | ShadowTLS | Shadowsocks | Trojan | VLESS | VLESS-REALITY | VMess-WebSocket |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| "multiplex" | |
-| - "enabled": | true | true | true | true | true | true |
-| - "padding" | false / true | false / true | false / true | false / true | false / true | false / true |
-| - "brutal" | |
-| -- "enabled" | true | true | true | true | true | true |
-| -- "up_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
-| -- "down_mbps" | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 | 任意值 |
+| **"multiplex"** | |
+| *"enabled"* | true | true | true | true | true | true |
+| *"padding"* | false / true | false / true | false / true | false / true | false / true | false / true |
+| **"brutal"** | |
+| *"enabled"* | true | true | true | true | true | true |
+| *"up_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
+| *"down_mbps"* | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 | 带宽 |
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
@@ -58,10 +58,10 @@
 
 ```jsonc
             "multiplex": {
-                "enabled": true, // 必填
-                "padding": true, // 两端 **"padding"** 必须一致
+                "enabled": true, // 必须填 true
+                "padding": true, // 两端 "padding" 必须一致
                 "brutal": {
-                    "enabled": true, // 必填
+                    "enabled": true, // 必须填 true
                     "up_mbps": 100, // 客户端的下行速率
                     "down_mbps": 1000 // 必填，不会生效
                 }
