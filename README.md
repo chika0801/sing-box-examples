@@ -21,7 +21,22 @@
 
 2. **"up_mbps" / "down_mbps"** 必填，不会生效
 
-3. 两端 "padding"** 必须一致
+3. 两端 **"padding"** 必须一致
+
+```jsonc
+            "multiplex": {
+                "enabled": true,
+                "protocol": "h2mux",
+                "max_connections": 4,
+                "min_streams": 4,
+                "padding": true,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 50, // 必填，不会生效
+                    "down_mbps": 1000 // 必填，不会生效
+                }
+            }
+```
 
 ### 服务端
 
@@ -39,7 +54,19 @@
 
 2. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
 
-3. 两端 "padding"** 必须一致
+3. 两端 **"padding"** 必须一致
+
+```jsonc
+            "multiplex": {
+                "enabled": true,
+                "padding": true,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 100, // 客户端的下行速率
+                    "down_mbps": 1000 // 必填，不会生效
+                }
+            }
+```
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
