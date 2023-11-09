@@ -50,20 +50,12 @@
                 "disable_cache": true
             },
             {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "geosite": [
-                            "geolocation-!cn"
-                        ]
-                    },
-                    {
-                        "query_type": [
-                            "A",
-                            "AAAA"
-                        ]
-                    }
+                "geosite": [
+                    "geolocation-!cn"
+                ],
+                "query_type": [
+                    "A",
+                    "AAAA"
                 ],
                 "server": "dns_fakeip"
             },
