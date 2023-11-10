@@ -65,7 +65,7 @@
             "multiplex": {
                 "enabled": true,
                 "protocol": "h2mux",
-                "max_connections": 4,
+                "max_connections": 1,
                 "min_streams": 4,
                 "padding": true,
                 "brutal": {
