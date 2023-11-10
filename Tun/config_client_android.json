@@ -97,16 +97,9 @@
             "mtu": 1400,
             "auto_route": true,
             "strict_route": true,
-            "stack": "gvisor",
+            "stack": "mixed",
             "sniff": true,
-            "sniff_override_destination": false,
-            "include_package": [ // 代理的 Android 应用包名，应用包名可使用 LibCheck 查看，若不写 "include_package" 表示代理全部应用
-                "com.google.android.gms",
-                "com.google.android.gsf",
-                "com.android.vending",
-                "com.android.chrome",
-                "org.telegram.messenger"
-            ]
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
