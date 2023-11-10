@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若服务端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // 若两端准备好了 IPv6，可改为 prefer_ipv6
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "h3://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // 若两端准备好了 IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
             {
@@ -50,7 +50,8 @@
                 ],
                 "server": "dns_proxy"
             }
-        ]
+        ],
+        "final": "dns_direct"
     },
     "route": {
         "geoip": {
@@ -86,6 +87,7 @@
                 "outbound": "direct"
             }
         ],
+        "final": "proxy",
         "auto_detect_interface": true
     },
     "inbounds": [
