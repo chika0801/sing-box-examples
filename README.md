@@ -16,7 +16,7 @@
             "multiplex": {
                 "enabled": true,
                 "protocol": "h2mux", // smux / yamux / h2mux
-                "max_connections": 4,
+                "max_connections": 1, // 必须为 1
                 "min_streams": 4,
                 "padding": true, // false / true
                 "brutal": {
