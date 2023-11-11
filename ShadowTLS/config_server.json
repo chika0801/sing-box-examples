@@ -15,14 +15,14 @@
                 "server": "",
                 "server_port": 443
             },
-            "strict_mode": true
+            "strict_mode": true // 需求 handshake server 网站支持 TLS 1.3
         },
         {
             "type": "shadowsocks",
             "tag": "shadowsocks-in",
             "listen": "127.0.0.1",
             "method": "2022-blake3-aes-128-gcm",
-            "password": ""
+            "password": "" // 执行 openssl rand -base64 16 生成
         }
     ],
     "outbounds": [
