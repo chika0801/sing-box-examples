@@ -1,0 +1,26 @@
+{
+    "inbounds": [
+        {
+            "type": "vmess",
+            "listen": "::",
+            "listen_port": 80,
+            "users": [
+                {
+                    "uuid": "",
+                    "alterId": 0
+                }
+            ],
+            "transport": {
+                "type": "ws",
+                "path": "",
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
