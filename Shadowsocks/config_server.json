@@ -5,7 +5,7 @@
             "listen": "::",
             "listen_port": 80,
             "method": "2022-blake3-aes-128-gcm",
-            "password": ""
+            "password": "" // 执行 openssl rand -base64 16 生成
         }
     ],
     "outbounds": [
