@@ -1,0 +1,26 @@
+{
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vmess",
+            "server": "",
+            "server_port": 80,
+            "uuid": "",
+            "security": "aes-128-gcm",
+            "alter_id": 0,
+            "packet_encoding": "packetaddr",
+            "transport": {
+                "type": "ws",
+                "path": "",
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        }
+    ]
+}
