@@ -1,0 +1,20 @@
+{
+    "inbounds": [
+        {
+            "type": "vmess",
+            "listen": "::",
+            "listen_port": 80,
+            "users": [
+                {
+                    "uuid": "",
+                    "alterId": 0
+                }
+            ]
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
