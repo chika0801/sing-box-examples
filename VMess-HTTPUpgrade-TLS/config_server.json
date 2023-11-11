@@ -12,7 +12,7 @@
             ],
             "transport": {
                 "type": "httpupgrade",
-                "path": "chika"
+                "path": ""
             }
         }
     ],
