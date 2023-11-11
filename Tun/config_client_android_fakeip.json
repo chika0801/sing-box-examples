@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "h3://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 prefer_ipv6
+                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
                 "detour": "direct"
             },
             {
