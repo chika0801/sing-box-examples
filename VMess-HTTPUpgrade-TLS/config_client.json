@@ -1,0 +1,32 @@
+{
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vmess",
+            "server": "",
+            "server_port": 443,
+            "uuid": "",
+            "security": "aes-128-gcm",
+            "alter_id": 0,
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+            },
+            "packet_encoding": "packetaddr",
+            "transport": {
+                "type": "httpupgrade",
+                "path": ""
+            }
+        }
+    ]
+}
