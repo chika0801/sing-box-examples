@@ -12,15 +12,15 @@
             ],
             "tls": {
                 "enabled": true,
-                "server_name": "",
+                "server_name": "", // 不支持 * 通配符
                 "reality": {
                     "enabled": true,
                     "handshake": {
-                        "server": "",
+                        "server": "", // 要求网站支持 TLS 1.3、X25519 与 H2，域名非跳转用
                         "server_port": 443
                     },
-                    "private_key": "",
-                    "short_id": [
+                    "private_key": "", // 执行 sing-box generate reality-keypair 生成
+                    "short_id": [ // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 sing-box generate rand 8 --hex 生成
                         ""
                     ]
                 }
