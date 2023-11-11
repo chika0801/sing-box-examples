@@ -12,10 +12,10 @@
                 }
             ],
             "handshake": {
-                "server": "",
+                "server": "", // 需求网站支持 TLS 1.3
                 "server_port": 443
             },
-            "strict_mode": true // 需求 handshake server 网站支持 TLS 1.3
+            "strict_mode": true
         },
         {
             "type": "shadowsocks",
