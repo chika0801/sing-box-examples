@@ -1,0 +1,24 @@
+{
+    "inbounds": [
+        {
+            "type": "vmess",
+            "listen": "127.0.0.1",
+            "listen_port": 8001,
+            "users": [
+                {
+                    "uuid": "",
+                    "alterId": 0
+                }
+            ],
+            "transport": {
+                "type": "httpupgrade",
+                "path": "chika"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
