@@ -35,7 +35,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             }
 ```
 
-**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket)**
+**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket) / [VMess](VMess)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
@@ -105,7 +105,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 建议 `"up_mbps"` 填小一些，量力而行，不会有错
 
-**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket)**
+**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket) / [VMess](VMess)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
