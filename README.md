@@ -83,8 +83,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                     "up_mbps": 50,
                     "down_mbps": 1000
                 }
-            },
-            "tcp_multi_path": true
+            }
         }
     ]
 }
@@ -145,8 +144,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                     "up_mbps": 100,
                     "down_mbps": 1000
                 }
-            },
-            "tcp_multi_path": true
+            }
         }
     ],
     "outbounds": [
