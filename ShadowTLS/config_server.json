@@ -12,7 +12,7 @@
                 }
             ],
             "handshake": {
-                "server": "", // 需求网站支持 TLS 1.3
+                "server": "", // 要求网站支持 TLS 1.3
                 "server_port": 443
             },
             "strict_mode": true
