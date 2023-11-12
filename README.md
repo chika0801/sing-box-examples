@@ -24,9 +24,9 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             "multiplex": {
                 "enabled": true,
                 "protocol": "h2mux", // smux / yamux / h2mux
-                "max_connections": 1, // 必须为 1
+                "max_connections": 1, // 建议为 1
                 "min_streams": 4,
-                "padding": true, // false / true
+                "padding": false, // false / true
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 50,
@@ -77,7 +77,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                 "protocol": "h2mux",
                 "max_connections": 1,
                 "min_streams": 4,
-                "padding": true,
+                "padding": false,
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 50,
@@ -97,7 +97,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```jsonc
             "multiplex": {
                 "enabled": true,
-                "padding": true, // false / true
+                "padding": false, // false / true
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 100, // 客户端的下行速率
@@ -139,7 +139,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             },
             "multiplex": {
                 "enabled": true,
-                "padding": true,
+                "padding": false,
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 100,
