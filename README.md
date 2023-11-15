@@ -23,21 +23,21 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```jsonc
             "multiplex": {
                 "enabled": true,
-                "protocol": "h2mux", // smux / yamux / h2mux
+                "protocol": "h2mux", // 默认 h2mux，可选 smux | yamux | h2mux
                 "max_connections": 1, // 建议为 1
                 "min_streams": 4,
-                "padding": false, // false / true
+                "padding": false, // 默认 false，可选 false | true
                 "brutal": {
                     "enabled": true,
-                    "up_mbps": 50,
-                    "down_mbps": 1000
+                    "up_mbps": 20,
+                    "down_mbps": 100
                 }
             }
 ```
 
 > 需要 sing-box 版本 1.7.0 或更高。
 
-**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket) / [VMess](VMess)**
+**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS](VLESS-XTLS-Vision) | [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
@@ -96,11 +96,11 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```jsonc
             "multiplex": {
                 "enabled": true,
-                "padding": false, // false / true
+                "padding": false,
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 100, // 客户端的下行速率
-                    "down_mbps": 1000
+                    "down_mbps": 20
                 }
             }
 ```
@@ -108,7 +108,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 > 需要 sing-box 版本 1.7.0 或更高。<br>
 > 建议 `"up_mbps"` 填小一些，量力而行，不会有错
 
-**支持的：[ShadowTLS](ShadowTLS) / [Shadowsocks](Shadowsocks) / [Trojan](Trojan) / [VLESS](VLESS-XTLS-Vision) / [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) / [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) / [VMess-WebSocket-TLS](VMess-WebSocket-TLS) / [VMess-WebSocket](VMess-WebSocket) / [VMess](VMess)**
+**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS](VLESS-XTLS-Vision) | [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
 1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空
 
