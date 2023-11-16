@@ -14,7 +14,7 @@
             },
             {
                 "tag": "dns_direct",
-                "address": "h3://dns.alidns.com/dns-query",
+                "address": "https://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
                 "detour": "direct"
@@ -85,8 +85,16 @@
         },
         "rules": [
             {
-                "protocol": "dns",
+                "protocol": [
+                    "dns"
+                ],
                 "outbound": "dns-out"
+            },
+            {
+                "protocol": [
+                    "quic"
+                ],
+                "outbound": "block"
             },
             {
                 "process_name": [ // 直连的 Windows 可执行程序
