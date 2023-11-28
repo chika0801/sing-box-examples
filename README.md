@@ -106,7 +106,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```
 
 > 需要 sing-box 版本 1.7.0 或更高。<br>
-> 建议 `"up_mbps"` 填小一些，量力而行，不会有错
+> 建议 `"up_mbps"` 填小一些，量力而行，不会有错。
 
 **支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS](VLESS-XTLS-Vision) | [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
