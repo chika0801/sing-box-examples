@@ -30,7 +30,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 20,
-                    "down_mbps": 100
+                    "down_mbps": 100 // 客户端的下行最大速率
                 }
             }
 ```
@@ -43,7 +43,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 2. 两端 **"padding"** 必须一致
 
-3. **"up_mbps" / "down_mbps"** 必填，不会生效
+3. 客户端 **"down_mbps"** 小于 服务端 **"up_mbps"** 时，以客户端为准
 
 <details> <summary>示例配置</summary>
 
@@ -80,8 +80,8 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                 "padding": false,
                 "brutal": {
                     "enabled": true,
-                    "up_mbps": 50,
-                    "down_mbps": 1000
+                    "up_mbps": 20,
+                    "down_mbps": 100
                 }
             }
         }
@@ -99,7 +99,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                 "padding": false,
                 "brutal": {
                     "enabled": true,
-                    "up_mbps": 100, // 客户端的下行速率
+                    "up_mbps": 100, // 对每个客户端，服务端的上行最大速率
                     "down_mbps": 20
                 }
             }
@@ -114,7 +114,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 2. 两端 **"padding"** 必须一致
 
-3. **"up_mbps" / "down_mbps"** 必填，**"down_mbps"** 不会生效
+3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
 
 <details> <summary>示例配置</summary>
 
@@ -142,7 +142,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 100,
-                    "down_mbps": 1000
+                    "down_mbps": 20
                 }
             }
         }
