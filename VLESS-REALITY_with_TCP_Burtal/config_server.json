@@ -6,8 +6,7 @@
             "listen_port": 8001,
             "users": [
                 {
-                    "uuid": "chika",
-                    "flow": ""
+                    "uuid": ""
                 }
             ],
             "tls": {
@@ -19,8 +18,8 @@
                         "server": "127.0.0.1",
                         "server_port": 8002
                     },
-                    "private_key": "", // 执行 sing-box generate reality-keypair 生成
-                    "short_id": [ // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 sing-box generate rand 8 --hex 生成
+                    "private_key": "",
+                    "short_id": [
                         ""
                     ]
                 }
