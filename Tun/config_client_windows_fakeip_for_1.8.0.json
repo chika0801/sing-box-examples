@@ -166,33 +166,8 @@
     ],
     "outbounds": [
         {
-            "type": "vless",
-            "tag": "proxy",
-            "server": "154.17.0.196",
-            "server_port": 443,
-            "uuid": "yohane",
-            "flow": "",
-            "tls": {
-                "enabled": true,
-                "server_name": "us.yohane.top",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-             },
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": true,
-                "protocol": "h2mux",
-                "max_connections": 1,
-                "min_streams": 4,
-                "padding": false,
-                "brutal": {
-                    "enabled": true,
-                    "up_mbps": 20,
-                    "down_mbps": 100
-                }
-            }
+            // 粘贴你的客户端配置，需要保留 "tag": "proxy"
+            "tag": "proxy"
         },
         {
             "type": "direct",
