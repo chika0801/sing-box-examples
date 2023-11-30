@@ -77,10 +77,10 @@
     "route": {
         "rule_set": [
             {
-                "tag": "geosite-category-ads-all.srs",
+                "tag": "geosite-category-ads-all",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
                 "download_detour": "proxy"
             },
             {
