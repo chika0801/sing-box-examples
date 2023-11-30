@@ -113,12 +113,6 @@
                 "outbound": "dns-out"
             },
             {
-                "protocol": [
-                    "quic"
-                ],
-                "outbound": "block"
-            },
-            {
                 "process_name": [ // 直连的 Windows 可执行程序
                     "xray.exe",
                     "hysteria.exe",
@@ -145,6 +139,10 @@
                 "rule_set": [
                     "geoip-cn"
                 ],
+                "outbound": "direct"
+            },
+            {
+                "ip_is_private": true,
                 "outbound": "direct"
             }
         ],
