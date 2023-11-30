@@ -1,0 +1,45 @@
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "listen": "127.0.0.1",
+            "listen_port": 8001,
+            "users": [
+                {
+                    "uuid": "chika",
+                    "flow": ""
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "example.com",
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "127.0.0.1",
+                        "server_port": 8002
+                    },
+                    "private_key": "", // 执行 sing-box generate reality-keypair 生成
+                    "short_id": [ // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 sing-box generate rand 8 --hex 生成
+                        ""
+                    ]
+                }
+            },
+            "multiplex": {
+                "enabled": true,
+                "padding": false,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 100,
+                    "down_mbps": 20
+                }
+            },
+            "tcp_multi_path": true
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
