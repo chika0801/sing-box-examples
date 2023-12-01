@@ -18,7 +18,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 > 需要内核版本 4.9 或以上，推荐使用 5.8 以上的内核。对于小于 5.8 的内核, 只支持 IPv4。
 
-支持的：**[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS-TLS](VLESS-Vision-TLS) | [VLESS-REALITY](VLESS-Vision-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
+支持的：**[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS-REALITY](VLESS-Vision-REALITY) | [VLESS-TLS](VLESS-Vision-TLS) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
 > 需要 sing-box 版本 1.7.0 或更高。
 
