@@ -37,59 +37,15 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 > 需要 sing-box 版本 1.7.0 或更高。
 
-**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS](VLESS-XTLS-Vision) | [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
+**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS-TLS](VLESS-Vision-TLS) | [VLESS-REALITY](VLESS-Vision-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
-1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
+1. **VLESS-TLS / VLESS-REALITY** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
 3. 客户端 **"down_mbps"** 小于 服务端 **"up_mbps"** 时，以客户端为准
 
-<details> <summary>示例配置</summary>
-
-```jsonc
-{
-    "inbounds": [
-        {
-            "type": "mixed",
-            "listen": "::",
-            "listen_port": 10000
-        }
-    ],
-    "outbounds": [
-        {
-            "type": "vless",
-            "server": "233.33.33.33",
-            "server_port": 443,
-            "uuid": "chika",
-            "flow": "",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                }
-             },
-            "packet_encoding": "xudp",
-            "multiplex": {
-                "enabled": true,
-                "protocol": "h2mux",
-                "max_connections": 1,
-                "min_streams": 4,
-                "padding": false,
-                "brutal": {
-                    "enabled": true,
-                    "up_mbps": 20,
-                    "down_mbps": 100
-                }
-            }
-        }
-    ]
-}
-```
-
-</details>
+> [VLESS-TLS with TCP Burtal 配置示例](TCP_Burtal)
 
 ## 服务端配置
 
@@ -105,57 +61,17 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             }
 ```
 
-> 需要 sing-box 版本 1.7.0 或更高。<br>
-> 建议 `"up_mbps"` 填小一些，量力而行，不会有错。
+> 需要 sing-box 版本 1.7.0 或更高。
 
-**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS](VLESS-XTLS-Vision) | [VLESS-REALITY](VLESS-XTLS-uTLS-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
+**支持的：[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS-TLS](VLESS-Vision-TLS) | [VLESS-REALITY](VLESS-Vision-REALITY) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
 
-1. **VLESS / VLESS-REALITY** 中 `"flow": ""` 必须留空或不写，或不写 `"flow": ""`
+1. **VLESS-TLS / VLESS-REALITY** 中 `"flow": ""` 必须留空或不写，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
 3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
 
-<details> <summary>示例配置</summary>
-
-```jsonc
-{
-    "inbounds": [
-        {
-            "type": "vless",
-            "listen": "::",
-            "listen_port": 443,
-            "users": [
-                {
-                    "uuid": "chika",
-                    "flow": ""
-                }
-            ],
-            "tls": {
-                "enabled": true,
-                "certificate_path": "/root/fullchain.cer",
-                "key_path": "/root/private.key"
-            },
-            "multiplex": {
-                "enabled": true,
-                "padding": false,
-                "brutal": {
-                    "enabled": true,
-                    "up_mbps": 100,
-                    "down_mbps": 20
-                }
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "type": "direct"
-        }
-    ]
-}
-```
-
-</details>
+> [VLESS-TLS with TCP Burtal 配置示例](TCP_Burtal)
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
