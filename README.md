@@ -1,8 +1,26 @@
-# **配置介绍：** 
+## **配置介绍：** 
 
 | | 传输层协议 | Multiplex | UDP over TCP | 拥塞控制算法 |
 | :--- | :---: | :---: | :---: | :---: |
-| **Hysteria** | UDP | 自带 |  | UDP Brutal |
+| **Hysteria** | UDP | 自带 |  | Brutal |
+| **Hysteria2** | UDP | 自带 |  | Brutal / BBR |
+| **Naive** | TCP | 自带 |  | |
+| **ShadowTLS** | TCP | 支持 | 支持 | TCP Brutal |
+| **Shadowsocks** | TCP | 支持 | 支持 | TCP Brutal |
+| **TUIC** | UDP | 自带 | udp_over_stream | BBR |
+| **Trojan** | TCP | 支持 | 自带 | TCP Brutal |
+| **VLESS-HTTP2-REALITY** | TCP | 自带 | 自带 | 不支持 |
+| **VLESS-Vision-REALITY** | TCP | 不支持 | 自带 | 不支持 |
+| **VLESS-REALITY** | TCP | 支持 | 自带 | TCP Brutal |
+| **VLESS-Vision-TLS** | TCP | 不支持 | 自带 | 不支持 |
+| **VLESS-TLS** | TCP | 支持 | 自带 | TCP Brutal |
+| **VLESS-gRPC-REALITY** | TCP | 自带 | 自带 | 不支持 |
+| **VLESS-gRPC-TLS** | TCP | 自带 | 自带 | 不支持 |
+| **VMess-HTTPUpgrade-TLS** | TCP | 支持 | 自带 | TCP Brutal |
+| **VMess-WebSocket-TLS** | TCP | 支持 | 自带 | TCP Brutal |
+| **VMess-WebSocket** | TCP | 支持 | 自带 | TCP Brutal |
+| **VMess** | TCP | 支持 | 自带 | TCP Brutal |
+
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
