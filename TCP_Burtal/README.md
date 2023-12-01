@@ -45,7 +45,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 3. 客户端 **"down_mbps"** 小于 服务端 **"up_mbps"** 时，以客户端为准
 
-> [VLESS-TLS with TCP Burtal 配置示例](TCP_Burtal/config_client.json)
+> [VLESS-TLS with TCP Burtal 配置示例](config_client.json)
 
 ## 服务端配置
 
@@ -67,4 +67,4 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
 
-> [VLESS-TLS with TCP Burtal 配置示例](TCP_Burtal/config_server.json)
+> [VLESS-TLS with TCP Burtal 配置示例](config_server.json)
