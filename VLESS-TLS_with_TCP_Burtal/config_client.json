@@ -1,0 +1,38 @@
+{
+    "inbounds": [
+        {
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 10000
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "vless",
+            "server": "",
+            "server_port": 443,
+            "uuid": "",
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                }
+             },
+            "packet_encoding": "xudp",
+            "multiplex": {
+                "enabled": true,
+                "protocol": "h2mux",
+                "max_connections": 1,
+                "min_streams": 4,
+                "padding": false,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 20,
+                    "down_mbps": 100
+                }
+            }
+        }
+    ]
+}
