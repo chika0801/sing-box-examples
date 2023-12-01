@@ -9,13 +9,13 @@
 | **Shadowsocks** | TCP | 支持 | 支持 | TCP Brutal |
 | **TUIC** | UDP | 自带 | udp_over_stream | BBR |
 | **Trojan** | TCP | 支持 | 自带 | TCP Brutal |
-| **VLESS-HTTP2-REALITY** | TCP | 自带 | 自带 | 不支持 |
-| **VLESS-Vision-REALITY** | TCP | 不支持 | 自带 | 不支持 |
+| **VLESS-HTTP2-REALITY** | TCP | 自带 | 自带 |  |
+| **VLESS-Vision-REALITY** | TCP | 不支持 | 自带 |  |
 | **VLESS-REALITY** | TCP | 支持 | 自带 | TCP Brutal |
-| **VLESS-Vision-TLS** | TCP | 不支持 | 自带 | 不支持 |
+| **VLESS-Vision-TLS** | TCP | 不支持 | 自带 |  |
 | **VLESS-TLS** | TCP | 支持 | 自带 | TCP Brutal |
-| **VLESS-gRPC-REALITY** | TCP | 自带 | 自带 | 不支持 |
-| **VLESS-gRPC-TLS** | TCP | 自带 | 自带 | 不支持 |
+| **VLESS-gRPC-REALITY** | TCP | 自带 | 自带 |  |
+| **VLESS-gRPC-TLS** | TCP | 自带 | 自带 |  |
 | **VMess-HTTPUpgrade-TLS** | TCP | 支持 | 自带 | TCP Brutal |
 | **VMess-WebSocket-TLS** | TCP | 支持 | 自带 | TCP Brutal |
 | **VMess-WebSocket** | TCP | 支持 | 自带 | TCP Brutal |
