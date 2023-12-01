@@ -1,3 +1,9 @@
+# **配置介绍：** 
+
+| | 传输层协议 | Multiplex | UDP over TCP | 拥塞控制算法 |
+| :--- | :---: | :---: | :---: | :---: |
+| **Hysteria** | UDP | 自带 |  | UDP Brutal |
+
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
 ## 一键脚本 [sing-box-install](https://github.com/chise0713/sing-box-install) 
