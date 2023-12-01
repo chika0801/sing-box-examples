@@ -6,8 +6,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "chika",
-                    "flow": ""
+                    "uuid": ""
                 }
             ],
             "tls": {
