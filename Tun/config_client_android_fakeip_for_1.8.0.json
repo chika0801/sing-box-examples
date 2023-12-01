@@ -81,28 +81,32 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "proxy"
+                "download_detour": "proxy",
+                "update_interval": "1d"
             },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-                "download_detour": "proxy"
+                "download_detour": "proxy",
+                "update_interval": "1d"
             },
             {
                 "tag": "geosite-private",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
-                "download_detour": "proxy"
+                "download_detour": "proxy",
+                "update_interval": "1d"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy"
+                "download_detour": "proxy",
+                "update_interval": "1d"
             }
         ],
         "rules": [
