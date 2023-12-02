@@ -16,10 +16,7 @@
 bash <(curl -fsSL https://tcp.hy2.sh/)
 ```
 
-> 需要内核版本 4.9 或以上，推荐使用 5.8 以上的内核。对于小于 5.8 的内核, 只支持 IPv4。
-
-支持的：**[ShadowTLS](ShadowTLS) | [Shadowsocks](Shadowsocks) | [Trojan](Trojan) | [VLESS-REALITY](VLESS-Vision-REALITY) | [VLESS-TLS](VLESS-Vision-TLS) | [VMess-HTTPUpgrade-TLS](VMess-HTTPUpgrade-TLS) | [VMess-WebSocket-TLS](VMess-WebSocket-TLS) | [VMess-WebSocket](VMess-WebSocket) | [VMess](VMess)**
-
+> 需要内核版本 4.9 或以上，推荐使用 5.8 以上的内核。对于小于 5.8 的内核, 只支持 IPv4。<br>
 > 需要 sing-box 版本 1.7.0 或更高。
 
 ## 客户端配置
@@ -39,13 +36,11 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             }
 ```
 
-1. **VLESS-TLS / VLESS-REALITY** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
+1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
 3. 客户端 **"down_mbps"** 小于 服务端 **"up_mbps"** 时，以客户端为准
-
-> [VLESS-TLS with TCP Burtal 配置示例](config_client.json)
 
 ## 服务端配置
 
@@ -61,10 +56,8 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             }
 ```
 
-1. **VLESS-TLS / VLESS-REALITY** 中 `"flow": ""` 必须留空或不写，或不写 `"flow": ""`
+1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
 3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
-
-> [VLESS-TLS with TCP Burtal 配置示例](config_server.json)
