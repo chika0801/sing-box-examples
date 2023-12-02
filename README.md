@@ -4,7 +4,6 @@
 | :--- | :---: | :---: | :---: | :---: |
 | **Hysteria** | UDP | 自带 |  | Brutal |
 | **Hysteria2** | UDP | 自带 |  | Brutal / BBR |
-| **Naive** | TCP | 自带 |  | |
 | **ShadowTLS** | TCP | 支持 | 支持 | TCP Brutal |
 | **Shadowsocks** | TCP | 支持 | 支持 | TCP Brutal |
 | **TUIC** | UDP | 自带 | udp_over_stream | BBR |
