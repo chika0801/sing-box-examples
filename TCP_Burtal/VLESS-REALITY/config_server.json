@@ -1,0 +1,44 @@
+{
+    "inbounds": [
+        {
+            "type": "vless",
+            "listen": "::",
+            "listen_port": 443,
+            "users": [
+                {
+                    "uuid": "",
+                    "flow": "xtls-rprx-vision"
+                }
+            ],
+            "tls": {
+                "enabled": true,
+                "server_name": "",
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "",
+                        "server_port": 443
+                    },
+                    "private_key": "",
+                    "short_id": [
+                        ""
+                    ]
+                }
+            },
+            "multiplex": {
+                "enabled": true,
+                "padding": false,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 100,
+                    "down_mbps": 20
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        }
+    ]
+}
