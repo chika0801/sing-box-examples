@@ -12,7 +12,6 @@
             "server": "",
             "server_port": 443,
             "uuid": "",
-            "flow": "xtls-rprx-vision",
             "tls": {
                 "enabled": true,
                 "server_name": "",
