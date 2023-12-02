@@ -6,8 +6,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "",
-                    "flow": "xtls-rprx-vision"
+                    "uuid": ""
                 }
             ],
             "tls": {
