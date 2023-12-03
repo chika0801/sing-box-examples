@@ -9,6 +9,7 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 ```
 curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
 ```
+
 使用 **[warp-reg.sh](https://github.com/chise0713/warp-reg.sh)**，获取warp账号
 
 ```
