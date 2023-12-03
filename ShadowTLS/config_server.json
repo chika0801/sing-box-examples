@@ -22,7 +22,11 @@
             "tag": "shadowsocks-in",
             "listen": "127.0.0.1",
             "method": "2022-blake3-aes-128-gcm",
-            "password": "" // 执行 sing-box generate rand 16 --base64 生成
+            "password": "", // 执行 sing-box generate rand 16 --base64 生成
+            "multiplex": {
+                "enabled": true,
+                "padding": false
+            }
         }
     ],
     "outbounds": [
