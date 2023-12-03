@@ -9,6 +9,11 @@ curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/m
 ```
 curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
 ```
+使用 **[warp-reg.sh](https://github.com/chise0713/warp-reg.sh)**，获取warp账号
+
+```
+bash -c "$(curl -L warp-reg.vercel.app)"
+```
 
 - 复制输出的 IPv6 地址，替换下面配置中的 `2606:4700::`
 - 复制输出的 `private_key` 值，粘贴到下面配置中 `private_key` 后的 `""` 中
