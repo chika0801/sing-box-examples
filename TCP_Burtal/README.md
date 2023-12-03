@@ -17,7 +17,28 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```
 
 > 需要内核版本 4.9 或以上，推荐使用 5.8 以上的内核。对于小于 5.8 的内核, 只支持 IPv4。<br>
+
+## 服务端配置
+
+```jsonc
+            "multiplex": {
+                "enabled": true,
+                "padding": false,
+                "brutal": {
+                    "enabled": true,
+                    "up_mbps": 100, // 对每个客户端，服务端的上行最大速率
+                    "down_mbps": 20
+                }
+            }
+```
+
 > 需要 sing-box 版本 1.7.0 或更高。
+
+1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
+
+2. 两端 **"padding"** 必须一致
+
+3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
 
 ## 客户端配置
 
@@ -36,28 +57,10 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
             }
 ```
 
+> 需要 sing-box 版本 1.7.0 或更高。
+
 1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
 3. 客户端 **"down_mbps"** 小于 服务端 **"up_mbps"** 时，以客户端为准
-
-## 服务端配置
-
-```jsonc
-            "multiplex": {
-                "enabled": true,
-                "padding": false,
-                "brutal": {
-                    "enabled": true,
-                    "up_mbps": 100, // 对每个客户端，服务端的上行最大速率
-                    "down_mbps": 20
-                }
-            }
-```
-
-1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
-
-2. 两端 **"padding"** 必须一致
-
-3. 服务端 **"up_mbps"** 小于 客户端 **"down_mbps"** 时，以服务端为准
