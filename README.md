@@ -1,10 +1,6 @@
 ## **配置介绍：** 
 
-| | Multiplex | UDP relay mode | 拥塞控制算法 |
-| :--- | :---: | :---: | :---: |
-| [**Hysteria**](Hysteria) | 自带 |  | Brutal |
-| [**Hysteria2**](Hysteria2) | 自带 |  | Brutal / BBR |
-| [**TUIC**](TUIC) | 自带 | native / quic / udp_over_stream | BBR |
+### 基于 TCP 的代理协议
 
 | | Multiplex | UDP over TCP | TCP Brutal | MPTCP |
 | :--- | :---: | :---: | :---: | :---: |
@@ -32,6 +28,14 @@
 ```
 
 > MPTCP 配置需在[客户端](TCP_Burtal/VLESS-TLS/config_client.json#L36)，[服务端](TCP_Burtal/VLESS-TLS/config_server.json#L26)同时启用<br>
+
+### 基于 UDP 的代理协议
+
+| | Multiplex | UDP relay mode | 拥塞控制算法 |
+| :--- | :---: | :---: | :---: |
+| [**Hysteria**](Hysteria) | 自带 |  | Brutal |
+| [**Hysteria2**](Hysteria2) | 自带 |  | Brutal / BBR |
+| [**TUIC**](TUIC) | 自带 | native / quic / udp_over_stream | BBR |
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
