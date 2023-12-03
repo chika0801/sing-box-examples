@@ -23,9 +23,9 @@
 | [**VMess-WebSocket**](VMess-WebSocket) | 支持 | 自带 | :heavy_check_mark: | :heavy_check_mark: |
 | [**VMess**](VMess) | 支持 | 自带 | :heavy_check_mark: | :heavy_check_mark: |
 
-## [**TCP Brutal 使用指南**](TCP_Burtal#readme)
+[**TCP Brutal 使用指南**](TCP_Burtal#readme)
 
-## MPTCP 使用指南
+[MPTCP](https://en.wikipedia.org/wiki/Multipath_TCP) 使用指南
 
 ```jsonc
             "tcp_multi_path": true
