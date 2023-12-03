@@ -4,6 +4,8 @@
             "type": "hysteria2",
             "listen": "::",
             "listen_port": 443,
+            "up_mbps": 100,
+            "down_mbps": 20,
             "users": [
                 {
                     "password": ""
