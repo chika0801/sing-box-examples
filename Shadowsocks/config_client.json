@@ -13,6 +13,10 @@
             "server_port": 80,
             "method": "2022-blake3-aes-128-gcm",
             "password": "",
+            "udp_over_tcp": {
+                "enabled": true,
+                "version": 2
+            },
             "multiplex": {
                 "enabled": true,
                 "protocol": "h2mux",
