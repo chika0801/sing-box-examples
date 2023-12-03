@@ -11,8 +11,8 @@
             "type": "hysteria",
             "server": "",
             "server_port": 443,
-            "up_mbps": 30,
-            "down_mbps": 150,
+            "up_mbps": 20,
+            "down_mbps": 100,
             "auth_str": "",
             "tls": {
                 "enabled": true,
