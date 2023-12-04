@@ -21,11 +21,7 @@
                 }
             },
             "multiplex": {
-                "enabled": true,
-                "protocol": "h2mux",
-                "max_connections": 4,
-                "min_streams": 4,
-                "padding": false
+                "enabled": true
             }
         }
     ]
