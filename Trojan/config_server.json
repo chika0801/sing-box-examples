@@ -15,8 +15,7 @@
                 "key_path": "/root/private.key"
             },
             "multiplex": {
-                "enabled": true,
-                "padding": false
+                "enabled": true
             }
         }
     ],
