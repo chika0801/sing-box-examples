@@ -1,0 +1,62 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "address": "https://1.1.1.1/dns-query",
+                "strategy": "ipv4_only"
+            }
+        ]
+    },
+    "route": {
+        "rule_set": [
+            {
+                "tag": "geoip-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+            }
+        ],
+        "rules": [
+            {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn",
+                        "rule_set_ipcidr_match_source": true,
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "geoip-cn"
+                    }
+                ],
+                "outbound": "block"
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            // 粘贴你的服务端配置
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "domain_strategy": "ipv4_only"
+        },
+        {
+            "type": "block",
+            "tag": "block"
+        }
+    ],
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db"
+        }
+    }
+}
