@@ -33,9 +33,9 @@
 
 | | Multiplex | UDP relay mode | 拥塞控制算法 |
 | :--- | :---: | :---: | :---: |
-| [**Hysteria**](Hysteria) | 自带 |  | Brutal |
-| [**Hysteria2**](Hysteria2) | 自带 |  | Brutal / BBR |
-| [**TUIC**](TUIC) | 自带 | native / quic / udp_over_stream | BBR |
+| [**Hysteria**](Hysteria) | 自带 | native | Brutal |
+| [**Hysteria2**](Hysteria2) | 自带 | native | Brutal / BBR |
+| [**TUIC**](TUIC) | 自带 | native / quic / udp_over_stream | BBR / New Reno / Cubic |
 
 # [sing-box](https://github.com/SagerNet/sing-box) 安装指南
 
