@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
+                "strategy": "ipv4_only",
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
                 "address": "https://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
+                "strategy": "ipv4_only",
                 "detour": "direct"
             },
             {
@@ -37,22 +37,16 @@
         ],
         "rules": [
             {
-                "outbound": [
-                    "any"
-                ],
+                "outbound": "any",
                 "server": "dns_resolver"
             },
             {
-                "rule_set": [
-                    "geosite-category-ads-all"
-                ],
+                "rule_set": "geosite-category-ads-all",
                 "server": "dns_block",
                 "disable_cache": true
             },
             {
-                "rule_set": [
-                    "geosite-geolocation-!cn"
-                ],
+                "rule_set": "geosite-geolocation-!cn",
                 "query_type": [
                     "A",
                     "AAAA"
@@ -60,13 +54,19 @@
                 "server": "dns_fakeip"
             },
             {
-                "rule_set": [
-                    "geosite-geolocation-!cn"
-                ],
+                "rule_set": "geosite-geolocation-!cn",
                 "server": "dns_proxy"
+            },
+            {
+                "rule_set": "geosite-cn",
+                "server": "dns_direct"
+            },
+            {
+                "rule_set": "geosite-category-companies@cn",
+                "server": "dns_direct"
             }
         ],
-        "final": "dns_direct",
+        "final": "dns_proxy",
         "independent_cache": true,
         "fakeip": {
             "enabled": true,
@@ -93,10 +93,18 @@
                 "update_interval": "1d"
             },
             {
-                "tag": "geosite-private",
+                "tag": "geosite-cn",
                 "type": "remote",
                 "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                "download_detour": "proxy",
+                "update_interval": "1d"
+            },
+            {
+                "tag": "geosite-category-companies@cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-companies@cn.srs",
                 "download_detour": "proxy",
                 "update_interval": "1d"
             },
@@ -111,37 +119,34 @@
         ],
         "rules": [
             {
-                "protocol": [
-                    "dns"
-                ],
+                "protocol": "dns",
                 "outbound": "dns-out"
             },
             {
-                "protocol": [
-                    "quic"
-                ],
+                "protocol": "quic",
                 "outbound": "block"
             },
             {
-                "rule_set": [
-                    "geosite-geolocation-!cn"
-                ],
+                "rule_set": "geosite-geolocation-!cn",
                 "outbound": "proxy"
             },
             {
-                "rule_set": [
-                    "geosite-private"
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "rule_set": "geosite-cn"
+                    },
+                    {
+                        "rule_set": "geosite-category-companies@cn"
+                    },
+                    {
+                        "rule_set": "geoip-cn"
+                    },
+                    {
+                        "ip_is_private": true
+                    }
                 ],
-                "outbound": "direct"
-            },
-            {
-                "rule_set": [
-                    "geoip-cn"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "ip_is_private": true,
                 "outbound": "direct"
             }
         ],
@@ -152,8 +157,9 @@
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.19.0.1/30",
-            "inet6_address": "fdfe:dcba:9876::1/126",
+            "inet4_address": "172.16.0.1/24",
+            "inet6_address": "fd00::1/64",
+            "mtu": 1400,
             "auto_route": true,
             "strict_route": true,
             "stack": "mixed",
