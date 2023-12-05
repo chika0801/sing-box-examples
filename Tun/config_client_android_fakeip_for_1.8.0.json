@@ -81,40 +81,35 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             },
             {
                 "tag": "geosite-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             },
             {
                 "tag": "geosite-category-companies@cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-companies@cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             }
         ],
         "rules": [
@@ -162,7 +157,7 @@
             "mtu": 1400,
             "auto_route": true,
             "strict_route": true,
-            "stack": "mixed",
+            "stack": "system",
             "sniff": true,
             "sniff_override_destination": false
         }
