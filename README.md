@@ -21,13 +21,15 @@
 
 [**TCP Brutal 使用指南**](TCP_Burtal#readme)
 
-[MPTCP](https://en.wikipedia.org/wiki/Multipath_TCP) 使用指南
+> [客户端配置](TCP_Burtal/config_client.json#L24-L35)，[服务端配置](TCP_Burtal/config_server.json#L17-L25)
+
+**MPTCP 使用指南**
 
 ```jsonc
             "tcp_multi_path": true
 ```
 
-> MPTCP 配置需在[客户端](TCP_Burtal/VLESS-TLS/config_client.json#L36)，[服务端](TCP_Burtal/VLESS-TLS/config_server.json#L26)同时启用<br>
+> MPTCP 配置需在[客户端](TCP_Burtal/config_client.json#L36)，[服务端](TCP_Burtal/config_server.json#L26)同时启用<br>
 
 ### 基于 UDP 的代理协议
 
