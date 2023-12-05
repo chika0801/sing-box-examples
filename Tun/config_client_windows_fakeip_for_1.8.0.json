@@ -68,16 +68,14 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             },
             {
                 "tag": "geoip-cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy",
-                "update_interval": "1d"
+                "download_detour": "proxy"
             }
         ],
         "rules": [
@@ -126,7 +124,7 @@
             "mtu": 1492,
             "auto_route": true,
             "strict_route": true,
-            "stack": "mixed",
+            "stack": "system",
             "sniff": true,
             "sniff_override_destination": false
         }
