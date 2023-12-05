@@ -84,7 +84,10 @@
                 "outbound": "dns-out"
             },
             {
-                "protocol": "quic",
+                "protocol": [
+                    "quic",
+                    "stun"
+                ],
                 "outbound": "block"
             },
             {
