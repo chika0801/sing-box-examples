@@ -6,7 +6,7 @@
             "listen_port": 443,
             "users": [
                 {
-                    "uuid": "",
+                    "uuid": "", // 执行 sing-box generate uuid 生成
                     "password": ""
                 }
             ],
