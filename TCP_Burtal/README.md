@@ -34,7 +34,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 > 需要 sing-box 版本 1.7.0 或更高。
 
-1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
+1. **VLESS-Vision-REALITY / VLESS-Vision-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
@@ -59,7 +59,7 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 
 > 需要 sing-box 版本 1.7.0 或更高。
 
-1. **VLESS-REALITY / VLESS-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
+1. **VLESS-Vision-REALITY / VLESS-Vision-TLS** 中 `"flow": ""` 必须留空，或不写 `"flow": ""`
 
 2. 两端 **"padding"** 必须一致
 
