@@ -8,8 +8,8 @@
 | [**Shadowsocks**](Shadowsocks) | 支持 | 支持 | :heavy_check_mark: | :heavy_check_mark: |
 | [**Trojan**](Trojan) | 支持 | 自带 | :heavy_check_mark: | :heavy_check_mark: |
 | [**VLESS-HTTP2-REALITY**](VLESS-HTTP2-REALITY) | 自带 | 自带 | :x: | :heavy_check_mark: |
-| [**VLESS-Vision-REALITY**](VLESS-Vision-REALITY) | 不支持 | 自带 | :x: **1** | :heavy_check_mark: |
-| [**VLESS-Vision-TLS**](VLESS-Vision-TLS) | 不支持 | 自带 | :x: **1** | :heavy_check_mark: |
+| [**VLESS-Vision-REALITY**](VLESS-Vision-REALITY) | 不支持 | 自带 | :heavy_check_mark: **1** | :heavy_check_mark: |
+| [**VLESS-Vision-TLS**](VLESS-Vision-TLS) | 不支持 | 自带 | :heavy_check_mark: **1** | :heavy_check_mark: |
 | [**VLESS-gRPC-REALITY**](VLESS-gRPC-REALITY) | 自带 | 自带 | :x: | :heavy_check_mark: |
 | [**VLESS-gRPC-TLS**](VLESS-gRPC-TLS) | 自带 | 自带 | :x: | :heavy_check_mark: |
 | [**VMess-HTTPUpgrade-TLS**](VMess-HTTPUpgrade-TLS) | 支持 | 自带 | :heavy_check_mark: | :heavy_check_mark: |
