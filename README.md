@@ -2,7 +2,7 @@
 
 ### 基于 TCP 的代理协议
 
-| | Multiplex | UDP over TCP | TCP Brutal | MPTCP |
+| | [Multiplex](https://sing-box.sagernet.org/configuration/shared/multiplex/) | [UDP over TCP](https://sing-box.sagernet.org/configuration/shared/udp-over-tcp/) | [TCP Brutal](https://sing-box.sagernet.org/configuration/shared/tcp-brutal/) | MPTCP |
 | :--- | :---: | :---: | :---: | :---: |
 | [**ShadowTLS**](ShadowTLS) | 支持 | 支持 | :heavy_check_mark: | :heavy_check_mark: |
 | [**Shadowsocks**](Shadowsocks) | 支持 | 支持 | :heavy_check_mark: | :heavy_check_mark: |
@@ -19,17 +19,9 @@
 
 **1：** `"flow": ""` 必须留空，或不写 `"flow": ""`
 
-**Multiplex 使用指南**
-
-> Multiplex 配置需在[客户端](Trojan/config_client.json#L23-L24)，[服务端](Trojan/config_server.json#L17-L18)同时启用
-
 [**TCP Brutal 使用指南**](TCP_Burtal#readme)
 
 > TCP Brutal 配置需在[客户端](TCP_Burtal/config_client.json#L24-L35)，[服务端](TCP_Burtal/config_server.json#L17-L25)同时启用
-
-**MPTCP 使用指南**
-
-> MPTCP 配置需在[客户端](TCP_Burtal/config_client.json#L36)，[服务端](TCP_Burtal/config_server.json#L26)同时启用
 
 ### 基于 UDP 的代理协议
 
