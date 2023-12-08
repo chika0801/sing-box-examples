@@ -32,8 +32,7 @@
                     "up_mbps": 20,
                     "down_mbps": 100
                 }
-            },
-            "tcp_multi_path": true
+            }
         }
     ]
 }
