@@ -22,9 +22,8 @@
                     "up_mbps": 100,
                     "down_mbps": 20
                 }
-            },
-            "tcp_multi_path": true
-        }
+            }
+        }    
     ],
     "outbounds": [
         {
