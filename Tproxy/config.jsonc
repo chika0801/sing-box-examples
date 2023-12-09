@@ -17,7 +17,12 @@
         {
             "type": "direct",
             "tag": "direct",
-            "routing_mark": 2
+            "routing_mark": 2 
+        },
+        // You need to mark any direct outbound as 2
+        {
+            // ...
+            "routing_mark": 2 
         }
     ]
 }
