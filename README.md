@@ -19,9 +19,9 @@
 
 **1：** `"flow": ""` 必须留空，或不写 `"flow": ""`
 
-[**TCP Brutal 使用指南**](TCP_Burtal#readme)
+[**TCP Brutal 使用指南**](TCP_Brutal#readme)
 
-> TCP Brutal 配置需在[客户端](TCP_Burtal/config_client.json#L24-L35)，[服务端](TCP_Burtal/config_server.json#L17-L25)同时启用
+> TCP Brutal 配置需在[客户端](TCP_Brutal/config_client.json#L24-L35)，[服务端](TCP_Brutal/config_server.json#L17-L25)同时启用
 
 ### 基于 UDP 的代理协议
 
