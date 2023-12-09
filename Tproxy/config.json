@@ -1,0 +1,23 @@
+{
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "listen_port": 12345,
+            "type": "tproxy",
+            "tag": "tproxy-in"
+        },
+        {
+            "listen": "::1",
+            "listen_port": 12345,
+            "type": "tproxy",
+            "tag": "tproxy-in"
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct",
+            "routing_mark": 2
+        }
+    ]
+}
