@@ -9,14 +9,14 @@
                 "tag": "dns_proxy",
                 "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
+                "strategy": "ipv4_only",
                 "detour": "proxy"
             },
             {
                 "tag": "dns_direct",
-                "address": "https://dns.alidns.com/dns-query",
+                "address": "h3://dns.alidns.com/dns-query",
                 "address_resolver": "dns_resolver",
-                "strategy": "ipv4_only", // 若两端准备好了IPv6，可改为 "prefer_ipv6"
+                "strategy": "ipv4_only",
                 "detour": "direct"
             },
             {
@@ -32,76 +32,66 @@
         ],
         "rules": [
             {
-                "outbound": [
-                    "any"
-                ],
+                "outbound": "any",
                 "server": "dns_resolver"
             },
             {
-                "geosite": [
-                    "category-ads-all"
-                ],
-                "server": "dns_block",
-                "disable_cache": true
-            },
-            {
-                "geosite": [
-                    "geolocation-!cn"
-                ],
+                "rule_set": "geosite-geolocation-!cn",
                 "server": "dns_proxy"
             }
         ],
         "final": "dns_direct"
     },
     "route": {
-        "geoip": {
-            "download_url": "https://github.com/soffchen/sing-geoip/releases/latest/download/geoip.db",
-            "download_detour": "proxy"
-        },
-        "geosite": {
-            "download_url": "https://github.com/soffchen/sing-geosite/releases/latest/download/geosite.db",
-            "download_detour": "proxy"
-        },
+        "rule_set": [
+            {
+                "tag": "geosite-geolocation-!cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "tag": "geoip-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                "download_detour": "proxy"
+            }
+        ],
         "rules": [
             {
-                "protocol": [
-                    "dns"
-                ],
+                "protocol": "dns",
                 "outbound": "dns-out"
             },
             {
                 "protocol": [
-                    "quic"
+                    "quic",
+                    "stun"
                 ],
                 "outbound": "block"
             },
             {
-                "process_name": [ // 直连的 Windows 可执行程序
+                "process_name": [
                     "xray.exe",
-                    "hysteria.exe",
-                    "tuic.exe",
-                    "tuic-client.exe",
-                    "juicity.exe",
-                    "juicity-client.exe"
+                    "IDMan.exe"
                 ],
                 "outbound": "direct"
             },
             {
-                "geosite": [
-                    "geolocation-!cn"
-                ],
+                "rule_set": "geosite-geolocation-!cn",
                 "outbound": "proxy"
             },
             {
-                "geosite": [
-                    "private"
-                ],
-                "outbound": "direct"
-            },
-            {
-                "geoip": [
-                    "cn",
-                    "private"
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn"
+                    },
+                    {
+                        "ip_is_private": true
+                    }
                 ],
                 "outbound": "direct"
             }
@@ -113,11 +103,12 @@
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.19.0.1/30",
-            "inet6_address": "fdfe:dcba:9876::1/126",
+            "inet4_address": "172.16.0.1/24",
+            "inet6_address": "fd00::1/64",
+            "mtu": 1492,
             "auto_route": true,
             "strict_route": true,
-            "stack": "mixed",
+            "stack": "system",
             "sniff": true,
             "sniff_override_destination": false
         }
@@ -146,5 +137,11 @@
         "server_port": 123,
         "interval": "30m",
         "detour": "direct"
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db"
+        }
     }
 }
