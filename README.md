@@ -4,7 +4,6 @@
 
 | | [Multiplex](https://sing-box.sagernet.org/configuration/shared/multiplex/) | [UDP over TCP](https://sing-box.sagernet.org/configuration/shared/udp-over-tcp/) | [TCP Brutal](https://sing-box.sagernet.org/configuration/shared/tcp-brutal/) | MPTCP |
 | :--- | :---: | :---: | :---: | :---: |
-| [**ShadowTLS**](ShadowTLS) | 支持 | 支持 | :heavy_check_mark: | :heavy_check_mark: |
 | [**Shadowsocks**](Shadowsocks) | 支持 | 支持 | :heavy_check_mark: | :heavy_check_mark: |
 | [**Trojan**](Trojan) | 支持 | 自带 | :heavy_check_mark: | :heavy_check_mark: |
 | [**VLESS-HTTP2-REALITY**](VLESS-HTTP2-REALITY) | 自带 | 自带 | :x: | :heavy_check_mark: |
