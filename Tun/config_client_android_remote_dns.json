@@ -36,11 +36,6 @@
                 "server": "dns_resolver"
             },
             {
-                "rule_set": "geosite-category-ads-all",
-                "server": "dns_block",
-                "disable_cache": true
-            },
-            {
                 "rule_set": "geosite-geolocation-!cn",
                 "server": "dns_proxy"
             },
@@ -57,13 +52,6 @@
     },
     "route": {
         "rule_set": [
-            {
-                "tag": "geosite-category-ads-all",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "proxy"
-            },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
