@@ -23,12 +23,6 @@
         "rules": [
             {
                 "rule_set": "geoip-cn",
-                "rule_set_ipcidr_match_source": true,
-                "invert": true
-                "outbound": "block"
-            },
-            {
-                "rule_set": "geoip-cn",
                 "outbound": "block"
             }
         ]
