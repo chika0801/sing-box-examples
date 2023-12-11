@@ -12,9 +12,6 @@
             "detour": "shadowtls-out",
             "method": "2022-blake3-aes-128-gcm",
             "password": "",
-            "udp_over_tcp": {
-                "enabled": true
-            },
             "multiplex": {
                 "enabled": true
             }
