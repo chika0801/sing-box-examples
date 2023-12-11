@@ -93,7 +93,6 @@
             {
                 "process_name": [
                     "xray.exe",
-                    "sing-box.exe",
                     "IDMan.exe"
                 ],
                 "outbound": "direct"
@@ -103,16 +102,11 @@
                 "outbound": "proxy"
             },
             {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "rule_set": "geoip-cn"
-                    },
-                    {
-                        "ip_is_private": true
-                    }
-                ],
+                "rule_set": "geoip-cn",
+                "outbound": "direct"
+            },
+            {
+                "ip_is_private": true,
                 "outbound": "direct"
             }
         ],
@@ -123,8 +117,8 @@
         {
             "type": "tun",
             "tag": "tun-in",
-            "inet4_address": "172.16.0.1/24",
-            "inet6_address": "fd00::1/64",
+            "inet4_address": "172.16.0.1/30",
+            "inet6_address": "fd00::1/126",
             "mtu": 1492,
             "auto_route": true,
             "strict_route": true,
@@ -151,13 +145,6 @@
             "tag": "dns-out"
         }
     ],
-    "ntp": {
-        "enabled": true,
-        "server": "time.apple.com",
-        "server_port": 123,
-        "interval": "30m",
-        "detour": "direct"
-    },
     "experimental": {
         "cache_file": {
             "enabled": true,
