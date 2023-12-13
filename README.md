@@ -2,7 +2,7 @@
 
 ### 基于 TCP 的代理协议
 
-| | [Multiplex](https://sing-box.sagernet.org/configuration/shared/multiplex/) | [TCP Brutal](https://sing-box.sagernet.org/configuration/shared/tcp-brutal/) | MPTCP |
+| 协议(组合) | [Multiplex](https://sing-box.sagernet.org/configuration/shared/multiplex/) | [TCP Brutal](https://sing-box.sagernet.org/configuration/shared/tcp-brutal/) | MPTCP |
 | :--- | :---: | :---: | :---: |
 | [**Shadowsocks**](Shadowsocks) | 支持 | :heavy_check_mark: | :heavy_check_mark: |
 | [**Trojan**](Trojan) | 支持 | :heavy_check_mark: | :heavy_check_mark: |
@@ -24,11 +24,11 @@
 
 ### 基于 UDP 的代理协议
 
-| | Multiplex | UDP relay mode | 拥塞控制算法 |
-| :--- | :---: | :---: | :---: |
-| [**Hysteria**](Hysteria) | 自带 | native | Brutal |
-| [**Hysteria2**](Hysteria2) | 自带 | native | Brutal / BBR |
-| [**TUIC**](TUIC) | 自带 | native / quic / udp_over_stream | BBR / New Reno / Cubic |
+| 协议 |
+| :--- |
+| [**Hysteria**](Hysteria) |
+| [**Hysteria2**](Hysteria2) |
+| [**TUIC**](TUIC) |
 
 ## 一键脚本 [sing-box-install](https://github.com/chise0713/sing-box-install) 
 
