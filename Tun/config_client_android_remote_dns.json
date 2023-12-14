@@ -21,7 +21,7 @@
             },
             {
                 "tag": "dns_block",
-                "address": "rcode://refused"
+                "address": "rcode://success"
             },
             {
                 "tag": "dns_resolver",
@@ -34,6 +34,11 @@
             {
                 "outbound": "any",
                 "server": "dns_resolver"
+            },
+            {
+                "rule_set": "geosite-category-ads-all",
+                "server": "dns_block",
+                "disable_cache": true
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
@@ -52,6 +57,13 @@
     },
     "route": {
         "rule_set": [
+            {
+                "tag": "geosite-category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
+                "download_detour": "proxy"
+            },
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
@@ -94,15 +106,37 @@
                 "outbound": "block"
             },
             {
-                "rule_set": "geosite-geolocation-!cn",
+                "rule_set": "geosite-category-ads-all",
+                "outbound": "block"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn",
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "geosite-geolocation-!cn"
+                    }
+                ],
                 "outbound": "proxy"
             },
             {
-                "rule_set": "geosite-cn",
-                "outbound": "direct"
-            },
-            {
-                "rule_set": "geosite-category-companies@cn",
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn"
+                    },
+                    {
+                        "rule_set": [
+                            "geosite-cn",
+                            "geosite-category-companies@cn"
+                        ]
+                    }
+                ],
                 "outbound": "direct"
             },
             {
