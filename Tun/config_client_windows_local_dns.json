@@ -21,7 +21,7 @@
             },
             {
                 "tag": "dns_block",
-                "address": "rcode://refused"
+                "address": "rcode://success"
             },
             {
                 "tag": "dns_resolver",
@@ -79,7 +79,17 @@
                 "outbound": "direct"
             },
             {
-                "rule_set": "geosite-geolocation-!cn",
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geoip-cn",
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "geosite-geolocation-!cn"
+                    }
+                ],
                 "outbound": "proxy"
             },
             {
