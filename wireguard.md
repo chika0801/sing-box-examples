@@ -1,16 +1,16 @@
-使用 **warp-reg**，注册warp账号
+### 使用 **warp-reg**，注册warp账号
 
 ```
 curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/main-linux-amd64 && chmod +x warp-reg && ./warp-reg && rm warp-reg
 ```
 
-使用 **api.zeroteam.top**，获取warp账号
+### 使用 **api.zeroteam.top**，获取warp账号
 
 ```
 curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
 ```
 
-使用 **[warp-reg.sh](https://github.com/chise0713/warp-reg.sh)**，注册warp账号
+### 使用 **[warp-reg.sh](https://github.com/chise0713/warp-reg.sh)**，注册warp账号
 
 ```
 bash -c "$(curl -L warp-reg.vercel.app)"
@@ -20,7 +20,7 @@ bash -c "$(curl -L warp-reg.vercel.app)"
 - 复制输出的 `private_key` 值，粘贴到下面配置中 `private_key` 后的 `""` 中
 - 复制输出的 `reserved` 值，粘贴到下面配置中 `reserved` 后的 `[]` 中
 
-**"outbounds"**
+### "outbounds"
 ```jsonc
         {
             "type": "direct",
@@ -52,7 +52,7 @@ bash -c "$(curl -L warp-reg.vercel.app)"
 
 编辑 **/root/sing-box_config.json**，按需增加 **"route"**，**"inbounds"**，**"outbounds"** 的内容（注意检查json格式），输入 `systemctl restart sing-box` 重启sing-box，访问[chat.openai.com/cdn-cgi/trace](https://chat.openai.com/cdn-cgi/trace)查看是否为Cloudflare的IP。
 
-**"route"**
+### "route"
 ```jsonc
             {
                 "geosite": [
@@ -62,13 +62,13 @@ bash -c "$(curl -L warp-reg.vercel.app)"
             }
 ```
 
-**"inbounds"**
+### "inbounds"**
 ```jsonc
             "sniff": true,
             "sniff_override_destination": true,
 ```
 
-**服务端配置示例**
+### 服务端配置示例
 
 ```jsonc
 {
