@@ -24,19 +24,19 @@ bash -c "$(curl -L warp-reg.vercel.app)"
 ```jsonc
         {
             "type": "direct",
-            "tag": "warp-IPv4-out",
-            "detour": "wireguard-out",
+            "tag": "warp-IPv4",
+            "detour": "warp",
             "domain_strategy": "ipv4_only"
         },
         {
             "type": "direct",
-            "tag": "warp-IPv6-out",
-            "detour": "wireguard-out",
+            "tag": "warp-IPv6",
+            "detour": "warp",
             "domain_strategy": "ipv6_only"
         },
         {
             "type": "wireguard",
-            "tag": "wireguard-out",
+            "tag": "warp",
             "server": "162.159.192.1", // 或填写 engage.cloudflareclient.com
             "server_port": 2408,
             "local_address": [
@@ -58,7 +58,7 @@ bash -c "$(curl -L warp-reg.vercel.app)"
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "warp-IPv4-out" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6-out"
+                "outbound": "warp-IPv4" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6"
             }
 ```
 
@@ -82,7 +82,7 @@ bash -c "$(curl -L warp-reg.vercel.app)"
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "warp-IPv4-out" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6-out"
+                "outbound": "warp-IPv4" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6"
             }
         ]
     },
@@ -100,19 +100,19 @@ bash -c "$(curl -L warp-reg.vercel.app)"
         },
         {
             "type": "direct",
-            "tag": "warp-IPv4-out",
-            "detour": "wireguard-out",
+            "tag": "warp-IPv4",
+            "detour": "warp",
             "domain_strategy": "ipv4_only"
         },
         {
             "type": "direct",
-            "tag": "warp-IPv6-out",
-            "detour": "wireguard-out",
+            "tag": "warp-IPv6",
+            "detour": "warp",
             "domain_strategy": "ipv6_only"
         },
         {
             "type": "wireguard",
-            "tag": "wireguard-out",
+            "tag": "warp",
             "server": "162.159.192.1", // 或填写 engage.cloudflareclient.com
             "server_port": 2408,
             "local_address": [
