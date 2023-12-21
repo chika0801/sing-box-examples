@@ -62,7 +62,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
             }
 ```
 
-### "inbounds"**
+### "inbounds"
 ```jsonc
             "sniff": true,
             "sniff_override_destination": true,
