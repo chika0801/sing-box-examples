@@ -1,19 +1,19 @@
-### 使用 **warp-reg**，注册warp账号
+### 使用 **[warp-reg](https://github.com/badafans/warp-reg)**，注册warp账号
 
 ```
 curl -sLo warp-reg https://github.com/badafans/warp-reg/releases/download/v1.0/main-linux-amd64 && chmod +x warp-reg && ./warp-reg && rm warp-reg
-```
-
-### 使用 **api.zeroteam.top**，获取warp账号
-
-```
-curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
 ```
 
 ### 使用 **[warp-reg.sh](https://github.com/chise0713/warp-reg.sh)**，注册warp账号
 
 ```
 bash -c "$(curl -L warp-reg.vercel.app)"
+```
+
+### 使用 **api.zeroteam.top**，获取warp账号
+
+```
+curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=never '"2606:4700:[0-9a-f:]+/128"|"private_key":"[0-9a-zA-Z\/+]+="|"reserved":\[[0-9]+(,[0-9]+){2}\]'
 ```
 
 - 复制输出的 IPv6 地址，替换下面配置中的 `2606:4700::`
