@@ -36,11 +36,6 @@
                 "server": "dns_resolver"
             },
             {
-                "rule_set": "geosite-category-ads-all",
-                "server": "dns_block",
-                "disable_cache": true
-            },
-            {
                 "rule_set": "geosite-geolocation-!cn",
                 "server": "dns_proxy"
             },
@@ -58,17 +53,17 @@
     "route": {
         "rule_set": [
             {
-                "tag": "geosite-category-ads-all",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "proxy"
-            },
-            {
                 "tag": "geosite-geolocation-!cn",
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+                "download_detour": "proxy"
+            },
+            {
+                "tag": "geoip-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
                 "download_detour": "proxy"
             },
             {
@@ -84,13 +79,6 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-companies@cn.srs",
                 "download_detour": "proxy"
-            },
-            {
-                "tag": "geoip-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                "download_detour": "proxy"
             }
         ],
         "rules": [
@@ -103,10 +91,6 @@
                     "quic",
                     "stun"
                 ],
-                "outbound": "block"
-            },
-            {
-                "rule_set": "geosite-category-ads-all",
                 "outbound": "block"
             },
             {
