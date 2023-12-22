@@ -41,7 +41,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32",
-                "2606:4700::/128" // 粘贴你获得的 warp IPv6 地址，结尾加 /128
+                "2606:4700::/128" // 粘贴你的 warp IPv6 地址，结尾加 /128
             ],
             "private_key": "", // 粘贴你的 "private_key" 值
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
@@ -58,7 +58,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "warp-IPv4" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6"
+                "outbound": "warp-IPv4" // 若需使用 cloudflare 的 IPv6，改为 "warp-IPv6"
             }
 ```
 
