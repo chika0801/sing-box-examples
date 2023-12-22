@@ -37,7 +37,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
         {
             "type": "wireguard",
             "tag": "warp",
-            "server": "162.159.192.1", // 或填写 engage.cloudflareclient.com
+            "server": "162.159.192.1", // IPv6 地址 2606:4700:d0::a29f:c001，或填写域名 engage.cloudflareclient.com
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32",
@@ -82,7 +82,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
                 "geosite": [
                     "openai"
                 ],
-                "outbound": "warp-IPv4" // 若需使用Cloudflare的IPv6，改为 "warp-IPv6"
+                "outbound": "warp-IPv4"
             }
         ]
     },
@@ -113,15 +113,15 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
         {
             "type": "wireguard",
             "tag": "warp",
-            "server": "162.159.192.1", // 或填写 engage.cloudflareclient.com
+            "server": "162.159.192.1",
             "server_port": 2408,
             "local_address": [
                 "172.16.0.2/32",
-                "/128" // 粘贴你获得的 warp IPv6 地址，结尾加 /128
+                "/128"
             ],
-            "private_key": "", // 粘贴你的 "private_key" 值
+            "private_key": "",
             "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-            "reserved":[0, 0, 0], // 粘贴你的 "reserved" 值
+            "reserved":[0, 0, 0],
             "mtu": 1280
         }
     ]
