@@ -240,44 +240,13 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
                 "detour": "direct"
             },
             {
-                "tag": "dns_ipv6",
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "dns_resolver",
-                "strategy": "ipv6_only",
-                "detour": "direct"
-            },
-            {
                 "tag": "dns_resolver",
                 "address": "1.1.1.1",
                 "strategy": "ipv4_only",
                 "detour": "direct"
             }
         ],
-        "rules": [
-            {
-                "rule_set": "geosite-openai",
-                "server": "dns_ipv6"
-            }
-        ],
         "final": "dns"
-    },
-    "route": {
-        "rule_set": [
-            {
-                "tag": "geosite-openai",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
-                "download_detour": "direct"
-            }
-        ],
-        "rules": [
-            {
-                "rule_set": "geosite-openai",
-                "outbound": "warp"
-            }
-        ],
-        "final": "direct"
     },
     "inbounds": [
         {
