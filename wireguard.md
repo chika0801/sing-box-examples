@@ -275,12 +275,6 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
             "reserved":[0, 0, 0],
             "mtu": 1280
         }
-    ],
-    "experimental": {
-        "cache_file": {
-            "enabled": true,
-            "path": "cache.db"
-        }
-    }
+    ]
 }
 ```
