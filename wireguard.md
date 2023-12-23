@@ -127,3 +127,96 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
     ]
 }
 ```
+
+### 另一种方式
+```jsonc
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "dns",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns_ipv6",
+                "address": "https://1.1.1.1/dns-query",
+                "address_resolver": "dns_resolver",
+                "strategy": "ipv6_only",
+                "detour": "direct"
+            },
+            {
+                "tag": "dns_resolver",
+                "address": "1.1.1.1",
+                "strategy": "ipv4_only",
+                "detour": "direct"
+            }
+        ],
+        "rules": [
+            {
+                "rule_set": "geosite-openai",
+                "server": "dns_ipv6"
+            }
+        ],
+        "final": "dns"
+    },
+    "route": {
+        "rule_set": [
+            {
+                "tag": "geosite-openai",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+                "download_detour": "direct"
+            }
+        ],
+        "rules": [
+            {
+                "geosite": [
+                    "openai"
+                ],
+                "outbound": "warp"
+            }
+        ],
+        "final": "direct"
+    },
+    "inbounds": [
+        {
+            "sniff": true,
+            "sniff_override_destination": true,
+            // 粘贴你的服务端配置
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct",
+            "tag": "direct"
+        },
+        {
+            "type": "wireguard",
+            "tag": "warp",
+            "server": "162.159.192.1",
+            "server_port": 2408,
+            "local_address": [
+                "172.16.0.2/32",
+                "/128"
+            ],
+            "private_key": "",
+            "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "reserved":[0, 0, 0],
+            "mtu": 1280
+        }
+    ],
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "cache.db"
+        }
+    }
+}
+```
