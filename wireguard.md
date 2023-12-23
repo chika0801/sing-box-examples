@@ -177,9 +177,7 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
         ],
         "rules": [
             {
-                "geosite": [
-                    "openai"
-                ],
+                "rule_set": "geosite-openai",
                 "outbound": "warp"
             }
         ],
