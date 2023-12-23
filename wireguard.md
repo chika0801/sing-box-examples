@@ -231,23 +231,6 @@ curl -sL "https://api.zeroteam.top/warp?format=sing-box" | grep -Eo --color=neve
         "level": "info",
         "timestamp": true
     },
-    "dns": {
-        "servers": [
-            {
-                "tag": "dns",
-                "address": "https://1.1.1.1/dns-query",
-                "address_resolver": "dns_resolver",
-                "detour": "direct"
-            },
-            {
-                "tag": "dns_resolver",
-                "address": "1.1.1.1",
-                "strategy": "ipv4_only",
-                "detour": "direct"
-            }
-        ],
-        "final": "dns"
-    },
     "inbounds": [
         {
             "sniff": true,
