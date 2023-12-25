@@ -45,10 +45,10 @@ bash <(curl -fsSL https://tcp.hy2.sh/)
 ```jsonc
             "multiplex": {
                 "enabled": true,
-                "protocol": "h2mux", // 默认 h2mux，可选 smux | yamux | h2mux
-                "max_connections": 1, // 建议为 1
+                "protocol": "h2mux", // 默认值 h2mux，可选 smux | yamux | h2mux
+                "max_connections": 1, // 默认值 1，填其它值时可能无效
                 "min_streams": 4,
-                "padding": false, // 默认 false，可选 false | true
+                "padding": false, // 默认值 false，可选 false | true
                 "brutal": {
                     "enabled": true,
                     "up_mbps": 20,
