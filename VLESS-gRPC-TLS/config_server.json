@@ -11,7 +11,7 @@
             ],
             "transport": {
                 "type": "grpc",
-                "service_name": "" // gRPC 服务名称，需要两端值与 Nginx 一致才能连接成功
+                "service_name": "" // gRPC 服务名称
             }
         }
     ],
