@@ -27,7 +27,8 @@
             },
             "packet_encoding": "xudp",
             "transport": {
-                "type": "http"
+                "type": "http",
+                "host": []
             }
         }
     ]
