@@ -45,6 +45,7 @@
                 "server": "dns_resolver"
             },
             {
+                "rule_set": "BlockHttpDNS",
                 "rule_set": "geosite-category-ads-all",
                 "domain_suffix": [
                     "mcdn.bilivideo.cn",
@@ -94,6 +95,13 @@
     "route": {
         "rule_set": [
             {
+                "tag": "BlockHttpDNS",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/BlockHttpDNS.srs",
+                "download_detour": "proxy"
+            },
+            {
                 "tag": "geosite-category-ads-all",
                 "type": "remote",
                 "format": "binary",
@@ -138,58 +146,9 @@
                 ],
                 "outbound": "block"
             },
+            
             {
-                "domain_suffix": [
-                    "httpdns.alicdn.com",
-                    "httpdns-api.aliyuncs.com",
-                    "httpdns-sc.aliyuncs.com",
-                    "httpsdns.baidu.com",
-                    "httpdns.baidu.com",
-                    "httpdns.baidubce.com",
-                    "httpdns.bilivideo.com",
-                    "httpdns.c.cdnhwc2.com",
-                    "dns.jd.com",
-                    "kuaishou.httpdns.pro",
-                    "httpdns.meituan.com",
-                    "httpdns.n.netease.com",
-                    "httpdns.music.163.com",
-                    "music.httpdns.c.163.com",
-                    "lofter.httpdns.c.163.com",
-                    "httpdns.push.oppomobile.com",
-                    "httpdns.volcengineapi.com",
-                    "dns.weibo.cn",
-                    "dns.weixin.qq.com",
-                    "dns.weixin.qq.com.cn"
-                ],
-                "ip_cidr": [
-                    "203.107.1.0/24",
-                    "186.76.76.200/32",
-                    "101.124.19.122/32",
-                    "2402:db40:5100:1011::5/128",
-                    "103.224.222.208/32",
-                    "59.111.239.61/32",
-                    "59.111.239.62/32",
-                    "115.236.121.51/32",
-                    "115.236.121.195/32",
-                    "119.29.29.98/32",
-                    "119.29.29.99/32",
-                    "39.97.128.148/32",
-                    "39.97.130.51/32",
-                    "42.81.232.18/32",
-                    "42.187.182.106/32",
-                    "42.187.182.123/32",
-                    "42.187.184.154/32",
-                    "123.151.54.50/32",
-                    "2402:4e00:1900:1700:0:9554:1ad9:c3a/128",
-                    "240e:928:1400:10::25/128",
-                    "182.254.116.117/32",
-                    "182.254.118.119/32",
-                    "118.89.204.198/23",
-                    "2402:4e00:1200:ed00:0:9089:6dac:96b6/128"
-                ],
-                "outbound": "block"
-            },
-            {
+                "rule_set": "BlockHttpDNS",
                 "rule_set": "geosite-category-ads-all",
                 "domain_suffix": [
                     "mcdn.bilivideo.cn",
