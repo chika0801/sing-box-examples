@@ -20,8 +20,12 @@
                 "detour": "direct"
             },
             {
-                "tag": "dns_block",
+                "tag": "dns_success",
                 "address": "rcode://success"
+            },
+            {
+                "tag": "dns_refused",
+                "address": "rcode://refused"
             },
             {
                 "tag": "dns_resolver",
@@ -50,7 +54,7 @@
                     "cn-[a-zA-Z0-9-]+\\.bilivideo\\.com",
                     "[a-zA-Z0-9-]+-pcdn-[a-zA-Z0-9-]+\\.biliapi\\.net"
                 ],
-                "server": "dns_block",
+                "server": "dns_success",
                 "disable_cache": true
             },
             {
@@ -63,7 +67,20 @@
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
+                "query_type": [
+                    "CNAME"
+                ],
                 "server": "dns_proxy"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA",
+                    "CNAME"
+                ],
+                "invert": true,
+                "server": "dns_refused",
+                "disable_cache": true
             }
         ],
         "final": "dns_direct",
