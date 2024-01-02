@@ -87,10 +87,8 @@
                 "outbound": "dns-out"
             },
             {
-                "protocol": [
-                    "quic",
-                    "stun"
-                ],
+                "network": "udp",
+                "port": 443,
                 "outbound": "block"
             },
             {
