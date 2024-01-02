@@ -129,21 +129,8 @@
                 "outbound": "dns-out"
             },
             {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "network": "tcp",
-                        "port": 853
-                    },
-                    {
-                        "network": "udp",
-                        "port": 443
-                    },
-                    {
-                        "protocol": "stun"
-                    }
-                ],
+                "network": "udp",
+                "port": 443,
                 "outbound": "block"
             },
             {
