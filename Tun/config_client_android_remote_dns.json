@@ -42,10 +42,6 @@
             {
                 "rule_set": "geosite-cn",
                 "server": "dns_direct"
-            },
-            {
-                "rule_set": "geosite-category-companies@cn",
-                "server": "dns_direct"
             }
         ],
         "final": "dns_proxy"
@@ -72,24 +68,12 @@
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
                 "download_detour": "proxy"
-            },
-            {
-                "tag": "geosite-category-companies@cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-companies@cn.srs",
-                "download_detour": "proxy"
             }
         ],
         "rules": [
             {
                 "protocol": "dns",
                 "outbound": "dns-out"
-            },
-            {
-                "network": "udp",
-                "port": 443,
-                "outbound": "block"
             },
             {
                 "type": "logical",
@@ -114,8 +98,7 @@
                     },
                     {
                         "rule_set": [
-                            "geosite-cn",
-                            "geosite-category-companies@cn"
+                            "geosite-cn"
                         ]
                     }
                 ],
