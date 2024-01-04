@@ -65,11 +65,6 @@
                 "outbound": "dns-out"
             },
             {
-                "network": "udp",
-                "port": 443,
-                "outbound": "block"
-            },
-            {
                 "process_name": [
                     "xray.exe",
                     "IDMan.exe"
