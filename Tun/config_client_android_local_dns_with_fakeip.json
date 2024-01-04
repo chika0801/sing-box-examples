@@ -129,11 +129,6 @@
                 "outbound": "dns-out"
             },
             {
-                "network": "udp",
-                "port": 443,
-                "outbound": "block"
-            },
-            {
                 "rule_set": "BlockHttpDNS",
                 "rule_set": "geosite-category-ads-all",
                 "domain_suffix": [
