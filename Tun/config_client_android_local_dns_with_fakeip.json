@@ -48,8 +48,8 @@
                 "rule_set": "BlockHttpDNS",
                 "rule_set": "geosite-category-ads-all",
                 "domain_suffix": [
-                    "mcdn.bilivideo.cn",
-                    "szbdyd.com"
+                    ".mcdn.bilivideo.cn",
+                    ".szbdyd.com"
                 ],
                 "domain_regex": [
                     "cn-[a-zA-Z0-9-]+\\.bilivideo\\.com",
@@ -132,8 +132,8 @@
                 "rule_set": "BlockHttpDNS",
                 "rule_set": "geosite-category-ads-all",
                 "domain_suffix": [
-                    "mcdn.bilivideo.cn",
-                    "szbdyd.com"
+                    ".mcdn.bilivideo.cn",
+                    ".szbdyd.com"
                 ],
                 "domain_regex": [
                     "cn-[a-zA-Z0-9-]+\\.bilivideo\\.com",
