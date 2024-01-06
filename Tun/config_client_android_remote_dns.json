@@ -97,9 +97,7 @@
                         "rule_set": "geoip-cn"
                     },
                     {
-                        "rule_set": [
-                            "geosite-cn"
-                        ]
+                        "rule_set": "geosite-cn"
                     }
                 ],
                 "outbound": "direct"
