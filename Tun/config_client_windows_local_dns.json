@@ -65,13 +65,6 @@
                 "outbound": "dns-out"
             },
             {
-                "process_name": [
-                    "xray.exe",
-                    "IDMan.exe"
-                ],
-                "outbound": "direct"
-            },
-            {
                 "type": "logical",
                 "mode": "and",
                 "rules": [
