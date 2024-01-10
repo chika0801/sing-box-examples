@@ -122,7 +122,7 @@
             "mtu": 1400,
             "auto_route": true,
             "strict_route": true,
-            "stack": "system",
+            "stack": "gvisor",
             "sniff": true,
             "sniff_override_destination": false
         }
