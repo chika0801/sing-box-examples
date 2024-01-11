@@ -162,7 +162,6 @@
             "inet4_address": "172.16.0.1/30",
             "inet6_address": "fd00::1/126",
             "mtu": 1400,
-            "gso": true,
             "auto_route": true,
             "strict_route": true,
             "stack": "gvisor",
