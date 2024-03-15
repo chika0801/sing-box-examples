@@ -129,7 +129,6 @@
             {
                 "process_name": [
                     "xray.exe",
-                    "sing-box.exe",
                     "IDMan.exe"
                 ],
                 "outbound": "direct"
