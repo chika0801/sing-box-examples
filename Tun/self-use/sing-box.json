@@ -43,21 +43,6 @@
                 "server": "dns_resolver"
             },
             {
-                "domain": [
-                    "httpdns.bilivideo.com"
-                ],
-                "domain_suffix": [
-                    ".mcdn.bilivideo.cn",
-                    ".szbdyd.com"
-                ],
-                "domain_regex": [
-                    "cn-[a-zA-Z0-9-]+\\.bilivideo\\.com",
-                    "[a-zA-Z0-9-]+-pcdn-[a-zA-Z0-9-]+\\.biliapi\\.net"
-                ],
-                "server": "dns_success",
-                "disable_cache": true
-            },
-            {
                 "rule_set": "geosite-geolocation-!cn",
                 "query_type": [
                     "A",
@@ -70,6 +55,7 @@
                 "query_type": [
                     "CNAME"
                 ],
+                "client_subnet": "", // 你 VPS 的 IP
                 "server": "dns_proxy"
             },
             {
@@ -134,43 +120,8 @@
                 "outbound": "direct"
             },
             {
-                "domain": [
-                    "httpdns.bilivideo.com"
-                ],
-                "domain_suffix": [
-                    ".mcdn.bilivideo.cn",
-                    ".szbdyd.com"
-                ],
-                "domain_regex": [
-                    "cn-[a-zA-Z0-9-]+\\.bilivideo\\.com",
-                    "[a-zA-Z0-9-]+-pcdn-[a-zA-Z0-9-]+\\.biliapi\\.net"
-                ],
-                "outbound": "block"
-            },
-            {
                 "rule_set": "geosite-geolocation-!cn",
                 "outbound": "proxy"
-            },
-            {
-                "ip_cidr": [
-                    "47.101.175.206/32",
-                    "47.100.123.169/32",
-                    "120.46.169.234/32",
-                    "121.36.72.124/32",
-                    "116.63.10.135/32",
-                    "122.9.7.134/32",
-                    "117.185.228.108/32",
-                    "117.144.238.29/32",
-                    "122.9.13.79/32",
-                    "122.9.15.129/32",
-                    "101.91.140.224/32",
-                    "101.91.140.124/32",
-                    "114.116.215.110/32",
-                    "116.63.10.31/32",
-                    "112.64.218.119/32",
-                    "112.65.200.117/32"
-                ],
-                "outbound": "block"
             },
             {
                 "rule_set": "geoip-cn",
