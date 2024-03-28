@@ -55,7 +55,6 @@
                 "query_type": [
                     "CNAME"
                 ],
-                "client_subnet": "", // 你 VPS 的 IP
                 "server": "dns_proxy"
             },
             {
