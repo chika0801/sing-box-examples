@@ -7,7 +7,7 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "https://8.8.8.8/dns-query",
+                "address": "tcp://1.1.1.1",
                 "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only",
                 "detour": "proxy"
@@ -46,13 +46,7 @@
                 "rule_set": "geosite-geolocation-!cn",
                 "query_type": [
                     "A",
-                    "AAAA"
-                ],
-                "server": "dns_fakeip"
-            },
-            {
-                "rule_set": "geosite-geolocation-!cn",
-                "query_type": [
+                    "AAAA",
                     "CNAME"
                 ],
                 "server": "dns_proxy"
