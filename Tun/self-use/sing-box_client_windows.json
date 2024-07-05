@@ -7,7 +7,7 @@
         "servers": [
             {
                 "tag": "dns_proxy",
-                "address": "tcp://1.1.1.1",
+                "address": "https://1.1.1.1/dns-query",
                 "address_resolver": "dns_resolver",
                 "strategy": "ipv4_only",
                 "detour": "proxy"
@@ -46,7 +46,13 @@
                 "rule_set": "geosite-geolocation-!cn",
                 "query_type": [
                     "A",
-                    "AAAA",
+                    "AAAA"
+                ],
+                "server": "dns_fakeip"
+            },
+            {
+                "rule_set": "geosite-geolocation-!cn",
+                "query_type": [
                     "CNAME"
                 ],
                 "server": "dns_proxy"
@@ -93,24 +99,22 @@
                 "outbound": "dns-out"
             },
             {
+                "process_name": [
+                    "xray.exe",
+                    "hysteria.exe",
+                    "IDMan.exe"
+                ],
+                "outbound": "direct"
+            },
+            {
                 "port": 853,
                 "network": "tcp",
                 "outbound": "block"
             },
             {
-                "port": [
-                    443,
-                    853
-                ],
+                "port": 443,
                 "network": "udp",
                 "outbound": "block"
-            },
-            {
-                "process_name": [
-                    "xray.exe",
-                    "IDMan.exe"
-                ],
-                "outbound": "direct"
             },
             {
                 "rule_set": "geosite-geolocation-!cn",
@@ -166,7 +170,8 @@
         "cache_file": {
             "enabled": true,
             "path": "cache.db",
-            "store_fakeip": true
+            "store_fakeip": true,
+            "store_rdrc": true
         }
     }
 }
